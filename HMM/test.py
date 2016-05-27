@@ -1,7 +1,7 @@
 # encoding=utf-8
 import hmm
 f2 = open('output.txt','wb')
-for line in open('raw.txt','rb'):
+for line in open('pku_test.utf8','rb'):
 	seg_list = hmm.cut(line)
 	s = ' '.join(seg_list).encode('utf-8')
 	s+='\n'

@@ -12,6 +12,7 @@
 import sys
 import re
 import copy
+import time
 
 SUPERSTR = ''
 ARTICLE = ''
@@ -123,8 +124,10 @@ def analyze2():
     return PROB_EMIT
 
 if __name__ == "__main__":
-    for line in open('seg.txt', 'rb'):
+    print time.strftime('%Y-%m-%d %H:%M:%S')
+    for line in open('pku_training.utf8', 'rb'):
         deal(line)
+    print len(TEXT),'words'
     f0 = open('target.txt','wb')
     f0.writelines(TEXT.encode('utf-8'))
     A = GetMatrix(SUPERSTR)
@@ -137,5 +140,4 @@ if __name__ == "__main__":
     f1.write(str(PROB_START))
     f2.write(str(A))
     f3.write(str(B))
-
-
+    print time.strftime('%Y-%m-%d %H:%M:%S')
