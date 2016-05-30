@@ -16,9 +16,9 @@ def load_model(f_name):
         return result
 
 
-prob_start = load_model("prob_start.py")
-prob_trans = load_model("prob_trans.py")
-prob_emit = load_model("prob_emit.py")
+prob_start = load_model("../Training/prob_start.py")
+prob_trans = load_model("../Training/prob_trans.py")
+prob_emit = load_model("../Training/prob_emit.py")
 near_char_tab = load_model("vocab.txt")
 
 
