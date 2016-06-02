@@ -5,7 +5,7 @@ i=0
 for line in open('pku_training.utf8','rb'):
 	i+=1
 	if(i<=4765):
-		seg_list = hmm.cut(line)
+		seg_list = hmm.cut(line,True)
 		s = ' '.join(seg_list).encode('utf-8')
 		s+='\n'
 		f2.write(s)

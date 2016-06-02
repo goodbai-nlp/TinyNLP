@@ -97,3 +97,6 @@ def cut(sentence, find_new_word=False):
         #     for x in tmp:
         #         if x != "":
         #             yield x
+
+for item in cut(u'１２月３１日，中共中央总书记、国家主席江泽民发表１９９８年新年讲话《迈向充满希望的新世纪》。（新华社记者兰红光摄）'):
+    print ' '+item,
