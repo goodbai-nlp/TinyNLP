@@ -54,3 +54,16 @@
 	"extmem.h"
 	<time.h>
 
+1464936008 source:/home/jackbai/mywork/Git/NLP/extmem-c/extmem.c
+	<stdlib.h>
+	<stdio.h>
+	"extmem.h"
+
+1464936008 /home/jackbai/mywork/Git/NLP/extmem-c/extmem.h
+
+1464939101 source:/home/jackbai/mywork/Git/NLP/extmem-c/test.c
+	<stdlib.h>
+	<stdio.h>
+	"extmem.h"
+	<time.h>
+

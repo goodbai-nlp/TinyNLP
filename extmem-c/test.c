@@ -22,6 +22,8 @@ int projectionAL(unsigned int *blk,Buffer *buf);
 int MergeSort(unsigned int addr,int n,Buffer *buf);
 int Merge(unsigned int left,int lnum,unsigned int right,int rnum,Buffer *buf);
 int split(unsigned int baseaddr,int num,int OFF,Buffer *buf);
+int Nst_Loop_Join(unsigned int * blk,Buffer *buf);
+void connectionAL(unsigned int * blk,Buffer *buf);
 int main()
 {
     int choice;
@@ -46,6 +48,7 @@ int main()
                 break;
             }
             case 3:{
+                connectionAL(blk,&buf);
                 break;
             }
             case 4:{
@@ -256,7 +259,7 @@ int Merge(unsigned int left,int lnum,unsigned int right,int rnum,Buffer *buf)
 {
     int l=0,r=0;//计数
     int offset=0,i;
-    unsigned int tmpaddr=left+500;  //结果存入的地址
+    unsigned int tmpaddr=left+500;  //结果存入的地址 650-761
     unsigned int *blk1,*blk2;
     while(l<lnum||r<rnum){
         if(l==lnum)                 //左边结束
@@ -310,4 +313,67 @@ int split(unsigned int baseaddr,int num,int OFF, Buffer* buf){
         }
     }
     return count;
+}
+
+int Nst_Loop_Join(unsigned int * blk,Buffer *buf){
+    //800
+    int si,sj,ri,rj;
+    int A,B,C,D,num=0,addr = 800;
+    for(si=0;si<32;++si){
+        blk = readBlockFromDisk(si+40,buf);
+        for(sj=0;sj<7;++sj){
+            C= *(blk+2*sj);
+            for(ri=0;ri<16;++ri){
+                unsigned int * tmp_blk = readBlockFromDisk(ri,buf);
+                for(rj=0;rj<7;++rj){
+                    A = *(tmp_blk+2*rj);
+                    if(A==C){
+                        B = *(tmp_blk+2*rj+1);
+                        D = *(blk+2*sj+1);
+                        unsigned int *blk2 = getNewBlockInBuffer(buf);
+                        *(blk) = A;
+                        *(blk+1) = B;
+                        *(blk+2) = C;
+                        *(blk+3) = D;
+                        writeBlockToDisk(blk2,addr+num,buf);
+                        num++;
+                        freeBlockInBuffer(blk2,buf);
+                    }
+                }
+                freeBlockInBuffer(tmp_blk,buf);
+            }
+        }
+        freeBlockInBuffer(blk,buf);
+    }
+    return num;
+}
+
+void connectionAL(unsigned int *blk,Buffer *buf){
+    int ch;
+    printf("==============1.NLJ 2.Merge 3.Hash -1.back===============\n");
+    scanf("%d",&ch);
+    switch(ch){
+        case 1:{
+            int num = Nst_Loop_Join(blk,buf);
+            for(int i=0;i<num;++i){
+                blk = readBlockFromDisk(800+i,buf);
+                printf("R.A:%d R.B %d S.C %d S.D %d\n",*(blk),*(blk+1),*(blk+2),*(blk+3));
+                freeBlockInBuffer(blk,buf);
+            }
+            break;
+        }
+        case 2:{
+
+            break;
+        }
+        case 3:{
+            break;
+        }
+        case -1:{
+            return;
+        }
+        default:{
+            printf("invalid value!!");
+        }
+    }
 }
