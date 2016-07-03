@@ -69,30 +69,7 @@ def GetMatrix(sstr):
               'S': {'B': 0, 'S': 0}}
     for i in range(len(sstr) - 1):
         A = sstr[i];B = sstr[i + 1]
-        if A == 'B' and B == 'E':
-            Matrix['B']['E'] += 1
-            continue
-        if A == 'B' and B == 'M':
-            Matrix['B']['M'] += 1
-            continue
-        if A == 'E' and B == 'B':
-            Matrix['E']['B'] += 1
-            continue
-        if A == 'E' and B == 'S':
-            Matrix['E']['S'] += 1
-            continue
-        if A == 'M' and B == 'E':
-            Matrix['M']['E'] += 1
-            continue
-        if A == 'M' and B == 'M':
-            Matrix['M']['M'] += 1
-            continue
-        if A == 'S' and B == 'B':
-            Matrix['S']['B'] += 1
-            continue
-        if A == 'S' and B == 'S':
-            Matrix['S']['S'] += 1
-            continue
+        Matrix[A][B]+=1
     Matrix2 = copy.deepcopy(Matrix)
     Matrix2['B']['E'] = float(Matrix['B']['E']) / (Matrix['B']['E'] + Matrix['B']['M'])
     Matrix2['B']['M'] = float(Matrix['B']['M']) / (Matrix['B']['E'] + Matrix['B']['M'])
