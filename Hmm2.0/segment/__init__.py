@@ -62,6 +62,7 @@ def createGraph(sentence):
     return gra
 res = ''
 allres = []
+
 def dfs(n,graph,sentence,path):
     if n<0:
         print path
@@ -71,10 +72,21 @@ def dfs(n,graph,sentence,path):
         dfs(n-1,graph,sentence,path)
     else:
         for key,value in graph.seq[n].items():
-            path = key + ' ' + path
-            dfs(n-len(key),graph,sentence,path)
+            tmppath = key + ' ' + path
+            dfs(n-len(key),graph,sentence,tmppath)
+def select():
+    best = []
+    best.append(allres[0])
+    for item in allres:
+        if len(item) < len(best[0]):
+            best = []
+            best.append(item)
+        elif len(item) == len(best[0]):
+            best.append(item)
+    print '\n'.join(best)
+
 load_dict(DICT_DIR)
-sentence = u'今天天气真好'
+sentence = u'汉字笔顺标准由国家语言文字工作委员会标准化工作委员会制定叫做现代汉语通用字笔顺规范'
 tmp = createGraph(sentence)
 dfs(len(sentence)-1,tmp,sentence,'')
-print allres
+select()
