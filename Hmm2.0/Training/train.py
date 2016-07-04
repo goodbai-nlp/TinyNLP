@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # encoding: utf-8
 """
-@version: ??
+@version: V0.2
 @author: muyeby
 @contact: bxf_hit@163.com
 @site: http://muyeby.github.io
@@ -9,18 +9,16 @@
 @file: hmm++.py
 @time: 16-7-3 下午7:41
 """
-import numpy as np
 import os
 import sys
-from hmmlearn import hmm
 import re
 import time
-DATA_DIR = os.getcwd()+'/../data/'
+DATA_DIR = os.getcwd()+'/../../data/'
 BASE_DICT = DATA_DIR + 'idict.utf8'
-DICT_DIR = DATA_DIR + 'icwb2-data/gold/pku_training_words.utf-8'
+# DICT_DIR = DATA_DIR + 'icwb2-data/gold/pku_training_words.utf-8'
 TRAIN_FILE = DATA_DIR + 'icwb2-data/training/pku_training.utf8'
 idict = []
-P_START = [0.7689828525554734, 0.0, 0.0, 0.2310171474445266 ]
+P_START = {'B':0.7689828525554734, 'E':0.0, 'M':0.0, 'S':0.2310171474445266}
 enums = ['B', 'E', 'M', 'S']
 count_trans = {'B':{'B':0, 'E':0, 'M':0, 'S':0}, 'E':{'B':0, 'E':0, 'M':0, 'S':0}, 'M':{'B':0, 'E':0, 'M':0, 'S':0}, 'S':{'B':0, 'E':0, 'M':0, 'S':0}}
 P_transMatrix = {'B':{'B':0, 'E':0, 'M':0, 'S':0}, 'E':{'B':0, 'E':0, 'M':0, 'S':0}, 'M':{'B':0, 'E':0, 'M':0, 'S':0}, 'S':{'B':0, 'E':0, 'M':0, 'S':0}}
@@ -29,6 +27,7 @@ count_mixed = {'B':{}, 'E':{}, 'M':{}, 'S':{}}
 P_mixedMatrix = {'B':{}, 'E':{}, 'M':{}, 'S':{}}
 
 def enum_dict(filename):
+    '''生成汉字字典'''
     global idict
     idict = []
     for line in open(filename,'rb'):
@@ -40,14 +39,13 @@ def enum_dict(filename):
         line = line.strip()
         if not line or line[0] == '#':
             continue
-        re_han = re.compile(ur"([\u4E00-\u9FA5]+)")
+        re_han = re.compile(ur"([\u4E00-\u9FA5])")
         m = re_han.match(line)
         if m:
             idict.append(m.group(0))
-
+    # print ' '.join(idict)
 def train_Matrix(filename):
-    # global idict
-    # global count_trans, P_transMatrix, count_mixed, P_mixedMatrix
+    '''利用统计的方法估计转移矩阵和混淆矩阵'''
     for line in open(filename,'r'):
         if sys.version < '3.0':
             if not (type(line) is unicode):
@@ -94,7 +92,7 @@ def train_Matrix(filename):
             if item not in value1:
                 count_mixed[key1][item] = 0
 
-    for key1,value1 in count_mixed.items():
+    for key1,value1 in count_mixed.items():   #这里采用拉普拉斯平滑来调整
         num = sum(value1.values())
         # print num+len(value1)
         for key2,value2 in value1.items():
