@@ -47,6 +47,7 @@ def enum_dict(filename):
     # print ' '.join(idict)
 def train_Matrix(filename):
     '''利用统计的方法估计转移矩阵和混淆矩阵'''
+    global idict
     for line in open(filename,'r'):
         if sys.version < '3.0':
             if not (type(line) is unicode):
@@ -77,8 +78,9 @@ def train_Matrix(filename):
         line_item = ''.join(blocks)
         for i in range(len(line_str)-1):
             count_trans[line_str[i]][line_str[i+1]]+=1
-        for i in range(len(line_str)-1):
+        for i in range(len(line_str)):
             if line_item[i] not in idict:
+                print line_item[i]
                 idict.append(line_item[i])
             if line_item[i] not in count_mixed[line_str[i]].keys():
                 count_mixed[line_str[i]][line_item[i]] = 1
@@ -103,20 +105,21 @@ def train_Matrix(filename):
     # print count_trans
     # print P_transMatrix
     dump_data=[]
+    mydict = list(set(idict))
     P_trans = [[0 for i in range(4)] for j in range(4)]
     for i in range(4):
         for j in range(4):
             P_trans[i][j] = P_transMatrix[states[i]][states[j]]
-    P_mix = [[0 for i in range(len(idict))]for j in range(4)]
+    P_mix = [[0 for i in range(len(mydict))]for j in range(4)]
     for i in range(4):
-        for j in range(len(idict)):
-            P_mix[i][j] = P_mixedMatrix[states[i]][idict[j]]
+        for j in range(len(mydict)):
+            P_mix[i][j] = P_mixedMatrix[states[i]][mydict[j]]
     f1 = open('./data.dat', 'wb',-1)
     dump_data.append(P_START)
     dump_data.append(P_trans)
     dump_data.append(P_mix)
     dump_data.append(states)
-    dump_data.append(idict)
+    dump_data.append(mydict)
     pickle.dump(dump_data, f1, -1)
 print time.strftime('%Y-%m-%d %H:%M:%S')
 enum_dict(BASE_DICT)

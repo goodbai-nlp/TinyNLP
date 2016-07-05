@@ -15,6 +15,7 @@ import os
 import re
 import math
 import pickle
+import time
 MAX_LENGTH = 10
 vocab = []
 
@@ -28,12 +29,14 @@ class Gnode(object):
 DATA_DIR = os.getcwd()+'/../../data/'
 DICT_DIR = DATA_DIR + 'icwb2-data/gold/pku_training_words.utf8'
 MODEL_DIR = os.getcwd()+'/../Training/data.dat'
-
+res = ''
+allres = []
 def load_dict(FILE):
     '''生成汉字字典'''
     global vocab
     vocab = []
-    for line in open(FILE, 'rb'):
+    f1 = open(FILE,'rb')
+    for line in f:
         if not (type(line) is unicode):
             try:
                 line = line.decode('utf-8')
@@ -47,6 +50,7 @@ def load_dict(FILE):
         if m:
             vocab.append(m.group(0))
             # print ' '.join(idict)
+    f1.close()
 def createGraph(sentence):
     '''生成有向图'''
     gra = Graph()
@@ -63,8 +67,8 @@ def createGraph(sentence):
     end = Gnode('#')
     gra.seq.append({'#': end})
     return gra
-res = ''
-allres = []
+
+
 
 def dfs(n,graph,sentence,path):
     '''遍历有向图,找出所有路径,存在allres[]中'''
@@ -119,12 +123,24 @@ def dealstr(sentence):
     for i in range(len(res2)):
         P_mixp+= (-math.log(P_mix[states.index(res2[i])][idict.index(ttmp[i])]))
     P_sum = P_state + P_mixp
-    print sentence,P_sum
+    # print sentence,P_sum
     return (sentence,P_sum)
 
+def cut(sentence):
+    Gra = createGraph(sentence)
+    global res,allres
+    res = ''
+    allres = []
+    dfs(len(sentence) - 1, Gra, sentence, '')
+    best = select()
+    bestt = ('', 1e5)
+    for sen in best:
+        sene, value = dealstr(sen)
+        if value < bestt[1]:
+            bestt = (sene, value)
+    f.close()
+    return ''.join(bestt[0]).strip()
 
-def cut():
-    pass
 f = open(MODEL_DIR)
 dump_data = pickle.load(f)
 P_start = dump_data[0]
@@ -133,16 +149,22 @@ P_mix = dump_data[2]
 states = dump_data[3]
 idict = dump_data[4]
 load_dict(DICT_DIR)
-sentence = u'汉字笔顺标准由国家语言文字工作委员会标准化工作委员会制定叫做现代汉语通用字笔顺规范'
-sentence2 = u'工信处女干事每月经过下属科室都要亲口交代二十四口交换机等技术性器件的安装工作'
-
-tmp = createGraph(sentence2)
-dfs(len(sentence2)-1,tmp,sentence2,'')
-best = select()
-bestt = ('',1e5)
-for sen in best:
-    sene,value = dealstr(sen)
-    if value<bestt[1]:
-        bestt = (sene,value)
-print 'best choice:'
-print ''.join(bestt[0]),value
+# print time.strftime('%Y-%m-%d %H:%M:%S')
+# sentence = u'汉字笔顺标准由国家语言文字工作委员会标准化工作委员会制定叫做现代汉语通用字笔顺规范'
+# sentence2 = u'工信处女干事每月经过下属科室都要亲口交代二十四口交换机等技术性器件的安装工作'
+# sentence3 = u'国家主席江泽民'
+# sentence4 = u'你好'
+# sentence5 = u'张'
+# sentence6 = u'中共中央总书记'
+# print cut(sentence5)
+# print cut(sentence6)
+# tmp = createGraph(sentence2)
+# dfs(len(sentence2)-1,tmp,sentence2,'')
+# best = select()
+# bestt = ('',1e5)
+# for sen in best:
+#     sene,value = dealstr(sen)
+#     if value<bestt[1]:
+#         bestt = (sene,value)
+# print 'best choice:'
+# print ''.join(bestt[0]),value
