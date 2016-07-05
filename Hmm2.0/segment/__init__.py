@@ -122,6 +122,9 @@ def dealstr(sentence):
     print sentence,P_sum
     return (sentence,P_sum)
 
+
+def cut():
+    pass
 f = open(MODEL_DIR)
 dump_data = pickle.load(f)
 P_start = dump_data[0]
@@ -132,6 +135,7 @@ idict = dump_data[4]
 load_dict(DICT_DIR)
 sentence = u'汉字笔顺标准由国家语言文字工作委员会标准化工作委员会制定叫做现代汉语通用字笔顺规范'
 sentence2 = u'工信处女干事每月经过下属科室都要亲口交代二十四口交换机等技术性器件的安装工作'
+
 tmp = createGraph(sentence2)
 dfs(len(sentence2)-1,tmp,sentence2,'')
 best = select()
