@@ -13,13 +13,14 @@ import os
 import sys
 import re
 import time
+import pickle
 DATA_DIR = os.getcwd()+'/../../data/'
 BASE_DICT = DATA_DIR + 'idict.utf8'
-# DICT_DIR = DATA_DIR + 'icwb2-data/gold/pku_training_words.utf-8'
 TRAIN_FILE = DATA_DIR + 'icwb2-data/training/pku_training.utf8'
 idict = []
-P_START = {'B':0.7689828525554734, 'E':0.0, 'M':0.0, 'S':0.2310171474445266}
-enums = ['B', 'E', 'M', 'S']
+P_START = [0.7689828525554734, 0.0, 0.0, 0.2310171474445266]
+states = ['B', 'E', 'M', 'S']
+outputs = []
 count_trans = {'B':{'B':0, 'E':0, 'M':0, 'S':0}, 'E':{'B':0, 'E':0, 'M':0, 'S':0}, 'M':{'B':0, 'E':0, 'M':0, 'S':0}, 'S':{'B':0, 'E':0, 'M':0, 'S':0}}
 P_transMatrix = {'B':{'B':0, 'E':0, 'M':0, 'S':0}, 'E':{'B':0, 'E':0, 'M':0, 'S':0}, 'M':{'B':0, 'E':0, 'M':0, 'S':0}, 'S':{'B':0, 'E':0, 'M':0, 'S':0}}
 
@@ -77,6 +78,8 @@ def train_Matrix(filename):
         for i in range(len(line_str)-1):
             count_trans[line_str[i]][line_str[i+1]]+=1
         for i in range(len(line_str)-1):
+            if line_item[i] not in idict:
+                idict.append(line_item[i])
             if line_item[i] not in count_mixed[line_str[i]].keys():
                 count_mixed[line_str[i]][line_item[i]] = 1
             else:
@@ -97,15 +100,24 @@ def train_Matrix(filename):
         # print num+len(value1)
         for key2,value2 in value1.items():
             P_mixedMatrix[key1][key2] = float(value2+1)/(num+len(value1))
-    print count_trans
-    print P_transMatrix
-    f1 = open('prob_trans.py', 'wb')
-    f2 = open('prob_emit.py', 'wb')
-    f3 = open('prob_start.py','wb')
-    f1.write(str(P_transMatrix))
-    f2.write(str(P_mixedMatrix))
-    f3.write(str(P_START))
-
+    # print count_trans
+    # print P_transMatrix
+    dump_data=[]
+    P_trans = [[0 for i in range(4)] for j in range(4)]
+    for i in range(4):
+        for j in range(4):
+            P_trans[i][j] = P_transMatrix[states[i]][states[j]]
+    P_mix = [[0 for i in range(len(idict))]for j in range(4)]
+    for i in range(4):
+        for j in range(len(idict)):
+            P_mix[i][j] = P_mixedMatrix[states[i]][idict[j]]
+    f1 = open('./data.dat', 'wb',-1)
+    dump_data.append(P_START)
+    dump_data.append(P_trans)
+    dump_data.append(P_mix)
+    dump_data.append(states)
+    dump_data.append(idict)
+    pickle.dump(dump_data, f1, -1)
 print time.strftime('%Y-%m-%d %H:%M:%S')
 enum_dict(BASE_DICT)
 train_Matrix(TRAIN_FILE)
