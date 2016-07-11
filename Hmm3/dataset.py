@@ -58,6 +58,6 @@ def read_dict(filename=TRAIN_FILE):
                     line = line.decode('utf-8')
                 except:
                     line = line.decode('gbk', 'ignore')
-        word = line.strip().split(' ')[0]
+        word = line.strip().split('\t')[0].split(' ')[0]
         idict[word] = 1
     return idict
