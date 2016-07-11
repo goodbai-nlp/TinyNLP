@@ -1,0 +1,2 @@
+perl ./score ../../hmm/vocab.txt \
+    target2.txt ../../Test/output.txt  > score3.ut8
