@@ -19,7 +19,7 @@ from collections import Counter
 
 DATA_DIR = os.getcwd()+'/data/'
 TRAIN_FILE = DATA_DIR + 'train.txt'
-TEST_FILE = DATA_DIR + 'hit_test.txt'
+TEST_FILE = DATA_DIR + 'dev.txt'
 OUT_PUT = os.getcwd() + '/score/output.txt'
 DATA_DICT = DATA_DIR + 'vocab.txt'
 class HMM(object):
@@ -96,10 +96,6 @@ class HMM(object):
             i = j+1
             j = i
 
-        #                 yield sentence[i:j + 1]
-        #                 i = j + 1
-        #             j += 1
-        # yield sentence[i:j + 1]
     def get_maxlength(self,start,sentence):
         tmp = range(min(len(sentence) - start, 6))
         max_length = 0
@@ -222,39 +218,31 @@ if __name__ == '__main__':
             if not blk:
                 continue
             if re_han.match(blk):
-                print(blk)
+                # print(blk)
                 for ll in hmm.raw_seg(blk):
                     if ll:
-                        print(ll)
+                        # print(ll)
                         if ll in hmm.idict:
                             res += ll
                         else:
                             tmp = __cut(ll, hmm)
-                            res += ' '.join(tmp)
-                        res += ' '
+                            res += '\n'.join(tmp)
+                        res += '\n'
             else:
                 i=0
                 while i<len(blk):
                     ttmp = ''
                     if not re_skip.match(blk[i]):
-                        res += blk[i] +' '
+                        res += blk[i] +'\n'
                         i+=1
                     else:
                         while (i<len(blk)) and re_skip.match(blk[i]):
                             ttmp+=blk[i]
                             i+=1
-                        res += (ttmp+' ')
+                        res += (ttmp+'\n')
         if res:
-            res+='\n'
+            # res+='\n'
             f.write(res.encode('utf-8'))
     print (time.strftime('%Y-%m-%d %H:%M:%S'))
-    # print(math.e**hmm.trans('B','E'))
-    # print(math.e**hmm.trans('B', 'M'))
-    # print(math.e**hmm.trans('B','S'))
-    # print(math.e ** hmm.trans('B', 'B'))
-    # print(len(hmm.idict))
-    # print(u'还原' in hmm.near_dict)
-    # print(u'目前' in hmm.idict.keys())
-    # for item in hmm.idict.keys():
-    #     print(item)
-    # f.close()
+
+    f.close()
