@@ -85,12 +85,28 @@ class HMM(object):
         return line_str
     def raw_seg(self,sentence):
         i,j=0,0
-        while j < len(sentence) - 1:
-            if not self.near_dict.has_key(sentence[j:j + 2]):
-                yield sentence[i:j + 1]
-                i = j + 1
-            j += 1
-        yield sentence[i:j + 1]
+        while j < len(sentence):
+            tag = False
+            max_length = self.get_maxlength(j,sentence)
+
+            while max_length:
+                j = j + max_length
+                max_length = self.get_maxlength(j,sentence)
+            yield sentence[i:j+1]
+            i = j+1
+            j = i
+
+        #                 yield sentence[i:j + 1]
+        #                 i = j + 1
+        #             j += 1
+        # yield sentence[i:j + 1]
+    def get_maxlength(self,start,sentence):
+        tmp = range(min(len(sentence) - start, 6))
+        max_length = 0
+        for lenh in tmp:
+            if lenh and self.idict.has_key(sentence[start:start + lenh + 1]):
+                max_length = lenh
+        return max_length
     def calc(self,res1,res2):
         '''平滑，取对数 平滑的参数是self.ALPHA'''
         return math.log(self.alpha*res1+(1-self.alpha)*res2)
@@ -103,15 +119,15 @@ class HMM(object):
         except:
             res1 = 0
         res2 = 1.0 / float(self.unigram[tag])
-        if i<(len(words)-1):
-            if self.idict.has_key(words[i:i+2]):
-                res1 = 1.0 if 'B'==tag else 0
-        if i < (len(words) - 2):
-            if self.idict.has_key(words[i:i + 3]):
-                res1 = 1.0 if 'B' == tag else 0
-        if i < (len(words) - 3):
-            if self.idict.has_key(words[i:i+2]) or self.idict.has_key(words[i:i+3]) or self.idict.has_key(words[i:i+4]):
-                res1 = 1.0 if 'B'==tag else 0
+        # if i<(len(words)-1):
+        #     if self.idict.has_key(words[i:i+2]):
+        #         res1 = 1.0 if 'B'==tag else 0
+        # if i < (len(words) - 2):
+        #     if self.idict.has_key(words[i:i + 3]):
+        #         res1 = 1.0 if 'B' == tag else 0
+        # if i < (len(words) - 3):
+        #     if self.idict.has_key(words[i:i+2]) or self.idict.has_key(words[i:i+3]) or self.idict.has_key(words[i:i+4]):
+        #         res1 = 1.0 if 'B'==tag else 0
         # if i>3 and i<len(words)-1:
         #     if self.idict.has_key(words[i-1:i+1]) or self.idict.has_key(words[i-2:i+1]) or self.idict.has_key(words[i-3:i+1]):
         #         res1 = 1.0 if 'E' == tag else 0
@@ -125,15 +141,16 @@ class HMM(object):
             if tag == 'B' or tag == 'M':
                 res1 = 0
         prob = self.calc(res1, res2)
-
         # prob = math.log((self.cooc[rob,tag]+1) / (ss+ len(words)))
         return prob
 
     def trans(self,tag,tag1):
+        '''这里先不用平滑'''
         ss = float(self.unigram[tag])
         res1 = self.bigram[(tag, tag1)] / ss
         res2 = 1.0 / ss
-        prob = self.calc(res1, res2)
+        # prob = self.calc(res1, res2)
+        prob = math.log(res1) if self.bigram[(tag,tag1)] else -1e10
         # prob = math.log((self.bigram[tag,tag1]+1)/(ss+len(self.postags)))
         return prob
 
@@ -165,8 +182,7 @@ def viterbi(words,hmm):
             best_t = j
 
     result = [best_t]
-    for i in range(len(words) - 1, 0, -1):
-        # Your code here, back trace to recover the full viterbi decode path
+    for i in range(len(words) - 1, 0, -1):      #回溯找出路径
         result.append(path[i][result[-1]])
     # convert POStag indexing to POStag str
     result = [hmm.postags[t] for t in reversed(result)]
@@ -197,7 +213,6 @@ if __name__ == '__main__':
     f = open(OUT_PUT,'wb')
     re_han = re.compile(ur"([\u4E00-\u9FA5]+)")
     re_skip = re.compile(ur"^[a-zA-Z0-9\uff10-\uff19\u2014\uff21-\uff3a\uff41-\uff5a]$")
-    # re_skip2 = re.compile(ur"")
     print (time.strftime('%Y-%m-%d %H:%M:%S'))
     # test_dataset = [u'回到ＣＤＭＡ覆盖地区再还原']
     for line in test_dataset:
@@ -207,9 +222,10 @@ if __name__ == '__main__':
             if not blk:
                 continue
             if re_han.match(blk):
+                print(blk)
                 for ll in hmm.raw_seg(blk):
                     if ll:
-                        # print(ll)
+                        print(ll)
                         if ll in hmm.idict:
                             res += ll
                         else:
@@ -232,6 +248,10 @@ if __name__ == '__main__':
             res+='\n'
             f.write(res.encode('utf-8'))
     print (time.strftime('%Y-%m-%d %H:%M:%S'))
+    # print(math.e**hmm.trans('B','E'))
+    # print(math.e**hmm.trans('B', 'M'))
+    # print(math.e**hmm.trans('B','S'))
+    # print(math.e ** hmm.trans('B', 'B'))
     # print(len(hmm.idict))
     # print(u'还原' in hmm.near_dict)
     # print(u'目前' in hmm.idict.keys())
