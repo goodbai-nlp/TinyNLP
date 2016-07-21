@@ -228,9 +228,9 @@ def NumNer(sentence):
     '''时间日期识别'''
     # print sentence
     seg = sentence.split(separator)
-    re_CN_NUM = re.compile(ur"^[\uff0d\-]{0,1}[0-9\uff10-\uff19\u25cb\\.]+$")
+    re_CN_NUM = re.compile(ur"^[\uff0d\-]{0,1}[0-9\uff10-\uff19\u25cb\\.\u5341\u767e\u5343\u4e07\u4ebf\uff05]+$")
     re_B_NUM = re.compile(ur"^[\u25cb\u4e00\u4e8c\u4e09\u56db\u4e94\u516d\u4e03\u516b\u4e5d\u5341\u767e\u5343\u4e07\u4ebf]+$")
-    re_date_time = re.compile(ur"^[\u5e74\u6708\u65e5]$")
+    re_date_time = re.compile(ur"^[\u5e74\u6708\u65e5\u5341\u767e\u5343\u4e07\u4ebf\uff05\u5206]$")
     i=0
     while i<(len(seg)-1):
         tmp=''
@@ -248,7 +248,7 @@ def NumNer(sentence):
     i=0
     while i<(len(seg)-1):
         tmp = ''
-        if re_CN_NUM.match(seg[i]):
+        if re_CN_NUM.match(seg[i]) or re_B_NUM.match(seg[i]):
             tmp+=seg[i]
             if(i+2<len(seg) and re_date_time.match(seg[i+1])):
                 tmp+=seg[i+1]
@@ -260,10 +260,10 @@ def NumNer(sentence):
     return separator.join(seg)
 print (time.strftime('%Y-%m-%d %H:%M:%S'))
 train_dataset = read_dataset()
-test_dataset = read_dataset(TEST_FILE)
+test_dataset = read_dataset(TEST_FILE2)
 hmm = HMM()
 hmm.fit(train_dataset)
-separator = '\n'
+separator = ' '
 if __name__ == '__main__':
 
     f = open(OUT_PUT,'wb')
@@ -304,7 +304,7 @@ if __name__ == '__main__':
                         res += (ttmp+separator)
         if res:
             ans = NumNer(res)
-            # ans+='\n'
+            ans+='\n'
             f.write(ans.encode('utf-8'))
             f2.write(tmpp.encode('utf-8'))
     print (time.strftime('%Y-%m-%d %H:%M:%S'))
