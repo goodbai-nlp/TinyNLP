@@ -49,12 +49,12 @@ def read_dict():
         # f2 = DATA_DIR + 'HIT_test.txt'
         fp = open(DATA_DICT, 'r')
         f2 = open(DATA_DICT2,'r')
-        f3 = open(DATA_DICT3,'r')
+        # f3 = open(DATA_DICT3,'r')
         # f = open(f2,'wb')
     except:
         print("Failed to open file.", file=sys.stderr)
         return
-    dict_list = [fp,f2,f3]
+    dict_list = [fp,f2]
     idict ={}
     for fs in dict_list:
         for line in fs:

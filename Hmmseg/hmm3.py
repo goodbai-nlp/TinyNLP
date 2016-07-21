@@ -1,14 +1,16 @@
 #!/usr/bin/env python
 # encoding: utf-8
+
 """
-@version: ??
+@version:
 @author: muyeby
 @contact: bxf_hit@163.com
 @site: http://muyeby.github.io
 @software: PyCharm
-@file: hmm2.py
-@time: 16-7-11 下午9:03
+@file: hmm3.py
+@time: 16-7-21 下午2:57
 """
+
 import math
 import os
 import re
@@ -27,6 +29,7 @@ OUT_PUT2 = os.getcwd() + '/score/support.txt'
 
 class HMM(object):
     '''隐马模型'''
+
     def __init__(self,alpha = 0.98,train_data = None):
         self.alpha = alpha
         self.start = {'B':0.7689828525554734, 'E':0.0, 'M':0.0, 'S':0.2310171474445266}
@@ -37,49 +40,48 @@ class HMM(object):
         self.unigram = Counter()       #标签出现次数
         self.bigram =  Counter()        #转移
         self.cooc = Counter()           #发射
-        self.wordcount = Counter()      #词计数
-        # self.tagset = set()
-        # self.wordset = set()
         self.idict = {}
         self.big_dict = {}
-        # self.near_dict ={}
         print('build HMM model...')
         self.idict = read_dict()
         self.big_dict = copy.deepcopy(self.idict)
+        f = open("tmp.txt",'wb')
         for item in train_data:
-            # paragraph = ''.join()
             re_han, re_skip = re.compile(ur"([\u4E00-\u9FA5\s]+)"), re.compile(ur"[^a-zA-Z0-9+#\n]")
             blocks = re_han.findall(item)
             if not blocks:
                 continue
             for sentence in blocks:
+                # print sentence
+                tag = False
                 tmp = sentence.strip().split()
-                if len(tmp):
-                    tags = self.getTags(tmp)
-                    print ' '.join(tmp)
-                    for sword in tmp:
-                        if len(sword)>1:
-                            self.big_dict[sword]=1
-                    words = list(''.join(tmp))
-                    self.unigram.update(tags)
-                    # self.tagset |= set(tags)
-                    # self.wordset |= set(words)
-                    self.wordcount.update(words)
-                    for i in range(len(tags)-1):
-                        self.bigram.update([(tags[i], tags[i + 1])])
-                    self.cooc.update([(words[i], tags[i]) for i in range(len(words))])
-        print(len(self.idict),len(self.big_dict))
-        # self.get_near()
+                conflict = []
+                if(len(tmp)):
+                    # print 'tmp:', ''.join(tmp)
+                    sourcesen = ''.join(tmp)
+                    res = self.raw_seg(sourcesen)
+                    for words in res:
+                        if not self.idict.has_key(words):
+                            conflict.append(words)
+                            # print words
+                            tag = True
+
+                    if not tag:
+                        continue
+                    wordtags = self.getTags(tmp)
+                    for itm in conflict:
+                        id = sourcesen.index(itm)
+                        tags = wordtags[id:id+len(itm)]
+                        self.unigram.update(tags)
+                        for i in range(len(tags)-1):
+                            self.bigram.update([(tags[i], tags[i + 1])])
+                        self.cooc.update([(itm[i], tags[i]) for i in range(len(itm))])
+                        str = itm + "  "+ ''.join(tags)+ "\n"
+                        f.write(str.encode('utf-8'))
+        # print(len(self.idict),len(self.big_dict))
         print('HMM model is built.')
         self.postags = [k for k in self.unigram]
-        # print(self.postags)
-    # def get_near(self):
-    #     for item in self.idict.keys():
-    #         if(item and len(item)>=2):
-    #             for i in range(len(item)-1):
-    #                 self.near_dict[item[i:i+2]]=1
-    #                 # print(item[i:i+2])
-    def getTags(self,sentence):
+    def getTags(self, sentence):
         line_str = []
         for item in sentence:
             # print(item)
@@ -97,40 +99,43 @@ class HMM(object):
         if len(''.join(sentence)) != len(line_str):
             print ('EEEEEEEEEEEEEEEEEEEEEE')
         return line_str
-    def raw_seg(self,sentence):
-        i,j=0,0
+
+    def raw_seg(self, sentence):
+        i, j = 0, 0
         res = []
         tag = False
         while j < len(sentence):
             tag = False
-            max_length = self.get_maxlength(j,sentence)
+            max_length = self.get_maxlength(j, sentence)
 
             while max_length:
                 j = j + max_length
-                max_length = self.get_maxlength(j,sentence)
-            yield sentence[i:j+1]
-            # res.append(sentence[i:j+1])
-            i = j+1
+                max_length = self.get_maxlength(j, sentence)
+            # yield sentence[i:j + 1]
+            res.append(sentence[i:j+1])
+            i = j + 1
             j = i
+        return res
 
-    def get_maxlength(self,start,sentence):
+    def get_maxlength(self, start, sentence):
         tmp = range(min(len(sentence) - start, 6))
         max_length = 0
         for lenh in tmp:
             if lenh and self.idict.has_key(sentence[start:start + lenh + 1]):
                 max_length = lenh
         return max_length
-    def calc(self,res1,res2):
-        '''平滑，取对数 平滑的参数是self.ALPHA'''
-        return math.log(self.alpha*res1+(1-self.alpha)*res2)
 
-    def emit(self,words, i, tag):
+    def calc(self, res1, res2):
+        '''平滑，取对数 平滑的参数是self.ALPHA'''
+        return math.log(self.alpha * res1 + (1 - self.alpha) * res2)
+
+    def emit(self, words, i, tag):
         rob = words[i]
         try:
             ss = float(self.unigram[tag])
             res1 = self.cooc[rob, tag] / ss
-            if(tag=='S'):
-                res1 = res1*0.5
+            if (tag == 'S'):
+                res1 = res1 * 0.5
         except:
             res1 = 0
         res2 = 1.0 / float(self.unigram[tag])
@@ -159,13 +164,13 @@ class HMM(object):
         # prob = math.log((self.cooc[rob,tag]+1) / (ss+ len(words)))
         return prob
 
-    def trans(self,tag,tag1):
+    def trans(self, tag, tag1):
         '''这里先不用平滑'''
         ss = float(self.unigram[tag])
         res1 = self.bigram[(tag, tag1)] / ss
         res2 = 1.0 / ss
         # prob = self.calc(res1, res2)
-        prob = math.log(res1) if self.bigram[(tag,tag1)] else -1e10
+        prob = math.log(res1) if self.bigram[(tag, tag1)] else -1e10
         # prob = math.log((self.bigram[tag,tag1]+1)/(ss+len(self.postags)))
         return prob
 
@@ -221,8 +226,6 @@ def __cut(sentence,hmm):
 
 print (time.strftime('%Y-%m-%d %H:%M:%S'))
 train_dataset = read_dataset()
-
-# test_dataset = read_dataset(TEST_FILE)
 test_dataset = read_dataset(TEST_FILE2)
 hmm = HMM()
 hmm.fit(train_dataset)
@@ -231,7 +234,7 @@ if __name__ == '__main__':
     f = open(OUT_PUT,'wb')
     f2 = open(OUT_PUT2,'wb')
     re_han = re.compile(ur"([\u4E00-\u9FA5]+)")
-    re_skip = re.compile(ur"^[a-zA-Z0-9\uff10-\uff19\u2014\uff21-\uff3a\uff41-\uff5a]$")
+    re_skip = re.compile(ur"^[a-zA-Z0-9\uff10-\uff19\u2014\uff21-\uff3a\uff41-\uff5a\u2026]$")
     print (time.strftime('%Y-%m-%d %H:%M:%S'))
     for line in test_dataset:
         res = ''
@@ -249,7 +252,7 @@ if __name__ == '__main__':
                         if ll in hmm.idict:
                             res += ll
                         else:
-                            tmp = __cut(ll, hmm)
+                            tmp = __cut(ll,hmm)
                             res += separator.join(tmp)
                         res += separator
             else:
