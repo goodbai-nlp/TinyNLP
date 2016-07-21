@@ -224,17 +224,52 @@ def __cut(sentence,hmm):
     if next < len(sentence):
         yield sentence[next:]
 
+def NumNer(sentence):
+    '''时间日期识别'''
+    # print sentence
+    seg = sentence.split(separator)
+    re_CN_NUM = re.compile(ur"^[\uff0d\-]{0,1}[0-9\uff10-\uff19\u25cb\\.]+$")
+    re_B_NUM = re.compile(ur"^[\u25cb\u4e00\u4e8c\u4e09\u56db\u4e94\u516d\u4e03\u516b\u4e5d\u5341\u767e\u5343\u4e07\u4ebf]+$")
+    re_date_time = re.compile(ur"^[\u5e74\u6708\u65e5]$")
+    i=0
+    while i<(len(seg)-1):
+        tmp=''
+        if(re_B_NUM.match(seg[i])):
+            tmp += seg[i]
+            j=0
+            for j in range(i+1,len(seg)):
+                if not re_B_NUM.match(seg[j]):
+                    break
+                tmp+=seg[j]
+            res = separator.join(seg[:i]) + separator + tmp + separator + separator.join(seg[j:])
+            seg = res.split(separator)
+        i+=1
+    # print ' '.join(seg)
+    i=0
+    while i<(len(seg)-1):
+        tmp = ''
+        if re_CN_NUM.match(seg[i]):
+            tmp+=seg[i]
+            if(i+2<len(seg) and re_date_time.match(seg[i+1])):
+                tmp+=seg[i+1]
+                res = separator.join(seg[:i])+separator+tmp+separator+separator.join(seg[i+2:])
+                seg = res.split(separator)
+                i = i+1
+                continue
+        i= i+1
+    return separator.join(seg)
 print (time.strftime('%Y-%m-%d %H:%M:%S'))
 train_dataset = read_dataset()
-test_dataset = read_dataset(TEST_FILE2)
+test_dataset = read_dataset(TEST_FILE)
 hmm = HMM()
 hmm.fit(train_dataset)
+separator = '\n'
 if __name__ == '__main__':
-    separator = ' '
+
     f = open(OUT_PUT,'wb')
     f2 = open(OUT_PUT2,'wb')
-    re_han = re.compile(ur"([\u4E00-\u9FA5]+)")
-    re_skip = re.compile(ur"^[a-zA-Z0-9\uff10-\uff19\u2014\uff21-\uff3a\uff41-\uff5a\u2026]$")
+    re_han = re.compile(ur"([\u4E00-\u9FA5\u25cb]+)")
+    re_skip = re.compile(ur"^[a-zA-Z0-9\uff10-\uff19\u2014\uff21-\uff3a\uff41-\uff5a\u2026\u25cb\\.]$")
     print (time.strftime('%Y-%m-%d %H:%M:%S'))
     for line in test_dataset:
         res = ''
@@ -268,8 +303,9 @@ if __name__ == '__main__':
                             i+=1
                         res += (ttmp+separator)
         if res:
-            res+='\n'
-            f.write(res.encode('utf-8'))
+            ans = NumNer(res)
+            # ans+='\n'
+            f.write(ans.encode('utf-8'))
             f2.write(tmpp.encode('utf-8'))
     print (time.strftime('%Y-%m-%d %H:%M:%S'))
     f.close()
