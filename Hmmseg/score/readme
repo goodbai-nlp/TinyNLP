@@ -1,2 +1,2 @@
-perl ./score ../../hmm/vocab.txt \
-    target2.txt ../../Test/output.txt  > score3.ut8
+perl ./score $your_dictionary \
+    $standard_output $your_output  > score.utf8
