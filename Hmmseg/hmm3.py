@@ -61,13 +61,14 @@ class HMM(object):
                     sourcesen = ''.join(tmp)
                     res = self.raw_seg(sourcesen)
                     for words in res:
-                        if not self.idict.has_key(words):
+                        if len(words)>1 and (not self.idict.has_key(words)) :
                             conflict.append(words)
                             # print words
                             tag = True
 
                     if not tag:
                         continue
+                    '''用有歧义的部分训练HMM'''
                     wordtags = self.getTags(tmp)
                     for itm in conflict:
                         id = sourcesen.index(itm)
@@ -78,7 +79,16 @@ class HMM(object):
                         self.cooc.update([(itm[i], tags[i]) for i in range(len(itm))])
                         str = itm + "  "+ ''.join(tags)+ "\n"
                         f.write(str.encode('utf-8'))
-        # print(len(self.idict),len(self.big_dict))
+                    '''用有歧义的句子训练HMM
+                    tags = wordtags
+                    self.unigram.update(tags)
+                    for i in range(len(tags) - 1):
+                        self.bigram.update([(tags[i], tags[i + 1])])
+                    self.cooc.update([(sourcesen[i], tags[i]) for i in range(len(sourcesen))])
+                    str = sourcesen + "  "+ ''.join(tags)+ "\n"
+                    f.write(str.encode('utf-8'))
+                    '''
+        print len(self.idict)
         print('HMM model is built.')
         self.postags = [k for k in self.unigram]
     def getTags(self, sentence):
@@ -118,7 +128,7 @@ class HMM(object):
         return res
 
     def get_maxlength(self, start, sentence):
-        tmp = range(min(len(sentence) - start, 6))
+        tmp = range(min(len(sentence) - start, 7))
         max_length = 0
         for lenh in tmp:
             if lenh and self.idict.has_key(sentence[start:start + lenh + 1]):
@@ -228,9 +238,9 @@ def NumNer(sentence):
     '''时间日期识别'''
     # print sentence
     seg = sentence.split(separator)
-    re_CN_NUM = re.compile(ur"^[\uff0d\-]{0,1}[0-9\uff10-\uff19\u25cb\\.\u5341\u767e\u5343\u4e07\u4ebf\uff05]+$")
-    re_B_NUM = re.compile(ur"^[\u25cb\u4e00\u4e8c\u4e09\u56db\u4e94\u516d\u4e03\u516b\u4e5d\u5341\u767e\u5343\u4e07\u4ebf]+$")
-    re_date_time = re.compile(ur"^[\u5e74\u6708\u65e5\u5341\u767e\u5343\u4e07\u4ebf\uff05\u5206]$")
+    re_CN_NUM = re.compile(ur"^[\uff0d\-]{0,1}[0-9\uff10-\uff19\u25cb\\.\u5341\u767e\u5343\u4e07\u4ebf\uff05\/]+$")
+    re_B_NUM = re.compile(ur"^[\u25cb\u4e00\u4e8c\u4e09\u56db\u4e94\u516d\u4e03\u516b\u4e5d\u5341\u767e\u5343\u4e07\u4ebf\u5206\u4e4b\u70b9]+$")
+    re_date_time = re.compile(ur"^[\u5e74\u6708\u65e5\u5341\u767e\u5343\u4e07\u4ebf\uff05\u65f6\u5206]$")
     i=0
     while i<(len(seg)-1):
         tmp=''
@@ -269,7 +279,7 @@ if __name__ == '__main__':
     f = open(OUT_PUT,'wb')
     f2 = open(OUT_PUT2,'wb')
     re_han = re.compile(ur"([\u4E00-\u9FA5\u25cb]+)")
-    re_skip = re.compile(ur"^[a-zA-Z0-9\uff10-\uff19\u2014\uff21-\uff3a\uff41-\uff5a\u2026\u25cb\\.]$")
+    re_skip = re.compile(ur"^[\uff0d\-{0,1}a-zA-Z0-9\uff10-\uff19\u2014\uff21-\uff3a\uff41-\uff5a\u2026\u25cb\\.]$")
     print (time.strftime('%Y-%m-%d %H:%M:%S'))
     for line in test_dataset:
         res = ''
@@ -284,7 +294,7 @@ if __name__ == '__main__':
                     if ll:
                         # print(ll)
                         tmpp=tmpp+ll+'\n'       # for support file
-                        if ll in hmm.idict:
+                        if ll in hmm.idict or len(ll)==1:
                             res += ll
                         else:
                             tmp = __cut(ll,hmm)

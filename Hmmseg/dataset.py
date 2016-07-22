@@ -49,8 +49,7 @@ def read_dict():
         # f2 = DATA_DIR + 'HIT_test.txt'
         fp = open(DATA_DICT, 'r')
         f2 = open(DATA_DICT2,'r')
-        # f3 = open(DATA_DICT3,'r')
-        # f = open(f2,'wb')
+        f3 = open(DATA_DICT3,'r')
     except:
         print("Failed to open file.", file=sys.stderr)
         return
@@ -65,6 +64,10 @@ def read_dict():
                     except:
                         line = line.decode('gbk', 'ignore')
             word = line.strip().split('\t')[0].split(' ')[0]
-            # print(word)
-            idict[word] = 1
+            if(len(word)>1):
+                idict[word] = 1
+
+    fp.close()
+    f2.close()
+    f3.close()
     return idict
