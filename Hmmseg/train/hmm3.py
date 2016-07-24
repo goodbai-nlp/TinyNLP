@@ -18,6 +18,7 @@ import sys
 import time
 import copy
 from dataset import read_dataset,read_dict
+from Name_CN import decode,CNNAME
 from collections import Counter
 
 DATA_DIR = os.getcwd()+'/../data/'
@@ -35,7 +36,8 @@ class HMM(object):
         self.start = {'B':0.7689828525554734, 'E':0.0, 'M':0.0, 'S':0.2310171474445266}
         if train_data:
             self.fit(train_data)
-
+        
+        
     def fit(self,train_data):
         self.unigram = Counter()       #标签出现次数
         self.bigram =  Counter()        #转移
@@ -57,7 +59,6 @@ class HMM(object):
                 tmp = sentence.strip().split()
                 conflict = []
                 if(len(tmp)):
-                    # print 'tmp:', ''.join(tmp)
                     sourcesen = ''.join(tmp)
                     res = self.raw_seg(sourcesen)
                     for words in res:
@@ -273,6 +274,8 @@ train_dataset = read_dataset()
 test_dataset = read_dataset(TEST_FILE2)
 hmm = HMM()
 hmm.fit(train_dataset)
+cname = CNNAME()
+cname.fit()
 separator = ' '
 if __name__ == '__main__':
 
@@ -314,8 +317,11 @@ if __name__ == '__main__':
                         res += (ttmp+separator)
         if res:
             ans = NumNer(res)
+            tp = ans.strip().split(' ')
+            rr = decode(cname,tp)
+            print rr
             ans+='\n'
-            f.write(ans.encode('utf-8'))
-            f2.write(tmpp.encode('utf-8'))
+            # f.write(ans.encode('utf-8'))
+            # f2.write(tmpp.encode('utf-8'))
     print (time.strftime('%Y-%m-%d %H:%M:%S'))
     f.close()

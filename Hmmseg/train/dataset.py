@@ -43,7 +43,29 @@ def read_dataset(filename=TRAIN_FILE):
         if tmp:
             dataset.append(' '.join([t.rsplit('/', 1)[0] for t in tokens]))
     return dataset
+def read_dataset2(filename = TRAIN_FILE):
+    try:
+        # f2 = DATA_DIR + 'HIT_test.txt'
+        fp = open(filename, 'r')
+        # f = open(f2,'wb')
+    except:
+        print("Failed to open file.", file=sys.stderr)
+        return
 
+    dataset = []
+    # i =0
+    for line in fp:
+        if sys.version < '3.0':
+            if not (type(line) is unicode):
+                try:
+                    line = line.decode('utf-8')
+                except:
+                    line = line.decode('gbk', 'ignore')
+        tokens = line.strip().split()
+        if tokens:
+            dataset.append(' '.join(tokens))
+            # print(tokens)
+    return dataset
 def read_dict():
     try:
         # f2 = DATA_DIR + 'HIT_test.txt'
