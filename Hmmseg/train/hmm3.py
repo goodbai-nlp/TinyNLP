@@ -25,6 +25,7 @@ DATA_DIR = os.getcwd()+'/../data/'
 TRAIN_FILE = DATA_DIR + 'train/train.txt'
 TEST_FILE = DATA_DIR + 'test/dev.txt'
 TEST_FILE2 = DATA_DIR + 'test/pku_test.utf8'
+TEST_FILE3 = DATA_DIR + 'test/HIT_test2.txt'
 OUT_PUT = os.getcwd() + '/../score/output.txt'
 OUT_PUT2 = os.getcwd() + '/../score/support.txt'
 
@@ -271,7 +272,7 @@ def NumNer(sentence):
     return separator.join(seg)
 print (time.strftime('%Y-%m-%d %H:%M:%S'))
 train_dataset = read_dataset()
-test_dataset = read_dataset(TEST_FILE2)
+test_dataset = read_dataset(TEST_FILE3)
 hmm = HMM()
 hmm.fit(train_dataset)
 cname = CNNAME()
@@ -281,12 +282,17 @@ if __name__ == '__main__':
 
     f = open(OUT_PUT,'wb')
     f2 = open(OUT_PUT2,'wb')
+    f3 = open('namevalue.txt','wb')
     re_han = re.compile(ur"([\u4E00-\u9FA5\u25cb]+)")
     re_skip = re.compile(ur"^[\uff0d\-{0,1}a-zA-Z0-9\uff10-\uff19\u2014\uff21-\uff3a\uff41-\uff5a\u2026\u25cb\\.]$")
     print (time.strftime('%Y-%m-%d %H:%M:%S'))
+    lnum=0
+    allnumm = 0
     for line in test_dataset:
+        lnum+=1
         res = ''
         tmpp = ''
+        
         blocks = re_han.split(line.strip())
         for blk in blocks:
             if not blk:
@@ -319,9 +325,13 @@ if __name__ == '__main__':
             ans = NumNer(res)
             tp = ans.strip().split(' ')
             rr = decode(cname,tp)
-            print rr
+            if rr:
+                allnumm+=len(rr)
+            # print lnum,':',rr
+            f3.write((rr+'\n').encode('utf-8'))
             ans+='\n'
             # f.write(ans.encode('utf-8'))
             # f2.write(tmpp.encode('utf-8'))
+    print 'total words:',allnumm
     print (time.strftime('%Y-%m-%d %H:%M:%S'))
     f.close()

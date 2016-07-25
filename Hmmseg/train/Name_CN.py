@@ -20,10 +20,13 @@ from collections import Counter
 
 DATA_DIR = os.getcwd()+'/../data/'
 PDict = DATA_DIR + 'train/person.txt'
+
 class CNNAME(object):
     '''人名识别'''
     def __init__(self):
-        self.alpha = -28
+        self.alpha = -30
+        self.para1 = 0
+        self.para2 = 0
         pass
     def fit(self):
         self.character = Counter()
@@ -199,15 +202,15 @@ def decode(model,sentence):
                 score1 = log(model.distribute[1])
                 if index-1 >=0 and sentence[index-1] in model.Pre_Postdict:
                     if model.Pre_Postdict[sentence[index-1]] >3:
-                        score1 += 4         # 自定义参数，可调整
+                        score1 += model.para1         # 自定义参数，可调整
                     else:
-                        score1 += 2         # 自定义参数，可调整
+                        score1 += model.para2         # 自定义参数，可调整
                         
                 if index+3 <len(sentence) and sentence[index+3] in model.Pre_Postdict:
                     if model.Pre_Postdict[sentence[index+3]] >3:
-                        score1 += 4         # 自定义参数，可调整
+                        score1 += model.para1         # 自定义参数，可调整
                     else:
-                        score1 += 2         # 自定义参数，可调整
+                        score1 += model.para2         # 自定义参数，可调整
                     
                 for i in range(3):
                     tmp= model.pchr_all(sentence[index+i],i)+model.pchr_name(sentence[index+i],i)
@@ -218,9 +221,9 @@ def decode(model,sentence):
                 score2 = tmp1+tmp2+log(model.distribute[0])
                 if index - 1 >= 0 and sentence[index - 1] in model.Pre_Postdict:
                     if model.Pre_Postdict[sentence[index - 1]] > 3:
-                        score2 += 4  # 自定义参数，可调整
+                        score2 += model.para1  # 自定义参数，可调整
                     else:
-                        score2 += 2  # 自定义参数，可调整
+                        score2 += model.para2  # 自定义参数，可调整
                 
                 if score1/log(3.0) > score2/log(2.0) and score1>model.alpha:    #自定义参数，可调整
                     res = sentence[index]+sentence[index+1]+sentence[index+2]
@@ -234,14 +237,14 @@ def decode(model,sentence):
                 score = tmp1 + tmp2+log(model.distribute[0])
                 if index - 1 >= 0 and sentence[index - 1] in model.Pre_Postdict:
                     if model.Pre_Postdict[sentence[index - 1]] > 3:
-                        score += 4  # 自定义参数，可调整
+                        score += model.para1  # 自定义参数，可调整
                     else:
-                        score += 2  # 自定义参数，可调整
+                        score += model.para2  # 自定义参数，可调整
                 if index + 2 < len(sentence) and sentence[index + 2] in model.Pre_Postdict:
                     if model.Pre_Postdict[sentence[index + 2]] > 3:
-                        score += 4  # 自定义参数，可调整
+                        score += model.para1  # 自定义参数，可调整
                     else:
-                        score += 2  # 自定义参数，可调整
+                        score += model.para2  # 自定义参数，可调整
                 if score>= model.alpha:
                     res = sentence[index]+sentence[index+1]
                     ans.append(res)
@@ -253,9 +256,3 @@ def rec_name(sentence):
     cname.fit()
     res = decode(cname, sentence)
     return res
-
-
-s = u'本报  北京  12月  31日  讯  新华社  记者  秦  杰  、  本报  记者  赵  川  东  报道  ：  乐音  飞扬  ，  弦  歌  阵阵  。  党  和  国家  领导人  尉  健  行  、  李  岚  清  今晚  在  人民  大会堂  与  数千  名  首都  观众  一起  ，  欣赏  世纪  音乐  盛典  ———  2001年  北京  新年  音乐会  。  '
-tmp = s.strip().split(' ')
-ss = rec_name(tmp)
-print ss

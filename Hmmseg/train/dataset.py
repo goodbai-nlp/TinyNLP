@@ -19,7 +19,7 @@ DATA_DICT2 = DATA_DIR + 'train/pku_training_words.utf8'
 DATA_DICT3 = DATA_DIR + 'train/msr_training_words.utf8'
 def read_dataset(filename=TRAIN_FILE):
     try:
-        # f2 = DATA_DIR + 'HIT_test.txt'
+        f2 =DATA_DIR+'test/HIT_test2.txt'
         fp = open(filename, 'r')
         # f = open(f2,'wb')
     except:
@@ -37,9 +37,9 @@ def read_dataset(filename=TRAIN_FILE):
                     line = line.decode('gbk', 'ignore')
         tokens = line.strip().split()
         tmp = (' '.join([t.rsplit('/', 1)[0] for t in tokens]))
-        # if tmp and i< 2000:
-        #     i+=1
-        #     f.write(tmp.encode('utf-8')+"\n")
+        # if tmp:
+        #     tt = ''.join([t.rsplit('/', 1)[0] for t in tokens])
+        #     # f.write(tt.encode('utf-8')+"\n")
         if tmp:
             dataset.append(' '.join([t.rsplit('/', 1)[0] for t in tokens]))
     return dataset
@@ -93,3 +93,5 @@ def read_dict():
     f2.close()
     f3.close()
     return idict
+
+# read_dataset()
