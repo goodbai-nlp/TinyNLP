@@ -134,24 +134,6 @@ class HMM(object):
         except:
             res1 = 0
         res2 = 1.0 / float(self.unigram[tag])
-        # if i<(len(words)-1):
-        #     if self.idict.has_key(words[i:i+2]):
-        #         res1 = 1.0 if 'B'==tag else 0
-        # if i < (len(words) - 2):
-        #     if self.idict.has_key(words[i:i + 3]):
-        #         res1 = 1.0 if 'B' == tag else 0
-        # if i < (len(words) - 3):
-        #     if self.idict.has_key(words[i:i+2]) or self.idict.has_key(words[i:i+3]) or self.idict.has_key(words[i:i+4]):
-        #         res1 = 1.0 if 'B'==tag else 0
-        # if i>3 and i<len(words)-1:
-        #     if self.idict.has_key(words[i-1:i+1]) or self.idict.has_key(words[i-2:i+1]) or self.idict.has_key(words[i-3:i+1]):
-        #         res1 = 1.0 if 'E' == tag else 0
-        # if i < (len(words) - 2) and i > 1:
-        #     if self.idict.has_key(words[i-1:i+2]) or self.idict.has_key(words[i-2:i+2]):
-        #         res1 = 1.0 if 'M' == tag else 0
-        # if i and i<(len(words)-3):
-        #     if self.idict.has_key(words[i-1:i+3]):
-        #         res1 = 1.0 if 'M' == tag else 0
         if i == len(words):
             if tag == 'B' or tag == 'M':
                 res1 = 0

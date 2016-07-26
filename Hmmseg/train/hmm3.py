@@ -10,40 +10,46 @@
 @file: hmm3.py
 @time: 16-7-21 下午2:57
 """
-
 import math
 import os
 import re
 import sys
 import time
 import copy
-from dataset import read_dataset,read_dict
+from dataset import read_dataset,read_dict,get_pcon
+from Name_CN import decode,CNNAME
 from collections import Counter
 
 DATA_DIR = os.getcwd()+'/../data/'
 TRAIN_FILE = DATA_DIR + 'train/train.txt'
+TRAIN_FILE2 = DATA_DIR + 'train/pku_training.utf8'
+TRAIN_PLACE = DATA_DIR + 'train/placecontext.txt'
 TEST_FILE = DATA_DIR + 'test/dev.txt'
 TEST_FILE2 = DATA_DIR + 'test/pku_test.utf8'
+TEST_FILE3 = DATA_DIR + 'test/HIT_test2.txt'
 OUT_PUT = os.getcwd() + '/../score/output.txt'
 OUT_PUT2 = os.getcwd() + '/../score/support.txt'
 
 class HMM(object):
     '''隐马模型'''
 
-    def __init__(self,alpha = 0.98,train_data = None):
+    def __init__(self,alpha = 0.5,train_data = None):
         self.alpha = alpha
         self.start = {'B':0.7689828525554734, 'E':0.0, 'M':0.0, 'S':0.2310171474445266}
         if train_data:
             self.fit(train_data)
-
+        
+        
     def fit(self,train_data):
         self.unigram = Counter()       #标签出现次数
         self.bigram =  Counter()        #转移
         self.cooc = Counter()           #发射
         self.idict = {}
         self.big_dict = {}
+        self.place_context = {}
         print('build HMM model...')
         self.idict = read_dict()
+        self.place_context = get_pcon(TRAIN_PLACE)
         self.big_dict = copy.deepcopy(self.idict)
         f = open("tmp.txt",'wb')
         for item in train_data:
@@ -57,11 +63,12 @@ class HMM(object):
                 tmp = sentence.strip().split()
                 conflict = []
                 if(len(tmp)):
-                    # print 'tmp:', ''.join(tmp)
                     sourcesen = ''.join(tmp)
                     res = self.raw_seg(sourcesen)
                     for words in res:
-                        if len(words)>1 and (not self.idict.has_key(words)) :
+                        if len(words)>1:
+                            self.big_dict[words]=1
+                        if len(words)>1 and (not self.idict.has_key(words)):
                             conflict.append(words)
                             # print words
                             tag = True
@@ -88,7 +95,8 @@ class HMM(object):
                     str = sourcesen + "  "+ ''.join(tags)+ "\n"
                     f.write(str.encode('utf-8'))
                     '''
-        print len(self.idict)
+        print len(self.idict),len(self.big_dict)
+        # self.idict = copy.deepcopy(self.big_dict)
         print('HMM model is built.')
         self.postags = [k for k in self.unigram]
     def getTags(self, sentence):
@@ -149,24 +157,7 @@ class HMM(object):
         except:
             res1 = 0
         res2 = 1.0 / float(self.unigram[tag])
-        # if i<(len(words)-1):
-        #     if self.idict.has_key(words[i:i+2]):
-        #         res1 = 1.0 if 'B'==tag else 0
-        # if i < (len(words) - 2):
-        #     if self.idict.has_key(words[i:i + 3]):
-        #         res1 = 1.0 if 'B' == tag else 0
-        # if i < (len(words) - 3):
-        #     if self.idict.has_key(words[i:i+2]) or self.idict.has_key(words[i:i+3]) or self.idict.has_key(words[i:i+4]):
-        #         res1 = 1.0 if 'B'==tag else 0
-        # if i>3 and i<len(words)-1:
-        #     if self.idict.has_key(words[i-1:i+1]) or self.idict.has_key(words[i-2:i+1]) or self.idict.has_key(words[i-3:i+1]):
-        #         res1 = 1.0 if 'E' == tag else 0
-        # if i < (len(words) - 2) and i > 1:
-        #     if self.idict.has_key(words[i-1:i+2]) or self.idict.has_key(words[i-2:i+2]):
-        #         res1 = 1.0 if 'M' == tag else 0
-        # if i and i<(len(words)-3):
-        #     if self.idict.has_key(words[i-1:i+3]):
-        #         res1 = 1.0 if 'M' == tag else 0
+        
         if i == len(words):
             if tag == 'B' or tag == 'M':
                 res1 = 0
@@ -268,22 +259,69 @@ def NumNer(sentence):
                 continue
         i= i+1
     return separator.join(seg)
+
+def Name_Ner(namelist,sen):
+    for name in namelist.strip().split(' '):
+        index = 0
+        if len(name)>=3:
+            while index<len(sen):
+                if index < len(sen)-2 and sen[index]== name[0] and sen[index+1] == name[1] and sen[index+2] == name[2]:
+                    tmp = name[1]+name[2]
+                    sen = sen[:index+1] + [tmp] + sen[index+3:]
+                    index+=1
+                index+=1
+    
+    return sen
+
+def Place_Ner(sen,model):
+    for itm in model.place_context.keys():
+        index =0
+        while index < len(sen):
+            if sen[index] == itm:
+                tmp = ''
+                if index-2>=0 and len(sen[index-1])==1 and len(sen[index-2])==1:
+                    if len(itm)<2:
+                        tmp = sen[index-2]+sen[index-1]+sen[index]
+                        sen = sen[:index-2] + [tmp] + sen[index+1:]
+                        index -=2
+                    else:
+                        tmp = sen[index-2]+sen[index-1]
+                        sen = sen[:index-2] + [tmp] + sen[index:]
+                        index -=1
+                elif index-1>=0 and len(sen[index-1])==2:
+                    if len(itm)<2:
+                        tmp = sen[index-1]+sen[index]
+                        sen = sen[:index-1] + [tmp] + sen[index+1:]
+                        index -=1
+                    else:
+                        pass
+            index+=1
+    return sen
 print (time.strftime('%Y-%m-%d %H:%M:%S'))
 train_dataset = read_dataset()
+train_dataset2 = read_dataset(TRAIN_FILE2)
+train_dataset = train_dataset+train_dataset2
 test_dataset = read_dataset(TEST_FILE2)
 hmm = HMM()
 hmm.fit(train_dataset)
+cname = CNNAME()
+cname.fit()
 separator = ' '
 if __name__ == '__main__':
 
     f = open(OUT_PUT,'wb')
     f2 = open(OUT_PUT2,'wb')
+    f3 = open('namevalue.txt','wb')
     re_han = re.compile(ur"([\u4E00-\u9FA5\u25cb]+)")
     re_skip = re.compile(ur"^[\uff0d\-{0,1}a-zA-Z0-9\uff10-\uff19\u2014\uff21-\uff3a\uff41-\uff5a\u2026\u25cb\\.]$")
     print (time.strftime('%Y-%m-%d %H:%M:%S'))
+    lnum=0
+    allnumm = 0
     for line in test_dataset:
+        lnum+=1
         res = ''
         tmpp = ''
+        
         blocks = re_han.split(line.strip())
         for blk in blocks:
             if not blk:
@@ -305,17 +343,25 @@ if __name__ == '__main__':
                 while i<len(blk):
                     ttmp = ''
                     if not re_skip.match(blk[i]):
-                        res += blk[i] +separator
+                        res += (blk[i]+separator)
                         i+=1
                     else:
                         while (i<len(blk)) and re_skip.match(blk[i]):
                             ttmp+=blk[i]
                             i+=1
                         res += (ttmp+separator)
+            
         if res:
             ans = NumNer(res)
-            ans+='\n'
-            f.write(ans.encode('utf-8'))
-            f2.write(tmpp.encode('utf-8'))
+            tp = ans.strip().split(' ')
+            rr = decode(cname,tp)
+            tt = Name_Ner(rr,tp)
+            tt2 = Place_Ner(tt,hmm)
+            final = ' '.join(tt2)
+            f3.write((rr+'\n').encode('utf-8'))
+            f2.write((tmpp + '\n').encode('utf-8'))
+            final+='\n'
+            f.write(final.encode('utf-8'))
+            
     print (time.strftime('%Y-%m-%d %H:%M:%S'))
     f.close()
