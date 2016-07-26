@@ -1,0 +1,2 @@
+perl ./score $your_dictionary \
+    $standard_output $your_output  > score.utf8
