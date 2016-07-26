@@ -95,7 +95,6 @@ def read_dict():
     f3.close()
     return idict
 
-<<<<<<< HEAD
 def get_pcon(filename = TRAIN_PLACE):
     tmpdict = {}
     try:
@@ -114,7 +113,3 @@ def get_pcon(filename = TRAIN_PLACE):
         tmpdict[word] = 1
     return tmpdict
 
-get_pcon()
-=======
-# read_dataset()
->>>>>>> db62c7729fe4ad1980609a704cb0409168d6407d

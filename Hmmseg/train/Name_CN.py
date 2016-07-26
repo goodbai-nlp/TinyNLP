@@ -24,15 +24,10 @@ PDict = DATA_DIR + 'train/person.txt'
 class CNNAME(object):
     '''人名识别'''
     def __init__(self):
-<<<<<<< HEAD
         self.alpha = -29
         self.para1 = 1
         self.para2 = 2
-=======
-        self.alpha = -30
-        self.para1 = 0
-        self.para2 = 0
->>>>>>> db62c7729fe4ad1980609a704cb0409168d6407d
+
         pass
     def fit(self):
         self.character = Counter()
@@ -150,23 +145,16 @@ class CNNAME(object):
     
     def pchr_all(self,chr,num):
         '''统计Wi作姓（或名）用字出现的次数/Wi出现的总次数'''
-<<<<<<< HEAD
+
         para = 7.0
         if num ==0:
             if(len(chr)==1):
                 res1 = max(self.han_first[chr],1)
                 res2 = para*max(self.character[chr],1)
-=======
-        if num ==0:
-            if(len(chr)==1):
-                res1 = max(self.han_first[chr],1)
-                res2 = 6*max(self.character[chr],1)
->>>>>>> db62c7729fe4ad1980609a704cb0409168d6407d
                 return self.calc(res1,res2)
                 # return float(res1)/res2
             if(len(chr)==2):
                 res1 = max(self.han_first[tuple(chr)],1)
-<<<<<<< HEAD
                 res2 = para*max(self.character[tuple(chr)],1)
                 return self.calc(res1, res2)
         elif num==1:
@@ -180,9 +168,8 @@ class CNNAME(object):
         elif num==3:
             res1 = max(self.han_single[chr], 1)
             res2 = para*max(self.character[chr], 1)
-=======
-                res2 = 6*max(self.character[tuple(chr)],1)
-                return self.calc(res1, res2)
+
+            return self.calc(res1, res2)
         elif num==1:
             res1 = max(self.han_second1[chr],1)
             res2 = 6*max(self.character[chr],1)
@@ -194,7 +181,6 @@ class CNNAME(object):
         elif num==3:
             res1 = max(self.han_single[chr], 1)
             res2 = 6*max(self.character[chr], 1)
->>>>>>> db62c7729fe4ad1980609a704cb0409168d6407d
             return self.calc(res1, res2)
     def pchr_name(self,chr,num):
         '''Wi在姓（或名）中使用的次数/ 姓名中的所有姓（或名）使用的总次数'''
@@ -255,7 +241,7 @@ def decode(model,sentence):
                     else:
                         score2 += model.para2  # 自定义参数，可调整
                 
-<<<<<<< HEAD
+
                 if score1/4.0 > score2/2.0 and score1>model.alpha:    #自定义参数，可调整
                     res = sentence[index]+sentence[index+1]+sentence[index+2]
                     ans.append(res)
@@ -263,15 +249,7 @@ def decode(model,sentence):
                     res = sentence[index] + sentence[index + 1]
                     ans.append(res)
             elif index+1<len(sentence) and len(sentence[index+1])==1 and len(sentence[index])>1: #诸葛+单字
-=======
-                if score1/log(3.0) > score2/log(2.0) and score1>model.alpha:    #自定义参数，可调整
-                    res = sentence[index]+sentence[index+1]+sentence[index+2]
-                    ans.append(res)
-                elif score1/log(3.0) < score2/log(2.0) and score2>model.alpha:
-                    res = sentence[index] + sentence[index + 1]
-                    ans.append(res)
-            elif index+1<len(sentence) and len(sentence[index+1])==1: #诸葛+单字
->>>>>>> db62c7729fe4ad1980609a704cb0409168d6407d
+
                 tmp1 = model.pchr_all(sentence[index], 0) + model.pchr_name(sentence[index], 0)
                 tmp2 = model.pchr_all(sentence[index+1], 3) + model.pchr_name(sentence[index+1], 3)
                 score = tmp1 + tmp2+log(model.distribute[0])
@@ -289,11 +267,6 @@ def decode(model,sentence):
                     res = sentence[index]+sentence[index+1]
                     ans.append(res)
         index +=1
-<<<<<<< HEAD
-    # print ' '.join(ans)
-=======
-    print ' '.join(ans)
->>>>>>> db62c7729fe4ad1980609a704cb0409168d6407d
     return ' '.join(ans)
 def rec_name(sentence):
     cname = CNNAME()

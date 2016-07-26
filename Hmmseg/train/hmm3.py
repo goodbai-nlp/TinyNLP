@@ -16,11 +16,8 @@ import re
 import sys
 import time
 import copy
-<<<<<<< HEAD
 from dataset import read_dataset,read_dict,get_pcon
-=======
-from dataset import read_dataset,read_dict
->>>>>>> db62c7729fe4ad1980609a704cb0409168d6407d
+
 from Name_CN import decode,CNNAME
 from collections import Counter
 
@@ -69,13 +66,23 @@ class HMM(object):
                 if(len(tmp)):
                     sourcesen = ''.join(tmp)
                     res = self.raw_seg(sourcesen)
-                    for words in res:
+                    # for words in res:
+                    index =0
+                    while index < len(res):
+                        words = res[index]
                         if len(words)>1:
                             self.big_dict[words]=1
                         if len(words)>1 and (not self.idict.has_key(words)):
-                            conflict.append(words)
+                            inputs = ''
+                            if index>0:
+                                inputs+=res[index-1]
+                            inputs+=res[index]
+                            if index<len(res)-1:
+                                inputs+=res[index+1]
+                            conflict.append(inputs)
                             # print words
                             tag = True
+                        index+=1
 
                     if not tag:
                         continue
@@ -213,21 +220,29 @@ def viterbi(words,hmm):
     result = [hmm.postags[t] for t in reversed(result)]
     return result
 
-def __cut(sentence,hmm):
-    pos_list = viterbi(sentence,hmm)
+def __cut(sen,hmm,start,lent):
+    pos = viterbi(sen,hmm)
+    pos_list = pos[start:start+lent]
+    sentence = sen[start:start+lent]
+    # print ' '.join(pos_list)
+    res = []
     begin, next = 0, 0
     for i, char in enumerate(sentence):
         pos = pos_list[i]
         if pos == 'B':
             begin = i
         elif pos == 'E':
-            yield sentence[begin:i + 1]
+            ttmp = ''.join(sentence[begin:i + 1])
+            res.append(ttmp)
             next = i + 1
         elif pos == 'S':
-            yield char
+            res.append(char)
             next = i + 1
     if next < len(sentence):
-        yield sentence[next:]
+        ttmp = ''.join(sentence[next:])
+        res.append(ttmp)
+    # print ' '.join(res)
+    return res
 
 def NumNer(sentence):
     '''时间日期识别'''
@@ -303,13 +318,10 @@ def Place_Ner(sen,model):
     return sen
 print (time.strftime('%Y-%m-%d %H:%M:%S'))
 train_dataset = read_dataset()
-<<<<<<< HEAD
 train_dataset2 = read_dataset(TRAIN_FILE2)
 train_dataset = train_dataset+train_dataset2
 test_dataset = read_dataset(TEST_FILE2)
-=======
-test_dataset = read_dataset(TEST_FILE3)
->>>>>>> db62c7729fe4ad1980609a704cb0409168d6407d
+
 hmm = HMM()
 hmm.fit(train_dataset)
 cname = CNNAME()
@@ -336,16 +348,29 @@ if __name__ == '__main__':
                 continue
             if re_han.match(blk):
                 # print(blk)
-                for ll in hmm.raw_seg(blk):
+                # for ll in hmm.raw_seg(blk):
+                index = 0
+                wlist = hmm.raw_seg(blk)
+                while index<len(wlist):
+                    ll = wlist[index]
                     if ll:
-                        # print(ll)
+                        
                         tmpp=tmpp+ll+'\n'       # for support file
                         if ll in hmm.idict or len(ll)==1:
                             res += ll
                         else:
-                            tmp = __cut(ll,hmm)
+                            inputs = ''
+                            llen = 0
+                            if index-1>0:
+                                inputs += wlist[index-1]
+                                llen = len(wlist[index-1])
+                            inputs += wlist[index]
+                            if index+1<len(wlist):
+                                inputs+=wlist[index+1]
+                            tmp = __cut(inputs,hmm,llen,len(ll))
                             res += separator.join(tmp)
                         res += separator
+                    index+=1
             else:
                 i=0
                 while i<len(blk):
@@ -363,7 +388,6 @@ if __name__ == '__main__':
             ans = NumNer(res)
             tp = ans.strip().split(' ')
             rr = decode(cname,tp)
-<<<<<<< HEAD
             tt = Name_Ner(rr,tp)
             tt2 = Place_Ner(tt,hmm)
             final = ' '.join(tt2)
@@ -371,16 +395,6 @@ if __name__ == '__main__':
             f2.write((tmpp + '\n').encode('utf-8'))
             final+='\n'
             f.write(final.encode('utf-8'))
-            
-=======
-            if rr:
-                allnumm+=len(rr)
-            # print lnum,':',rr
-            f3.write((rr+'\n').encode('utf-8'))
-            ans+='\n'
-            # f.write(ans.encode('utf-8'))
-            # f2.write(tmpp.encode('utf-8'))
-    print 'total words:',allnumm
->>>>>>> db62c7729fe4ad1980609a704cb0409168d6407d
+        
     print (time.strftime('%Y-%m-%d %H:%M:%S'))
     f.close()
