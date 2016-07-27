@@ -18,13 +18,13 @@ import copy
 from dataset import read_dataset,read_dict
 from collections import Counter
 
-DATA_DIR = os.getcwd()+'/data/'
+DATA_DIR = os.getcwd()+'/../data/'
 TRAIN_FILE = DATA_DIR + 'train/train.txt'
+TRAIN_FILE2 = DATA_DIR + 'train/pku_training.utf8'
 TEST_FILE = DATA_DIR + 'test/dev.txt'
 TEST_FILE2 = DATA_DIR + 'test/pku_test.utf8'
-OUT_PUT = os.getcwd() + '/score/output.txt'
-OUT_PUT2 = os.getcwd() + '/score/support.txt'
-
+OUT_PUT = os.getcwd() + '/../score/output.txt'
+OUT_PUT2 = os.getcwd() + '/../score/support.txt'
 class HMM(object):
     '''隐马模型'''
     def __init__(self,alpha = 0.98,train_data = None):
@@ -38,11 +38,10 @@ class HMM(object):
         self.bigram =  Counter()        #转移
         self.cooc = Counter()           #发射
         self.wordcount = Counter()      #词计数
-        # self.tagset = set()
-        # self.wordset = set()
+     
         self.idict = {}
         self.big_dict = {}
-        # self.near_dict ={}
+       
         print('build HMM model...')
         self.idict = read_dict()
         self.big_dict = copy.deepcopy(self.idict)
@@ -56,14 +55,12 @@ class HMM(object):
                 tmp = sentence.strip().split()
                 if len(tmp):
                     tags = self.getTags(tmp)
-                    print ' '.join(tmp)
+                    # print ' '.join(tmp)
                     for sword in tmp:
                         if len(sword)>1:
                             self.big_dict[sword]=1
                     words = list(''.join(tmp))
                     self.unigram.update(tags)
-                    # self.tagset |= set(tags)
-                    # self.wordset |= set(words)
                     self.wordcount.update(words)
                     for i in range(len(tags)-1):
                         self.bigram.update([(tags[i], tags[i + 1])])
@@ -72,13 +69,7 @@ class HMM(object):
         # self.get_near()
         print('HMM model is built.')
         self.postags = [k for k in self.unigram]
-        # print(self.postags)
-    # def get_near(self):
-    #     for item in self.idict.keys():
-    #         if(item and len(item)>=2):
-    #             for i in range(len(item)-1):
-    #                 self.near_dict[item[i:i+2]]=1
-    #                 # print(item[i:i+2])
+        
     def getTags(self,sentence):
         line_str = []
         for item in sentence:
@@ -211,7 +202,7 @@ hmm.fit(train_dataset)
 if __name__ == '__main__':
     separator = ' '
     f = open(OUT_PUT,'wb')
-    f2 = open(OUT_PUT2,'wb')
+    # f2 = open(OUT_PUT2,'wb')
     re_han = re.compile(ur"([\u4E00-\u9FA5]+)")
     re_skip = re.compile(ur"^[a-zA-Z0-9\uff10-\uff19\u2014\uff21-\uff3a\uff41-\uff5a]$")
     print (time.strftime('%Y-%m-%d %H:%M:%S'))
@@ -249,6 +240,6 @@ if __name__ == '__main__':
         if res:
             res+='\n'
             f.write(res.encode('utf-8'))
-            f2.write(tmpp.encode('utf-8'))
+            # f2.write(tmpp.encode('utf-8'))
     print (time.strftime('%Y-%m-%d %H:%M:%S'))
     f.close()
