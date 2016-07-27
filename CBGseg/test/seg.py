@@ -9,11 +9,12 @@ import time
 sys.path.append("..")
 
 from utils.tnt import TnT
-from model.NumNer import NumNer
+from model.NumNer import NumRec
 from model.y09_2047 import CharacterBasedGenerativeModel
-TRAIN_FILE = '../train/data2.txt'
+from model.PlaceNer import PlaceRec
+TRAIN_FILE = '../train/data/data2.txt'
 TEST_FILE = 'pku_test.utf8'
-TEST_OUTPUT = '../output.txt'
+TEST_OUTPUT = '../score/output.txt'
 class Seg(object):
 
     def __init__(self, name='other'):
@@ -21,7 +22,8 @@ class Seg(object):
             self.segger = TnT()
         else:
             self.segger = CharacterBasedGenerativeModel()
-
+        self.Pner = PlaceRec()
+        self.Numner = NumRec()
     def save(self, fname, iszip=True):
         self.segger.save(fname, iszip)
 
@@ -75,8 +77,9 @@ if __name__ == '__main__':
                     line = line.decode('gbk', 'ignore')
         line = line.strip()
         res = seg.seg(line)
-        tmp = NumNer(res)
-        ans = ' '.join(tmp)
+        tmp = seg.Numner.NumNer(res)
+        ttmp = seg.Pner.Place_Ner(tmp)
+        ans = ' '.join(ttmp)
         ans+='\n'
         f2.write(ans.encode('utf-8'))
     print(time.strftime('%Y-%m-%d %H:%M:%S'))
