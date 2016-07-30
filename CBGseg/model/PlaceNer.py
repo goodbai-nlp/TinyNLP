@@ -42,7 +42,7 @@ class PlaceRec(object):
                         if len(itm)<2:
                             tmp = sen[index-2]+sen[index-1]+sen[index]
                             sen = sen[:index-2] + [tmp] + sen[index+1:]
-                            print tmp
+                            # print tmp
                             index -=2
                         # else:
                         #     tmp = sen[index-2]+sen[index-1]
@@ -53,7 +53,7 @@ class PlaceRec(object):
                         if len(itm)<2:
                             tmp = sen[index-1]+sen[index]
                             sen = sen[:index-1] + [tmp] + sen[index+1:]
-                            print tmp
+                            # print tmp
                             index -=1
                         else:
                             pass

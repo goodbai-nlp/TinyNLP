@@ -20,7 +20,9 @@ class CharacterBasedGenerativeModel(object):
         self.uni = frequency.NormalProb()
         self.bi = frequency.NormalProb()
         self.tri = frequency.NormalProb()
-
+        # self.uni = frequency.AddOneProb()
+        # self.bi = frequency.AddOneProb()
+        # self.tri = frequency.AddOneProb()
     def save(self, fname, iszip=True):
         d = {}
         for k, v in self.__dict__.items():

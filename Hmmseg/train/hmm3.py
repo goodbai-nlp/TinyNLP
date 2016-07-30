@@ -289,7 +289,6 @@ def Name_Ner(namelist,sen):
                     sen = sen[:index+1] + [tmp] + sen[index+3:]
                     index+=1
                 index+=1
-    
     return sen
 
 def Place_Ner(sen,model):

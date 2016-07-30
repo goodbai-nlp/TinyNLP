@@ -49,7 +49,12 @@ class AddOneProb(BaseProb):
             self.d[key] = 1
             self.total += 1
         self.d[key] += value
-
+    
+    def get(self, key):
+        if not self.exists(key):
+            self.total+=1
+            return False, self.none
+        return True, self.d[key]
 
 class GoodTuringProb(BaseProb):
 
