@@ -8,9 +8,8 @@ import sys
 import time
 sys.path.append("..")
 
-from utils.tnt import TnT
 from model.NumNer import NumRec
-from model.y09_2047 import CharacterBasedGenerativeModel
+from model.CBGM import CBGM
 from model.PlaceNer import PlaceRec
 from model.NameNer import CNNAME,decode
 
@@ -22,11 +21,8 @@ TEST_OUTPUT = '../score/output.txt'
 
 class Seg(object):
 
-    def __init__(self, name='other'):
-        if name == 'tnt':
-            self.segger = TnT()
-        else:
-            self.segger = CharacterBasedGenerativeModel()
+    def __init__(self):
+        self.segger = CBGM()
         self.Pner = PlaceRec()
         self.Numner = NumRec()
         self.cname = CNNAME()
@@ -45,12 +41,6 @@ class Seg(object):
                         line = line.decode('gbk', 'ignore')
             word = line.strip()
             self.idict[word]=1
-    
-    def save(self, fname, iszip=True):
-        self.segger.save(fname, iszip)
-
-    def load(self, fname, iszip=True):
-        self.segger.load(fname, iszip)
 
     def train(self, fname):
         fr = codecs.open(fname, 'r', 'utf-8')
@@ -65,6 +55,7 @@ class Seg(object):
         self.segger.train(data)
 
     def seg(self, sentence):
+        '''标签到汉字序列转换'''
         ret = self.segger.tag(sentence)
         res = []
         tmp = ''
