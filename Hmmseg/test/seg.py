@@ -166,7 +166,7 @@ if __name__ == '__main__':
             res2 = Pner.Place_Ner(res1)
             namelist = decode(cname, res2)
             res3 = Name_Replace(namelist, res2)
-            ans = '\n'.join(res3)
+            ans = '\t'.join(res3)
             ans += '\n'
             f.write(ans.encode('utf-8'))
     print 'mission complete'
