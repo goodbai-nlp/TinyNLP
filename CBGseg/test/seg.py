@@ -3,7 +3,6 @@ from __future__ import print_function
 from __future__ import unicode_literals
 
 import codecs
-import os
 import sys
 import time
 sys.path.append("..")
@@ -13,10 +12,11 @@ from model.CBGM import CBGM
 from model.PlaceNer import PlaceRec
 from model.NameNer import CNNAME,decode
 
-TRAIN_FILE = '../train/data/data2.txt'
+TRAIN_FILE = '../train/data/pku_data.txt'
+TRAIN_FILE2 = '../train/data/msr_data.txt'
 USER_DICT = '../train/data/userdict.txt'
 TEST_FILE = 'pku_test.utf8'
-TEST_FILE2 = 'test.txt'
+TEST_FILE2 = 'msr_test.utf8'
 TEST_OUTPUT = '../score/output.txt'
 
 class Seg(object):
@@ -29,7 +29,7 @@ class Seg(object):
         self.cname.fit()
         self.idict = {}
         self.load_dict()
-    
+        
     def load_dict(self):
         f = codecs.open(USER_DICT,'r')
         for line in f:
@@ -72,7 +72,7 @@ class Seg(object):
         if tmp:
             res.append(tmp)
         return res
-
+    
 def Name_Replace(namelist,sen):
     for name in namelist.strip().split(' '):
         index = 0
@@ -89,7 +89,7 @@ if __name__ == '__main__':
     print(time.strftime('%Y-%m-%d %H:%M:%S'))
     seg = Seg()
     seg.train(TRAIN_FILE)
-    f = open(TEST_FILE2)
+    f = open(TEST_FILE)
     f2 = open(TEST_OUTPUT,'wb')
     print('model loaded')
     print(time.strftime('%Y-%m-%d %H:%M:%S'))
@@ -103,11 +103,10 @@ if __name__ == '__main__':
         line = line.strip()
         res = seg.seg(line)
         res1 = seg.Numner.NumNer(res)
-        res2 = seg.Pner.Place_Ner(res1)
-        namelist = decode(seg.cname,res2)
-        res3 = Name_Replace(namelist,res2)
-        ans = '\n'.join(res3)
+        # res2 = seg.Pner.Place_Ner(res1)
+        # namelist = decode(seg.cname,res2)
+        # res3 = Name_Replace(namelist,res2)
+        ans = ' '.join(res1)
         ans+='\n'
         f2.write(ans.encode('utf-8'))
     print(time.strftime('%Y-%m-%d %H:%M:%S'))
-

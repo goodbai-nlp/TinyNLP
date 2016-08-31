@@ -47,3 +47,17 @@ class NormalProb(BaseProb):
             self.d[key] = 0
         self.d[key] += value
         self.total += value
+
+class AddOneProb(BaseProb):
+
+    def __init__(self):
+        self.d = {}
+        self.total = 0.0
+        self.none = 1
+
+    def add(self, key, value):
+        self.total += value
+        if not self.exists(key):
+            self.d[key] = 1
+            self.total += 1
+        self.d[key] += value
