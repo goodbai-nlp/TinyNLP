@@ -6,17 +6,16 @@ import codecs
 import sys
 import time
 sys.path.append("..")
-
 from model.NumNer import NumRec
 from model.CBGM import CBGM
 from model.PlaceNer import PlaceRec
 from model.NameNer import CNNAME,decode
-
+from config.config import Config
 TRAIN_FILE = '../train/data/pku_data.txt'
 TRAIN_FILE2 = '../train/data/msr_data.txt'
 USER_DICT = '../train/data/userdict.txt'
-TEST_FILE = 'pku_test.utf8'
-TEST_FILE2 = 'msr_test.utf8'
+TEST_FILE = Config.PKU_TEST
+TEST_FILE2 = Config.MSR_TEST
 TEST_OUTPUT = '../score/output.txt'
 
 class Seg(object):

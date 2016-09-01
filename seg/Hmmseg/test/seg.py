@@ -15,6 +15,7 @@ import os
 import re
 import math
 sys.path.append('..')
+from config.config import Config
 from model.NameNer import decode,CNNAME
 from model.NumNer import NumRec
 from model.PlaceNer import PlaceRec
@@ -24,7 +25,7 @@ from utils.dataset import read_dataset
 DATA_DIR = os.getcwd()+'/../data/'
 TRAIN_FILE = DATA_DIR + 'train/train.txt'
 TEST_FILE1 = 'test.txt'
-TEST_FILE2 = 'pku_test.utf8'
+TEST_FILE2 = Config.PKU_TEST
 OUT_PUT = os.getcwd() + '/../score/output.txt'
 
 
