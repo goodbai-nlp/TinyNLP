@@ -23,7 +23,7 @@ hmm+字典分词是jieba分词系统的核心模块，这里就不再介绍hmm�
 当我们发现一阶hmm不够用时，直观的想可以考虑采用二阶hmm来提高正确率，这里参照的是A00-1031这篇论文的Trigrams'n'Tags（TnT）模型，TnT模型的公式写起来想这样：  
 	`argmax(ΠP(wordi∣tagi)∗P(tagi∣tagi−1,tagi−2))`  
 考虑到每个字的标签同样可以加入计算，所以这算是一个TnT的变种，既考虑了已知序列，也考虑了标注序列，它的概率公式写起来像是这样：  
-	$$$argmax(ΠP((wordi,tagi)∣(wordi−1,tagi−1),(wordi−2,tagi−2)))$$$  
+	`argmax(ΠP((wordi,tagi)∣(wordi−1,tagi−1),(wordi−2,tagi−2)))`  
 看起来像是TnT和普通n-gram的综合，所以效果应该会比以上的模型好一点  
 [注]：大概还有许多的细节的优化和数据平滑的不到位导致实验结果和论文的结果有差距，以后有时间会继续做调整。  
 ###crf分词
