@@ -14,9 +14,12 @@ import sys
 import os
 DATA_DIR = os.getcwd()+'/../data/'
 TRAIN_FILE = DATA_DIR + 'train/hit_train.txt'
+TRAIN_FILE2 = DATA_DIR + 'train/msr_training.utf8'
 TRAIN_PLACE = DATA_DIR + 'train/placecontext.txt'
 DATA_DICT = DATA_DIR + 'train/hit_training_words.txt'
 DATA_DICT2 = DATA_DIR + 'train/pku_training_words.utf8'
+DATA_DICT3 = DATA_DIR + 'train/msr_training_words.utf8'
+
 
 def read_dataset(filename=TRAIN_FILE):
     try:
@@ -67,6 +70,7 @@ def read_dict():
     try:
         fp = open(DATA_DICT, 'r')
         f2 = open(DATA_DICT2,'r')
+        f3 = open(DATA_DICT3,'r')
     except:
         print("Failed to open file.", file=sys.stderr)
         return

@@ -87,8 +87,8 @@ def Name_Replace(namelist,sen):
 if __name__ == '__main__':
     print(time.strftime('%Y-%m-%d %H:%M:%S'))
     seg = Seg()
-    seg.train(TRAIN_FILE)
-    f = open(TEST_FILE)
+    seg.train(TRAIN_FILE2)
+    f = open(TEST_FILE2)
     f2 = open(TEST_OUTPUT,'wb')
     print('model loaded')
     print(time.strftime('%Y-%m-%d %H:%M:%S'))

@@ -1385,8 +1385,7 @@ TEST WORDS PRECISION:	0.892
 小提琴家						      |	小提琴
 							      >	家
 吕								吕
-思清							      |	思
-							      >	清
+思清								思清
 演绎								演绎
 下								下
 更								更
@@ -1473,14 +1472,14 @@ TEST WORDS PRECISION:	0.892
 的								的
 脚步								脚步
 。								。
-INSERTIONS:	15
+INSERTIONS:	14
 DELETIONS:	2
-SUBSTITUTIONS:	9
-NCHANGE:	26
+SUBSTITUTIONS:	8
+NCHANGE:	24
 NTRUTH:	113
-NTEST:	126
-TRUE WORDS RECALL:	0.903
-TEST WORDS PRECISION:	0.810
+NTEST:	125
+TRUE WORDS RECALL:	0.912
+TEST WORDS PRECISION:	0.824
 --pku_test_gold.utf8-------output.txt----25
 演出								演出
 开始								开始
@@ -2222,9 +2221,9 @@ TEST WORDS PRECISION:	0.812
 。								。
 排长								排长
 唐								唐
-晓国							      |	晓
-大							      |	国
-喊							      |	大喊
+晓国								晓国
+大							      |	大喊
+喊							      <
 一								一
 声								声
 ：								：
@@ -2338,13 +2337,13 @@ TEST WORDS PRECISION:	0.812
 理解								理解
 。								。
 INSERTIONS:	3
-DELETIONS:	3
-SUBSTITUTIONS:	12
-NCHANGE:	18
+DELETIONS:	4
+SUBSTITUTIONS:	10
+NCHANGE:	17
 NTRUTH:	190
-NTEST:	190
-TRUE WORDS RECALL:	0.921
-TEST WORDS PRECISION:	0.921
+NTEST:	189
+TRUE WORDS RECALL:	0.926
+TEST WORDS PRECISION:	0.931
 --pku_test_gold.utf8-------output.txt----40
 巡逻								巡逻
 归来								归来
@@ -3954,8 +3953,7 @@ TEST WORDS PRECISION:	0.923
 ，								，
 原								原
 海南省								海南省
-东方市							      |	东方
-							      >	市
+东方市								东方市
 市委								市委
 书记								书记
 戚								戚
@@ -4040,14 +4038,14 @@ TEST WORDS PRECISION:	0.923
 劳动								劳动
 果实								果实
 。								。
-INSERTIONS:	4
+INSERTIONS:	3
 DELETIONS:	1
-SUBSTITUTIONS:	4
-NCHANGE:	9
+SUBSTITUTIONS:	3
+NCHANGE:	7
 NTRUTH:	154
-NTEST:	157
-TRUE WORDS RECALL:	0.968
-TEST WORDS PRECISION:	0.949
+NTEST:	156
+TRUE WORDS RECALL:	0.974
+TEST WORDS PRECISION:	0.962
 --pku_test_gold.utf8-------output.txt----84
 思								思
 廉								廉
@@ -4159,8 +4157,7 @@ TEST WORDS PRECISION:	0.949
 裕禄								裕禄
 、								、
 李								李
-向群							      |	向
-							      >	群
+向群								向群
 等								等
 优秀								优秀
 的								的
@@ -4195,14 +4192,14 @@ TEST WORDS PRECISION:	0.949
 了								了
 他们								他们
 。								。
-INSERTIONS:	4
+INSERTIONS:	3
 DELETIONS:	3
-SUBSTITUTIONS:	8
-NCHANGE:	15
+SUBSTITUTIONS:	7
+NCHANGE:	13
 NTRUTH:	142
-NTEST:	143
-TRUE WORDS RECALL:	0.923
-TEST WORDS PRECISION:	0.916
+NTEST:	142
+TRUE WORDS RECALL:	0.930
+TEST WORDS PRECISION:	0.930
 --pku_test_gold.utf8-------output.txt----85
 思								思
 ，								，
@@ -6575,9 +6572,8 @@ TEST WORDS PRECISION:	0.909
 代表								代表
 在								在
 北京								北京
-申奥							      |	申
-							      >	奥
-旗								旗
+申奥							      |	申奥旗
+旗							      <
 上								上
 签								签
 了								了
@@ -6586,9 +6582,9 @@ TEST WORDS PRECISION:	0.909
 并								并
 围								围
 着								着
-这								这
-面								面
-旗								旗
+这							      |	这面旗
+面							      <
+旗							      <
 合影								合影
 。								。
 31日								31日
@@ -6602,9 +6598,9 @@ TEST WORDS PRECISION:	0.909
 考察							      |	考察队员
 队员							      <
 在								在
-这								这
-面								面
-旗								旗
+这							      |	这面旗
+面							      <
+旗							      <
 上								上
 签								签
 了								了
@@ -6634,14 +6630,14 @@ TEST WORDS PRECISION:	0.909
 意							      <
 重								重
 。								。
-INSERTIONS:	6
-DELETIONS:	2
-SUBSTITUTIONS:	7
-NCHANGE:	15
+INSERTIONS:	5
+DELETIONS:	7
+SUBSTITUTIONS:	9
+NCHANGE:	21
 NTRUTH:	125
-NTEST:	129
-TRUE WORDS RECALL:	0.928
-TEST WORDS PRECISION:	0.899
+NTEST:	123
+TRUE WORDS RECALL:	0.872
+TEST WORDS PRECISION:	0.886
 --pku_test_gold.utf8-------output.txt----105
 12月								12月
 24日								24日
@@ -6809,8 +6805,7 @@ TEST WORDS PRECISION:	0.929
 的								的
 科学家								科学家
 王								王
-自磐							      |	自
-							      >	磐
+自磐								自磐
 和								和
 最								最
 年轻								年轻
@@ -6828,14 +6823,14 @@ TEST WORDS PRECISION:	0.929
 周								周
 春霞								春霞
 。								。
-INSERTIONS:	3
+INSERTIONS:	2
 DELETIONS:	1
-SUBSTITUTIONS:	4
-NCHANGE:	8
+SUBSTITUTIONS:	3
+NCHANGE:	6
 NTRUTH:	65
-NTEST:	67
-TRUE WORDS RECALL:	0.923
-TEST WORDS PRECISION:	0.896
+NTEST:	66
+TRUE WORDS RECALL:	0.938
+TEST WORDS PRECISION:	0.924
 --pku_test_gold.utf8-------output.txt----108
 长城站								长城站
 就							      |	就是
@@ -6853,9 +6848,9 @@ TEST WORDS PRECISION:	0.896
 ，								，
 但								但
 再								再
-高								高
-的								的
-山								山
+高							      |	高的山
+的							      <
+山							      <
 ，								，
 再								再
 大								大
@@ -6884,13 +6879,13 @@ TEST WORDS PRECISION:	0.896
 专电								专电
 ）								）
 INSERTIONS:	0
-DELETIONS:	2
-SUBSTITUTIONS:	2
-NCHANGE:	4
+DELETIONS:	4
+SUBSTITUTIONS:	3
+NCHANGE:	7
 NTRUTH:	46
-NTEST:	44
-TRUE WORDS RECALL:	0.913
-TEST WORDS PRECISION:	0.955
+NTEST:	42
+TRUE WORDS RECALL:	0.848
+TEST WORDS PRECISION:	0.929
 --pku_test_gold.utf8-------output.txt----109
 西沙								西沙
 灯语							      |	灯
@@ -7045,17 +7040,15 @@ TEST WORDS PRECISION:	0.889
 喜庆								喜庆
 气氛								气氛
 。								。
-各								各
-守								守
-岛								岛
+各							      |	各守岛
+守							      <
+岛							      <
 官兵								官兵
 分别								分别
 在								在
 永兴岛								永兴岛
 、								、
-琛航岛							      |	琛
-							      >	航
-							      >	岛
+琛航岛								琛航岛
 、								、
 中建岛							      |	中建
 							      >	岛
@@ -7092,9 +7085,8 @@ TEST WORDS PRECISION:	0.889
 荣誉								荣誉
 称号								称号
 的								的
-中建岛							      |	中建
-守备队							      |	岛
-							      >	守
+中建岛								中建岛
+守备队							      |	守
 							      >	备
 							      >	队
 官兵								官兵
@@ -7127,23 +7119,23 @@ TEST WORDS PRECISION:	0.889
 营区								营区
 内								内
 。								。
-INSERTIONS:	6
-DELETIONS:	1
-SUBSTITUTIONS:	5
-NCHANGE:	12
+INSERTIONS:	3
+DELETIONS:	3
+SUBSTITUTIONS:	4
+NCHANGE:	10
 NTRUTH:	89
-NTEST:	94
-TRUE WORDS RECALL:	0.933
-TEST WORDS PRECISION:	0.883
+NTEST:	89
+TRUE WORDS RECALL:	0.921
+TEST WORDS PRECISION:	0.921
 --pku_test_gold.utf8-------output.txt----113
 2000年								2000年
 12月								12月
 31日								31日
 晨								晨
 ，								，
-各								各
-守								守
-岛								岛
+各							      |	各守岛
+守							      <
+岛							      <
 部队								部队
 举行								举行
 了								了
@@ -7203,13 +7195,13 @@ TEST WORDS PRECISION:	0.883
 电								电
 ）								）
 INSERTIONS:	0
-DELETIONS:	2
-SUBSTITUTIONS:	2
-NCHANGE:	4
+DELETIONS:	4
+SUBSTITUTIONS:	3
+NCHANGE:	7
 NTRUTH:	66
-NTEST:	64
-TRUE WORDS RECALL:	0.939
-TEST WORDS PRECISION:	0.969
+NTEST:	62
+TRUE WORDS RECALL:	0.894
+TEST WORDS PRECISION:	0.952
 --pku_test_gold.utf8-------output.txt----114
 湖北								湖北
 ：								：
@@ -7295,8 +7287,7 @@ TEST WORDS PRECISION:	0.714
 ，								，
 大别山区							大别山区
 的								的
-黄冈市							      |	黄冈
-							      >	市
+黄冈市								黄冈市
 ，								，
 在								在
 大别山								大别山
@@ -7346,14 +7337,14 @@ TEST WORDS PRECISION:	0.714
 推向								推向
 高潮								高潮
 。								。
-INSERTIONS:	2
+INSERTIONS:	1
 DELETIONS:	4
-SUBSTITUTIONS:	6
-NCHANGE:	12
+SUBSTITUTIONS:	5
+NCHANGE:	10
 NTRUTH:	117
-NTEST:	115
-TRUE WORDS RECALL:	0.915
-TEST WORDS PRECISION:	0.930
+NTEST:	114
+TRUE WORDS RECALL:	0.923
+TEST WORDS PRECISION:	0.947
 --pku_test_gold.utf8-------output.txt----116
 本报								本报
 编辑部								编辑部
@@ -8203,18 +8194,17 @@ TEST WORDS PRECISION:	1.000
 新华社								新华社
 记者								记者
 吕								吕
-全成							      |	全
-							      >	成
+全成								全成
 摄								摄
 ）								）
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	0
-SUBSTITUTIONS:	1
-NCHANGE:	2
+SUBSTITUTIONS:	0
+NCHANGE:	0
 NTRUTH:	32
-NTEST:	33
-TRUE WORDS RECALL:	0.969
-TEST WORDS PRECISION:	0.939
+NTEST:	32
+TRUE WORDS RECALL:	1.000
+TEST WORDS PRECISION:	1.000
 --pku_test_gold.utf8-------output.txt----131
 巴								巴
 以								以
@@ -9106,8 +9096,7 @@ TEST WORDS PRECISION:	0.200
 （								（
 记者								记者
 李								李
-超碧							      |	超
-							      >	碧
+超碧								超碧
 、								、
 晏								晏
 明								明
@@ -9135,14 +9124,14 @@ TEST WORDS PRECISION:	0.200
 							      >	葬
 仪式								仪式
 。								。
-INSERTIONS:	6
+INSERTIONS:	5
 DELETIONS:	0
-SUBSTITUTIONS:	5
-NCHANGE:	11
+SUBSTITUTIONS:	4
+NCHANGE:	9
 NTRUTH:	31
-NTEST:	37
-TRUE WORDS RECALL:	0.839
-TEST WORDS PRECISION:	0.703
+NTEST:	36
+TRUE WORDS RECALL:	0.871
+TEST WORDS PRECISION:	0.750
 --pku_test_gold.utf8-------output.txt----139
 葬礼								葬礼
 在								在
@@ -9190,8 +9179,7 @@ TEST WORDS PRECISION:	0.703
 在							      |	宋
 宋双							      |	双亲
 亲王							      |	王
-灵柩							      |	灵
-							      >	柩
+灵柩								灵柩
 的								的
 周围								周围
 。								。
@@ -9216,14 +9204,14 @@ TEST WORDS PRECISION:	0.703
 							      >	超
 							      >	度
 。								。
-INSERTIONS:	15
+INSERTIONS:	14
 DELETIONS:	0
-SUBSTITUTIONS:	18
-NCHANGE:	33
+SUBSTITUTIONS:	17
+NCHANGE:	31
 NTRUTH:	57
-NTEST:	72
-TRUE WORDS RECALL:	0.684
-TEST WORDS PRECISION:	0.542
+NTEST:	71
+TRUE WORDS RECALL:	0.702
+TEST WORDS PRECISION:	0.563
 --pku_test_gold.utf8-------output.txt----140
 宋双							      |	宋
 亲王							      |	双亲
@@ -9980,8 +9968,7 @@ TEST WORDS PRECISION:	0.900
 把								把
 手								手
 赵								赵
-明录							      |	明
-							      >	录
+明录								明录
 以								以
 金								金
 正日								正日
@@ -10118,8 +10105,7 @@ TEST WORDS PRECISION:	0.900
 前往								前往
 平壤								平壤
 和								和
-金刚山							      |	金刚
-							      >	山
+金刚山								金刚山
 观光								观光
 ，								，
 进行								进行
@@ -10131,14 +10117,14 @@ TEST WORDS PRECISION:	0.900
 的								的
 访问								访问
 。								。
-INSERTIONS:	6
+INSERTIONS:	4
 DELETIONS:	7
-SUBSTITUTIONS:	12
-NCHANGE:	25
+SUBSTITUTIONS:	10
+NCHANGE:	21
 NTRUTH:	204
-NTEST:	203
-TRUE WORDS RECALL:	0.907
-TEST WORDS PRECISION:	0.911
+NTEST:	201
+TRUE WORDS RECALL:	0.917
+TEST WORDS PRECISION:	0.930
 --pku_test_gold.utf8-------output.txt----153
 目前								目前
 ，								，
@@ -11861,9 +11847,7 @@ TEST WORDS PRECISION:	0.889
 新西兰								新西兰
 的								的
 吉斯伯恩市						      |	吉斯
-							      >	伯
-							      >	恩
-							      >	市
+							      >	伯恩市
 举行								举行
 庆祝								庆祝
 活动								活动
@@ -11906,14 +11890,14 @@ TEST WORDS PRECISION:	0.889
 的								的
 表演								表演
 。								。
-INSERTIONS:	6
+INSERTIONS:	4
 DELETIONS:	4
 SUBSTITUTIONS:	7
-NCHANGE:	17
+NCHANGE:	15
 NTRUTH:	45
-NTEST:	47
+NTEST:	45
 TRUE WORDS RECALL:	0.756
-TEST WORDS PRECISION:	0.723
+TEST WORDS PRECISION:	0.756
 --pku_test_gold.utf8-------output.txt----186
 图								图
 为								为
@@ -11979,8 +11963,7 @@ TEST WORDS PRECISION:	0.833
 （								（
 记者								记者
 马								马
-晓霖							      |	晓
-							      >	霖
+晓霖								晓霖
 ）								）
 巴勒斯坦							巴勒斯坦
 民族								民族
@@ -12003,23 +11986,21 @@ TEST WORDS PRECISION:	0.833
 图尔凯勒姆省						      |	图
 							      >	尔
 							      >	凯
-							      >	勒
-							      >	姆
-							      >	省
+							      >	勒姆省
 被								被
 以色列								以色列
 军队								军队
 打							      |	打死
 死							      <
 。								。
-INSERTIONS:	6
+INSERTIONS:	3
 DELETIONS:	1
-SUBSTITUTIONS:	3
-NCHANGE:	10
+SUBSTITUTIONS:	2
+NCHANGE:	6
 NTRUTH:	35
-NTEST:	40
-TRUE WORDS RECALL:	0.886
-TEST WORDS PRECISION:	0.775
+NTEST:	37
+TRUE WORDS RECALL:	0.914
+TEST WORDS PRECISION:	0.865
 --pku_test_gold.utf8-------output.txt----190
 据								据
 巴勒斯坦							巴勒斯坦
@@ -12031,9 +12012,7 @@ TEST WORDS PRECISION:	0.775
 图尔凯勒姆省						      |	图
 							      >	尔
 							      >	凯
-							      >	勒
-							      >	姆
-							      >	省
+							      >	勒姆省
 书记								书记
 、								、
 50								50
@@ -12091,14 +12070,14 @@ TEST WORDS PRECISION:	0.775
 的								的
 交界处								交界处
 。								。
-INSERTIONS:	9
+INSERTIONS:	7
 DELETIONS:	2
 SUBSTITUTIONS:	9
-NCHANGE:	20
+NCHANGE:	18
 NTRUTH:	61
-NTEST:	68
+NTEST:	66
 TRUE WORDS RECALL:	0.820
-TEST WORDS PRECISION:	0.735
+TEST WORDS PRECISION:	0.758
 --pku_test_gold.utf8-------output.txt----191
 老者								老者
 如是							      |	如是说
@@ -12890,9 +12869,7 @@ TEST WORDS PRECISION:	0.939
 开车								开车
 通过								通过
 沙巴							      |	沙
-跨海							      |	巴
-							      >	跨
-							      >	海
+跨海							      |	巴跨海
 大桥								大桥
 来								来
 巴林								巴林
@@ -12925,14 +12902,14 @@ TEST WORDS PRECISION:	0.939
 31日								31日
 电								电
 ）								）
-INSERTIONS:	5
+INSERTIONS:	3
 DELETIONS:	3
 SUBSTITUTIONS:	7
-NCHANGE:	15
+NCHANGE:	13
 NTRUTH:	78
-NTEST:	80
+NTEST:	78
 TRUE WORDS RECALL:	0.872
-TEST WORDS PRECISION:	0.850
+TEST WORDS PRECISION:	0.872
 --pku_test_gold.utf8-------output.txt----199
 数千								数千
 名								名
@@ -13341,9 +13318,7 @@ U—2								U—2
 曾								曾
 先后								先后
 在								在
-德积岛							      |	德
-							      >	积
-							      >	岛
+德积岛								德积岛
 、								、
 抱川							      |	抱
 							      >	川
@@ -13366,14 +13341,14 @@ U—2								U—2
 电子								电子
 侦察								侦察
 。								。
-INSERTIONS:	4
+INSERTIONS:	2
 DELETIONS:	1
-SUBSTITUTIONS:	4
-NCHANGE:	9
+SUBSTITUTIONS:	3
+NCHANGE:	6
 NTRUTH:	81
-NTEST:	84
-TRUE WORDS RECALL:	0.938
-TEST WORDS PRECISION:	0.905
+NTEST:	82
+TRUE WORDS RECALL:	0.951
+TEST WORDS PRECISION:	0.939
 --pku_test_gold.utf8-------output.txt----208
 巴基斯坦							巴基斯坦
 地方								地方
@@ -13401,9 +13376,9 @@ TEST WORDS PRECISION:	1.000
 巴								巴
 全国								全国
 的								的
-四								四
-个								个
-省								省
+四							      |	四个省
+个							      <
+省							      <
 同时								同时
 开始								开始
 ，								，
@@ -13447,13 +13422,13 @@ TEST WORDS PRECISION:	1.000
 选举								选举
 。								。
 INSERTIONS:	7
-DELETIONS:	0
-SUBSTITUTIONS:	3
-NCHANGE:	10
+DELETIONS:	2
+SUBSTITUTIONS:	4
+NCHANGE:	13
 NTRUTH:	51
-NTEST:	58
-TRUE WORDS RECALL:	0.941
-TEST WORDS PRECISION:	0.828
+NTEST:	56
+TRUE WORDS RECALL:	0.882
+TEST WORDS PRECISION:	0.804
 --pku_test_gold.utf8-------output.txt----210
 满怀								满怀
 豪情								豪情
@@ -13578,9 +13553,8 @@ TEST WORDS PRECISION:	0.921
 福建								福建
 北部								北部
 山区								山区
-南平市							      |	南平
-芦下镇							      |	市
-							      >	芦
+南平市								南平市
+芦下镇							      |	芦
 							      >	下
 							      >	镇
 涌现								涌现
@@ -13655,8 +13629,7 @@ TEST WORDS PRECISION:	0.921
 青年								青年
 农民								农民
 陈								陈
-仁武							      |	仁
-							      >	武
+仁武								仁武
 在								在
 长势								长势
 良好								良好
@@ -13674,14 +13647,14 @@ TEST WORDS PRECISION:	0.921
 国俊								国俊
 摄								摄
 ）								）
-INSERTIONS:	8
+INSERTIONS:	6
 DELETIONS:	0
-SUBSTITUTIONS:	6
-NCHANGE:	14
+SUBSTITUTIONS:	4
+NCHANGE:	10
 NTRUTH:	93
-NTEST:	101
-TRUE WORDS RECALL:	0.935
-TEST WORDS PRECISION:	0.861
+NTEST:	99
+TRUE WORDS RECALL:	0.957
+TEST WORDS PRECISION:	0.899
 --pku_test_gold.utf8-------output.txt----214
 3								3
 、								、
@@ -13835,18 +13808,17 @@ TEST WORDS PRECISION:	0.972
 。								。
 （								（
 焦								焦
-裕清							      |	裕
-							      >	清
+裕清								裕清
 摄								摄
 ）								）
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	0
-SUBSTITUTIONS:	1
-NCHANGE:	2
+SUBSTITUTIONS:	0
+NCHANGE:	0
 NTRUTH:	75
-NTEST:	76
-TRUE WORDS RECALL:	0.987
-TEST WORDS PRECISION:	0.974
+NTEST:	75
+TRUE WORDS RECALL:	1.000
+TEST WORDS PRECISION:	1.000
 --pku_test_gold.utf8-------output.txt----216
 5								5
 、								、
@@ -22313,18 +22285,17 @@ TEST WORDS PRECISION:	0.887
 新华社								新华社
 记者								记者
 张								张
-凤国							      |	凤
-							      >	国
+凤国								凤国
 摄								摄
 ）								）
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	0
-SUBSTITUTIONS:	1
-NCHANGE:	2
+SUBSTITUTIONS:	0
+NCHANGE:	0
 NTRUTH:	7
-NTEST:	8
-TRUE WORDS RECALL:	0.857
-TEST WORDS PRECISION:	0.750
+NTEST:	7
+TRUE WORDS RECALL:	1.000
+TEST WORDS PRECISION:	1.000
 --pku_test_gold.utf8-------output.txt----440
 俄								俄
 境内								境内
@@ -22982,8 +22953,7 @@ TEST WORDS PRECISION:	0.941
 南							      <
 大使								大使
 温								温
-西贵							      |	西
-							      >	贵
+西贵								西贵
 发表								发表
 了								了
 热情							      |	热情洋溢
@@ -23069,14 +23039,14 @@ TEST WORDS PRECISION:	0.941
 的								的
 关心								关心
 。								。
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	5
-SUBSTITUTIONS:	6
-NCHANGE:	12
+SUBSTITUTIONS:	5
+NCHANGE:	10
 NTRUTH:	91
-NTEST:	87
-TRUE WORDS RECALL:	0.879
-TEST WORDS PRECISION:	0.920
+NTEST:	86
+TRUE WORDS RECALL:	0.890
+TEST WORDS PRECISION:	0.942
 --pku_test_gold.utf8-------output.txt----457
 “								“
 万								万
@@ -24672,9 +24642,7 @@ TEST WORDS PRECISION:	1.000
 粼粼								粼粼
 的								的
 艾瑟尔湖						      |	艾
-							      >	瑟
-							      >	尔
-							      >	湖
+							      >	瑟尔湖
 ，								，
 左边								左边
 的								的
@@ -24741,14 +24709,14 @@ TEST WORDS PRECISION:	1.000
 雾霭								雾霭
 之中								之中
 。								。
-INSERTIONS:	8
+INSERTIONS:	6
 DELETIONS:	4
 SUBSTITUTIONS:	10
-NCHANGE:	22
+NCHANGE:	20
 NTRUTH:	92
-NTEST:	96
+NTEST:	94
 TRUE WORDS RECALL:	0.848
-TEST WORDS PRECISION:	0.812
+TEST WORDS PRECISION:	0.830
 --pku_test_gold.utf8-------output.txt----477
 坝顶							      |	坝
 							      >	顶
@@ -24928,10 +24896,8 @@ TEST WORDS PRECISION:	0.906
 海面								海面
 上								上
 筑								筑
-起								起
-拦海大坝						      |	拦
-							      >	海
-							      >	大坝
+起							      |	起拦海
+拦海大坝						      |	大坝
 ，								，
 石头								石头
 是								是
@@ -24986,14 +24952,14 @@ TEST WORDS PRECISION:	0.906
 的								的
 需要								需要
 。								。
-INSERTIONS:	2
+INSERTIONS:	0
 DELETIONS:	2
-SUBSTITUTIONS:	3
-NCHANGE:	7
+SUBSTITUTIONS:	4
+NCHANGE:	6
 NTRUTH:	139
-NTEST:	139
-TRUE WORDS RECALL:	0.964
-TEST WORDS PRECISION:	0.964
+NTEST:	137
+TRUE WORDS RECALL:	0.957
+TEST WORDS PRECISION:	0.971
 --pku_test_gold.utf8-------output.txt----479
 经过								经过
 5							      |	5年
@@ -25198,9 +25164,7 @@ TEST WORDS PRECISION:	0.912
 ，								，
 人							      |	人称
 称							      |	艾
-艾瑟尔湖						      |	瑟
-							      >	尔
-							      >	湖
+艾瑟尔湖						      |	瑟尔湖
 。								。
 大坝								大坝
 成为								成为
@@ -25305,14 +25269,14 @@ TEST WORDS PRECISION:	0.912
 							      >	尔
 大坝								大坝
 。								。
-INSERTIONS:	6
+INSERTIONS:	4
 DELETIONS:	4
 SUBSTITUTIONS:	9
-NCHANGE:	19
+NCHANGE:	17
 NTRUTH:	127
-NTEST:	129
+NTEST:	127
 TRUE WORDS RECALL:	0.898
-TEST WORDS PRECISION:	0.884
+TEST WORDS PRECISION:	0.898
 --pku_test_gold.utf8-------output.txt----482
 驱车								驱车
 离开								离开
@@ -25357,9 +25321,9 @@ TEST WORDS PRECISION:	0.884
 的								的
 土地								土地
 是								是
-靠								靠
-围								围
-海								海
+靠							      |	靠围海
+围							      <
+海							      <
 造田								造田
 而								而
 得								得
@@ -25380,26 +25344,26 @@ TEST WORDS PRECISION:	0.884
 电								电
 ）								）
 INSERTIONS:	2
-DELETIONS:	3
-SUBSTITUTIONS:	3
-NCHANGE:	8
+DELETIONS:	5
+SUBSTITUTIONS:	4
+NCHANGE:	11
 NTRUTH:	63
-NTEST:	62
-TRUE WORDS RECALL:	0.905
-TEST WORDS PRECISION:	0.919
+NTEST:	60
+TRUE WORDS RECALL:	0.857
+TEST WORDS PRECISION:	0.900
 --pku_test_gold.utf8-------output.txt----483
 学生								学生
-审议								审议
-市								市
+审议							      |	审议市
+市							      <
 预算								预算
 INSERTIONS:	0
-DELETIONS:	0
-SUBSTITUTIONS:	0
-NCHANGE:	0
+DELETIONS:	1
+SUBSTITUTIONS:	1
+NCHANGE:	2
 NTRUTH:	4
-NTEST:	4
-TRUE WORDS RECALL:	1.000
-TEST WORDS PRECISION:	1.000
+NTEST:	3
+TRUE WORDS RECALL:	0.500
+TEST WORDS PRECISION:	0.667
 --pku_test_gold.utf8-------output.txt----484
 岁末								岁末
 来临								来临
@@ -25497,8 +25461,8 @@ TEST WORDS PRECISION:	0.837
 作								作
 审议								审议
 二０００							二０００
-年度								年度
-市								市
+年度							      |	年度市
+市							      <
 预算								预算
 执行								执行
 情况								情况
@@ -25506,13 +25470,13 @@ TEST WORDS PRECISION:	0.837
 报告								报告
 。								。
 INSERTIONS:	1
-DELETIONS:	2
-SUBSTITUTIONS:	3
-NCHANGE:	6
+DELETIONS:	3
+SUBSTITUTIONS:	4
+NCHANGE:	8
 NTRUTH:	41
-NTEST:	40
-TRUE WORDS RECALL:	0.878
-TEST WORDS PRECISION:	0.900
+NTEST:	39
+TRUE WORDS RECALL:	0.829
+TEST WORDS PRECISION:	0.872
 --pku_test_gold.utf8-------output.txt----486
 一个								一个
 男孩子								男孩子
@@ -27135,8 +27099,7 @@ TEST WORDS PRECISION:	0.972
 							      >	提
 、								、
 王								王
-忠禹							      |	忠
-							      >	禹
+忠禹								忠禹
 、								、
 肖							      |	肖扬
 扬							      <
@@ -27212,14 +27175,14 @@ TEST WORDS PRECISION:	0.972
 出席								出席
 茶话会								茶话会
 。								。
-INSERTIONS:	19
+INSERTIONS:	18
 DELETIONS:	1
-SUBSTITUTIONS:	11
-NCHANGE:	31
+SUBSTITUTIONS:	10
+NCHANGE:	29
 NTRUTH:	146
-NTEST:	164
-TRUE WORDS RECALL:	0.918
-TEST WORDS PRECISION:	0.817
+NTEST:	163
+TRUE WORDS RECALL:	0.925
+TEST WORDS PRECISION:	0.828
 --pku_test_gold.utf8-------output.txt----508
 出席								出席
 茶话会								茶话会
@@ -27238,8 +27201,7 @@ TEST WORDS PRECISION:	0.817
 刚川								刚川
 、								、
 郭								郭
-伯雄							      |	伯
-							      >	雄
+伯雄								伯雄
 、								、
 徐								徐
 才厚							      |	才
@@ -27265,14 +27227,14 @@ TEST WORDS PRECISION:	0.817
 万通								万通
 等								等
 。								。
-INSERTIONS:	2
+INSERTIONS:	1
 DELETIONS:	0
-SUBSTITUTIONS:	2
-NCHANGE:	4
+SUBSTITUTIONS:	1
+NCHANGE:	2
 NTRUTH:	42
-NTEST:	44
-TRUE WORDS RECALL:	0.952
-TEST WORDS PRECISION:	0.909
+NTEST:	43
+TRUE WORDS RECALL:	0.976
+TEST WORDS PRECISION:	0.953
 --pku_test_gold.utf8-------output.txt----509
 图片								图片
 ：								：
@@ -29429,8 +29391,7 @@ TEST WORDS PRECISION:	0.967
 副								副
 书记								书记
 陆								陆
-浩歌							      |	浩
-							      >	歌
+浩歌								浩歌
 点燃								点燃
 了								了
 2001年								2001年
@@ -29451,14 +29412,14 @@ TEST WORDS PRECISION:	0.967
 而							      <
 起							      <
 。								。
-INSERTIONS:	3
+INSERTIONS:	2
 DELETIONS:	2
-SUBSTITUTIONS:	3
-NCHANGE:	8
+SUBSTITUTIONS:	2
+NCHANGE:	6
 NTRUTH:	107
-NTEST:	108
-TRUE WORDS RECALL:	0.953
-TEST WORDS PRECISION:	0.944
+NTEST:	107
+TRUE WORDS RECALL:	0.963
+TEST WORDS PRECISION:	0.963
 --pku_test_gold.utf8-------output.txt----535
 从								从
 2000年								2000年
@@ -29679,8 +29640,7 @@ TEST WORDS PRECISION:	0.934
 长沙市								长沙市
 市长								市长
 谭								谭
-仲池							      |	仲
-							      >	池
+仲池								仲池
 手中								手中
 接								接
 过								过
@@ -29724,14 +29684,14 @@ TEST WORDS PRECISION:	0.934
 向								向
 未来								未来
 。								。
-INSERTIONS:	3
+INSERTIONS:	2
 DELETIONS:	4
-SUBSTITUTIONS:	5
-NCHANGE:	12
+SUBSTITUTIONS:	4
+NCHANGE:	10
 NTRUTH:	128
-NTEST:	127
-TRUE WORDS RECALL:	0.930
-TEST WORDS PRECISION:	0.937
+NTEST:	126
+TRUE WORDS RECALL:	0.938
+TEST WORDS PRECISION:	0.952
 --pku_test_gold.utf8-------output.txt----537
 冰								冰
 封								封
@@ -29821,9 +29781,7 @@ TEST WORDS PRECISION:	0.937
 以								以
 吉林市								吉林市
 、								、
-长白山							      |	长
-							      >	白
-							      >	山
+长白山								长白山
 、								、
 延边州							      |	延边
 							      >	州
@@ -29846,14 +29804,14 @@ TEST WORDS PRECISION:	0.937
 风光								风光
 旅游线								旅游线
 。								。
-INSERTIONS:	5
+INSERTIONS:	3
 DELETIONS:	5
-SUBSTITUTIONS:	10
-NCHANGE:	20
+SUBSTITUTIONS:	9
+NCHANGE:	17
 NTRUTH:	108
-NTEST:	108
-TRUE WORDS RECALL:	0.861
-TEST WORDS PRECISION:	0.861
+NTEST:	106
+TRUE WORDS RECALL:	0.870
+TEST WORDS PRECISION:	0.887
 --pku_test_gold.utf8-------output.txt----538
 今天								今天
 ，								，
@@ -30022,8 +29980,8 @@ TEST WORDS PRECISION:	0.872
 旅游局								旅游局
 会同								会同
 乌市								乌市
-各							      |	各区
-区县							      |	县
+各							      |	各区县
+区县							      <
 有关								有关
 部门								部门
 开展								开展
@@ -30048,13 +30006,13 @@ TEST WORDS PRECISION:	0.872
 活动								活动
 。								。
 INSERTIONS:	1
-DELETIONS:	3
-SUBSTITUTIONS:	6
+DELETIONS:	4
+SUBSTITUTIONS:	5
 NCHANGE:	10
 NTRUTH:	91
-NTEST:	89
+NTEST:	88
 TRUE WORDS RECALL:	0.901
-TEST WORDS PRECISION:	0.921
+TEST WORDS PRECISION:	0.932
 --pku_test_gold.utf8-------output.txt----540
 （								（
 本报								本报
@@ -32816,20 +32774,20 @@ TEST WORDS PRECISION:	0.867
 金税							      |	金
 							      >	税
 工程								工程
-在								在
-五								五
-省								省
+在							      |	在五省
+五							      <
+省							      <
 四								四
 市								市
 开通								开通
 INSERTIONS:	1
-DELETIONS:	0
-SUBSTITUTIONS:	1
-NCHANGE:	2
+DELETIONS:	2
+SUBSTITUTIONS:	2
+NCHANGE:	5
 NTRUTH:	15
-NTEST:	16
-TRUE WORDS RECALL:	0.933
-TEST WORDS PRECISION:	0.875
+NTEST:	14
+TRUE WORDS RECALL:	0.733
+TEST WORDS PRECISION:	0.786
 --pku_test_gold.utf8-------output.txt----581
 七月								七月
 一日								一日
@@ -32894,9 +32852,9 @@ TEST WORDS PRECISION:	1.000
 在								在
 “								“
 五								五
-省								省
-四								四
-市								市
+省							      |	省四市
+四							      <
+市							      <
 ”								”
 （								（
 北京								北京
@@ -32966,13 +32924,13 @@ TEST WORDS PRECISION:	1.000
 建立								建立
 。								。
 INSERTIONS:	8
-DELETIONS:	1
-SUBSTITUTIONS:	9
-NCHANGE:	18
+DELETIONS:	3
+SUBSTITUTIONS:	10
+NCHANGE:	21
 NTRUTH:	106
-NTEST:	113
-TRUE WORDS RECALL:	0.906
-TEST WORDS PRECISION:	0.850
+NTEST:	111
+TRUE WORDS RECALL:	0.877
+TEST WORDS PRECISION:	0.838
 --pku_test_gold.utf8-------output.txt----583
 据								据
 介绍								介绍
@@ -33956,12 +33914,10 @@ TEST WORDS PRECISION:	1.000
 电								电
 （								（
 宋								宋
-熙文							      |	熙
-							      >	文
+熙文								熙文
 、								、
 张								张
-春利							      |	春
-							      >	利
+春利								春利
 ）								）
 2000年								2000年
 12月								12月
@@ -33987,14 +33943,14 @@ TEST WORDS PRECISION:	1.000
 了								了
 常流水								常流水
 。								。
-INSERTIONS:	2
+INSERTIONS:	0
 DELETIONS:	1
-SUBSTITUTIONS:	3
-NCHANGE:	6
+SUBSTITUTIONS:	1
+NCHANGE:	2
 NTRUTH:	36
-NTEST:	37
-TRUE WORDS RECALL:	0.889
-TEST WORDS PRECISION:	0.865
+NTEST:	35
+TRUE WORDS RECALL:	0.944
+TEST WORDS PRECISION:	0.971
 --pku_test_gold.utf8-------output.txt----602
 据								据
 黄河								黄河
@@ -34090,8 +34046,7 @@ TEST WORDS PRECISION:	0.818
 电								电
 记者								记者
 顾								顾
-兆农							      |	兆
-							      >	农
+兆农								兆农
 报道								报道
 ：								：
 国家								国家
@@ -34120,8 +34075,7 @@ TEST WORDS PRECISION:	0.818
 市委								市委
 书记								书记
 王								王
-武龙							      |	武
-							      >	龙
+武龙								武龙
 说								说
 ，								，
 此次								此次
@@ -34173,14 +34127,14 @@ TEST WORDS PRECISION:	0.818
 如期								如期
 建成								建成
 。								。
-INSERTIONS:	4
+INSERTIONS:	2
 DELETIONS:	0
-SUBSTITUTIONS:	8
-NCHANGE:	12
+SUBSTITUTIONS:	6
+NCHANGE:	8
 NTRUTH:	86
-NTEST:	90
-TRUE WORDS RECALL:	0.907
-TEST WORDS PRECISION:	0.867
+NTEST:	88
+TRUE WORDS RECALL:	0.930
+TEST WORDS PRECISION:	0.909
 --pku_test_gold.utf8-------output.txt----605
 劣								劣
 米								米
@@ -35469,21 +35423,19 @@ TEST WORDS PRECISION:	1.000
 整个								整个
 巴黎								巴黎
 一片灯海						      |	一
-							      >	片
-							      >	灯
-							      >	海
+							      >	片灯海
 ，								，
 如同								如同
 白昼								白昼
 。								。
-INSERTIONS:	4
+INSERTIONS:	2
 DELETIONS:	2
 SUBSTITUTIONS:	4
-NCHANGE:	10
+NCHANGE:	8
 NTRUTH:	69
-NTEST:	71
+NTEST:	69
 TRUE WORDS RECALL:	0.913
-TEST WORDS PRECISION:	0.887
+TEST WORDS PRECISION:	0.913
 --pku_test_gold.utf8-------output.txt----623
 暂								暂
 辟								辟
@@ -36159,8 +36111,7 @@ TEST WORDS PRECISION:	1.000
 （								（
 记者								记者
 王								王
-丙飞							      |	丙
-							      >	飞
+丙飞								丙飞
 、								、
 鲁								鲁
 绍明								绍明
@@ -36194,14 +36145,14 @@ TEST WORDS PRECISION:	1.000
 以								以
 争端								争端
 。								。
-INSERTIONS:	4
+INSERTIONS:	3
 DELETIONS:	0
-SUBSTITUTIONS:	3
-NCHANGE:	7
+SUBSTITUTIONS:	2
+NCHANGE:	5
 NTRUTH:	40
-NTEST:	44
-TRUE WORDS RECALL:	0.925
-TEST WORDS PRECISION:	0.841
+NTEST:	43
+TRUE WORDS RECALL:	0.950
+TEST WORDS PRECISION:	0.884
 --pku_test_gold.utf8-------output.txt----639
 埃雷卡特						      |	埃
 							      >	雷
@@ -37474,18 +37425,17 @@ TEST WORDS PRECISION:	0.750
 新华社								新华社
 记者								记者
 徐								徐
-显辉							      |	显
-							      >	辉
+显辉								显辉
 摄								摄
 ）								）
-INSERTIONS:	3
+INSERTIONS:	2
 DELETIONS:	2
-SUBSTITUTIONS:	6
-NCHANGE:	11
+SUBSTITUTIONS:	5
+NCHANGE:	9
 NTRUTH:	39
-NTEST:	40
-TRUE WORDS RECALL:	0.795
-TEST WORDS PRECISION:	0.775
+NTEST:	39
+TRUE WORDS RECALL:	0.821
+TEST WORDS PRECISION:	0.821
 --pku_test_gold.utf8-------output.txt----654
 3								3
 、								、
@@ -38684,8 +38634,7 @@ TEST WORDS PRECISION:	1.000
 副								副
 部长								部长
 苏莱曼库洛夫						      |	苏
-							      >	莱
-							      >	曼
+							      >	莱曼
 							      >	库
 							      >	洛
 							      >	夫
@@ -38737,14 +38686,14 @@ TEST WORDS PRECISION:	1.000
 新华社								新华社
 电								电
 ）								）
-INSERTIONS:	33
+INSERTIONS:	32
 DELETIONS:	0
 SUBSTITUTIONS:	16
-NCHANGE:	49
+NCHANGE:	48
 NTRUTH:	107
-NTEST:	140
+NTEST:	139
 TRUE WORDS RECALL:	0.850
-TEST WORDS PRECISION:	0.650
+TEST WORDS PRECISION:	0.655
 --pku_test_gold.utf8-------output.txt----673
 在								在
 全国								全国
@@ -40668,8 +40617,7 @@ TEST WORDS PRECISION:	1.000
 电								电
 记者								记者
 郑								郑
-有义							      |	有
-							      >	义
+有义								有义
 报道								报道
 ：								：
 宁夏							      |	宁夏回族自治区
@@ -40699,14 +40647,14 @@ TEST WORDS PRECISION:	1.000
 和								和
 要求								要求
 。								。
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	2
-SUBSTITUTIONS:	2
-NCHANGE:	5
+SUBSTITUTIONS:	1
+NCHANGE:	3
 NTRUTH:	37
-NTEST:	36
-TRUE WORDS RECALL:	0.892
-TEST WORDS PRECISION:	0.917
+NTEST:	35
+TRUE WORDS RECALL:	0.919
+TEST WORDS PRECISION:	0.971
 --pku_test_gold.utf8-------output.txt----696
 通知								通知
 规定								规定
@@ -41907,8 +41855,7 @@ TRUE WORDS RECALL:	1.000
 TEST WORDS PRECISION:	1.000
 --pku_test_gold.utf8-------output.txt----750
 福建								福建
-武夷山							      |	武夷
-							      >	山
+武夷山								武夷山
 多								多
 云								云
 2								2
@@ -41916,22 +41863,20 @@ TEST WORDS PRECISION:	1.000
 ／								／
 16								16
 ℃								℃
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	0
-SUBSTITUTIONS:	1
-NCHANGE:	2
+SUBSTITUTIONS:	0
+NCHANGE:	0
 NTRUTH:	9
-NTEST:	10
-TRUE WORDS RECALL:	0.889
-TEST WORDS PRECISION:	0.800
+NTEST:	9
+TRUE WORDS RECALL:	1.000
+TEST WORDS PRECISION:	1.000
 --pku_test_gold.utf8-------output.txt----751
 桂林								桂林
 资江							      |	资
 							      >	江
 漂流								漂流
-五排河							      |	五
-							      >	排
-							      >	河
+五排河								五排河
 探险								探险
 阴								阴
 转								转
@@ -41941,20 +41886,18 @@ TEST WORDS PRECISION:	0.800
 ／								／
 12								12
 ℃								℃
-INSERTIONS:	3
+INSERTIONS:	1
 DELETIONS:	0
-SUBSTITUTIONS:	2
-NCHANGE:	5
+SUBSTITUTIONS:	1
+NCHANGE:	2
 NTRUTH:	13
-NTEST:	16
-TRUE WORDS RECALL:	0.846
-TEST WORDS PRECISION:	0.688
+NTEST:	14
+TRUE WORDS RECALL:	0.923
+TEST WORDS PRECISION:	0.857
 --pku_test_gold.utf8-------output.txt----752
 湖南								湖南
 南岳							      |	南
-衡山							      |	岳
-							      >	衡
-							      >	山
+衡山							      |	岳衡山
 阴								阴
 转								转
 小雨								小雨
@@ -41963,19 +41906,17 @@ TEST WORDS PRECISION:	0.688
 ／								／
 6								6
 ℃								℃
-INSERTIONS:	2
+INSERTIONS:	0
 DELETIONS:	0
 SUBSTITUTIONS:	2
-NCHANGE:	4
+NCHANGE:	2
 NTRUTH:	11
-NTEST:	13
+NTEST:	11
 TRUE WORDS RECALL:	0.818
-TEST WORDS PRECISION:	0.692
+TEST WORDS PRECISION:	0.818
 --pku_test_gold.utf8-------output.txt----753
 贵州								贵州
-红枫湖							      |	红
-							      >	枫
-							      >	湖
+红枫湖								红枫湖
 小雨								小雨
 转							      |	转阴
 阴							      <
@@ -41984,14 +41925,14 @@ TEST WORDS PRECISION:	0.692
 ／								／
 7								7
 ℃								℃
-INSERTIONS:	2
+INSERTIONS:	0
 DELETIONS:	1
-SUBSTITUTIONS:	2
-NCHANGE:	5
+SUBSTITUTIONS:	1
+NCHANGE:	2
 NTRUTH:	10
-NTEST:	11
-TRUE WORDS RECALL:	0.700
-TEST WORDS PRECISION:	0.636
+NTEST:	9
+TRUE WORDS RECALL:	0.800
+TEST WORDS PRECISION:	0.889
 --pku_test_gold.utf8-------output.txt----754
 湖南								湖南
 张家界								张家界
@@ -42602,8 +42543,7 @@ TEST WORDS PRECISION:	0.964
 电视人							      |	电视
 							      >	人
 黄								黄
-阿原							      |	阿
-							      >	原
+阿原								阿原
 与								与
 屏幕								屏幕
 上								上
@@ -42658,14 +42598,14 @@ TEST WORDS PRECISION:	0.964
 的								的
 骄傲								骄傲
 。								。
-INSERTIONS:	3
+INSERTIONS:	2
 DELETIONS:	1
-SUBSTITUTIONS:	4
-NCHANGE:	8
+SUBSTITUTIONS:	3
+NCHANGE:	6
 NTRUTH:	63
-NTEST:	65
-TRUE WORDS RECALL:	0.921
-TEST WORDS PRECISION:	0.892
+NTEST:	64
+TRUE WORDS RECALL:	0.937
+TEST WORDS PRECISION:	0.922
 --pku_test_gold.utf8-------output.txt----768
 是								是
 啊								啊
@@ -42985,8 +42925,7 @@ TEST WORDS PRECISION:	1.000
 电								电
 记者								记者
 顾								顾
-兆农							      |	兆
-							      >	农
+兆农								兆农
 报道								报道
 ：								：
 元旦								元旦
@@ -43033,14 +42972,14 @@ TEST WORDS PRECISION:	1.000
 万								万
 元								元
 。								。
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	2
-SUBSTITUTIONS:	3
-NCHANGE:	6
+SUBSTITUTIONS:	2
+NCHANGE:	4
 NTRUTH:	54
-NTEST:	53
-TRUE WORDS RECALL:	0.907
-TEST WORDS PRECISION:	0.925
+NTEST:	52
+TRUE WORDS RECALL:	0.926
+TEST WORDS PRECISION:	0.962
 --pku_test_gold.utf8-------output.txt----774
 多							      |	多年
 年							      <
@@ -43167,8 +43106,8 @@ TEST WORDS PRECISION:	0.947
 元								元
 ，								，
 支持								支持
-建立								建立
-市								市
+建立							      |	建立市
+市							      <
 、								、
 县								县
 女								女
@@ -43210,13 +43149,13 @@ TEST WORDS PRECISION:	0.947
 活动								活动
 。								。
 INSERTIONS:	0
-DELETIONS:	2
-SUBSTITUTIONS:	4
-NCHANGE:	6
+DELETIONS:	3
+SUBSTITUTIONS:	5
+NCHANGE:	8
 NTRUTH:	100
-NTEST:	98
-TRUE WORDS RECALL:	0.940
-TEST WORDS PRECISION:	0.959
+NTEST:	97
+TRUE WORDS RECALL:	0.920
+TEST WORDS PRECISION:	0.948
 --pku_test_gold.utf8-------output.txt----776
 江苏								江苏
 各级								各级
@@ -43299,9 +43238,8 @@ TEST WORDS PRECISION:	0.959
 镇江								镇江
 、								、
 常州							      |	常
-							      >	州
-两								两
-市								市
+两							      |	州两市
+市							      <
 总工会								总工会
 与								与
 医疗								医疗
@@ -43361,14 +43299,14 @@ TEST WORDS PRECISION:	0.959
 转岗								转岗
 培训								培训
 。								。
-INSERTIONS:	3
-DELETIONS:	1
-SUBSTITUTIONS:	4
-NCHANGE:	8
+INSERTIONS:	2
+DELETIONS:	2
+SUBSTITUTIONS:	5
+NCHANGE:	9
 NTRUTH:	140
-NTEST:	142
-TRUE WORDS RECALL:	0.964
-TEST WORDS PRECISION:	0.951
+NTEST:	140
+TRUE WORDS RECALL:	0.950
+TEST WORDS PRECISION:	0.950
 --pku_test_gold.utf8-------output.txt----777
 我国								我国
 民间								民间
@@ -43760,8 +43698,7 @@ TEST WORDS PRECISION:	0.758
 特首							      |	特
 							      >	首
 何								何
-厚铧							      |	厚
-							      >	铧
+厚铧								厚铧
 的								的
 礼物								礼物
 。								。
@@ -43784,8 +43721,7 @@ TEST WORDS PRECISION:	0.758
 。								。
 当								当
 何								何
-厚铧							      |	厚
-							      >	铧
+厚铧								厚铧
 举起								举起
 右手								右手
 面向								面向
@@ -43856,14 +43792,14 @@ TEST WORDS PRECISION:	0.758
 的								的
 祝福								祝福
 。								。
-INSERTIONS:	9
+INSERTIONS:	7
 DELETIONS:	3
-SUBSTITUTIONS:	8
-NCHANGE:	20
+SUBSTITUTIONS:	6
+NCHANGE:	16
 NTRUTH:	100
-NTEST:	106
-TRUE WORDS RECALL:	0.890
-TEST WORDS PRECISION:	0.840
+NTEST:	104
+TRUE WORDS RECALL:	0.910
+TEST WORDS PRECISION:	0.875
 --pku_test_gold.utf8-------output.txt----786
 吐逊江							      |	吐
 							      >	逊
@@ -44479,8 +44415,8 @@ TEST WORDS PRECISION:	0.925
 全国								全国
 81								81
 个								个
-大							      |	大城
-城市							      |	市
+大							      |	大城市
+城市							      <
 所								所
 产生								产生
 的								的
@@ -44645,13 +44581,13 @@ TEST WORDS PRECISION:	0.925
 建设								建设
 。								。
 INSERTIONS:	0
-DELETIONS:	3
-SUBSTITUTIONS:	5
+DELETIONS:	4
+SUBSTITUTIONS:	4
 NCHANGE:	8
 NTRUTH:	180
-NTEST:	177
+NTEST:	176
 TRUE WORDS RECALL:	0.956
-TEST WORDS PRECISION:	0.972
+TEST WORDS PRECISION:	0.977
 --pku_test_gold.utf8-------output.txt----799
 铁道部								铁道部
 计划								计划
@@ -44665,8 +44601,8 @@ TEST WORDS PRECISION:	0.972
 哈尔滨								哈尔滨
 、								、
 北京								北京
-至							      |	至上
-上海							      |	海
+至							      |	至上海
+上海							      <
 、								、
 北京								北京
 至								至
@@ -44701,13 +44637,13 @@ TEST WORDS PRECISION:	0.972
 通道							      <
 。								。
 INSERTIONS:	1
-DELETIONS:	1
-SUBSTITUTIONS:	4
+DELETIONS:	2
+SUBSTITUTIONS:	3
 NCHANGE:	6
 NTRUTH:	46
-NTEST:	46
+NTEST:	45
 TRUE WORDS RECALL:	0.891
-TEST WORDS PRECISION:	0.891
+TEST WORDS PRECISION:	0.911
 --pku_test_gold.utf8-------output.txt----800
 从								从
 一月								一月
@@ -46221,17 +46157,16 @@ TEST WORDS PRECISION:	1.000
 。								。
 （								（
 宋								宋
-长军							      |	长
-							      >	军
+长军								长军
 ）								）
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	0
-SUBSTITUTIONS:	1
-NCHANGE:	2
+SUBSTITUTIONS:	0
+NCHANGE:	0
 NTRUTH:	48
-NTEST:	49
-TRUE WORDS RECALL:	0.979
-TEST WORDS PRECISION:	0.959
+NTEST:	48
+TRUE WORDS RECALL:	1.000
+TEST WORDS PRECISION:	1.000
 --pku_test_gold.utf8-------output.txt----823
 香河								香河
 创建								创建
@@ -46263,8 +46198,7 @@ TEST WORDS PRECISION:	1.000
 要道								要道
 ，								，
 河北省								河北省
-香河县							      |	香河
-							      >	县
+香河县								香河县
 公安								公安
 交警								交警
 大队								大队
@@ -46306,17 +46240,16 @@ TEST WORDS PRECISION:	1.000
 杜								杜
 志宏								志宏
 张								张
-玉秀							      |	玉
-							      >	秀
+玉秀								玉秀
 ）								）
-INSERTIONS:	2
+INSERTIONS:	0
 DELETIONS:	1
-SUBSTITUTIONS:	3
-NCHANGE:	6
+SUBSTITUTIONS:	1
+NCHANGE:	2
 NTRUTH:	58
-NTEST:	59
-TRUE WORDS RECALL:	0.931
-TEST WORDS PRECISION:	0.915
+NTEST:	57
+TRUE WORDS RECALL:	0.966
+TEST WORDS PRECISION:	0.982
 --pku_test_gold.utf8-------output.txt----825
 新型								新型
 细胞								细胞
@@ -46471,17 +46404,16 @@ TEST WORDS PRECISION:	1.000
 。								。
 （								（
 李								李
-曼丽							      |	曼
-							      >	丽
+曼丽								曼丽
 ）								）
-INSERTIONS:	2
+INSERTIONS:	1
 DELETIONS:	1
-SUBSTITUTIONS:	3
-NCHANGE:	6
+SUBSTITUTIONS:	2
+NCHANGE:	4
 NTRUTH:	47
-NTEST:	48
-TRUE WORDS RECALL:	0.915
-TEST WORDS PRECISION:	0.896
+NTEST:	47
+TRUE WORDS RECALL:	0.936
+TEST WORDS PRECISION:	0.936
 --pku_test_gold.utf8-------output.txt----830
 新年								新年
 消费								消费
@@ -47768,8 +47700,7 @@ TEST WORDS PRECISION:	1.000
 副								副
 部长								部长
 赵								赵
-宝江							      |	宝
-							      >	江
+宝江								宝江
 介绍								介绍
 ，								，
 风景								风景
@@ -47881,14 +47812,14 @@ TEST WORDS PRECISION:	1.000
 ”								”
 状态								状态
 。								。
-INSERTIONS:	4
+INSERTIONS:	3
 DELETIONS:	0
-SUBSTITUTIONS:	3
-NCHANGE:	7
+SUBSTITUTIONS:	2
+NCHANGE:	5
 NTRUTH:	114
-NTEST:	118
-TRUE WORDS RECALL:	0.974
-TEST WORDS PRECISION:	0.941
+NTEST:	117
+TRUE WORDS RECALL:	0.982
+TEST WORDS PRECISION:	0.957
 --pku_test_gold.utf8-------output.txt----853
 建设部								建设部
 还								还
@@ -48253,8 +48184,7 @@ TEST WORDS PRECISION:	1.000
 统计局								统计局
 局长								局长
 朱								朱
-之鑫							      |	之
-							      >	鑫
+之鑫								之鑫
 说								说
 ，								，
 今年								今年
@@ -48279,14 +48209,14 @@ TEST WORDS PRECISION:	1.000
 之							      <
 重							      <
 。								。
-INSERTIONS:	2
+INSERTIONS:	1
 DELETIONS:	3
-SUBSTITUTIONS:	3
-NCHANGE:	8
+SUBSTITUTIONS:	2
+NCHANGE:	6
 NTRUTH:	115
-NTEST:	114
-TRUE WORDS RECALL:	0.948
-TEST WORDS PRECISION:	0.956
+NTEST:	113
+TRUE WORDS RECALL:	0.957
+TEST WORDS PRECISION:	0.973
 --pku_test_gold.utf8-------output.txt----860
 图片								图片
 新闻								新闻
@@ -48378,8 +48308,7 @@ TEST WORDS PRECISION:	1.000
 讯								讯
 记者								记者
 李								李
-丽辉							      |	丽
-							      >	辉
+丽辉								丽辉
 从								从
 国家								国家
 工商								工商
@@ -48467,14 +48396,14 @@ TEST WORDS PRECISION:	1.000
 典型								典型
 案件								案件
 。								。
-INSERTIONS:	2
+INSERTIONS:	1
 DELETIONS:	0
-SUBSTITUTIONS:	3
-NCHANGE:	5
+SUBSTITUTIONS:	2
+NCHANGE:	3
 NTRUTH:	91
-NTEST:	93
-TRUE WORDS RECALL:	0.967
-TEST WORDS PRECISION:	0.946
+NTEST:	92
+TRUE WORDS RECALL:	0.978
+TEST WORDS PRECISION:	0.967
 --pku_test_gold.utf8-------output.txt----864
 去年								去年
 12月								12月
@@ -48499,17 +48428,13 @@ TEST WORDS PRECISION:	0.946
 五交化							      |	口
 门市部							      |	五
 							      >	交
-							      >	化
-							      >	门
-							      >	市
+							      >	化门市
 							      >	部
 时								时
 ，								，
 发现								发现
-该								该
-门市部							      |	门
-							      >	市
-							      >	部
+该							      |	该门市
+门市部							      |	部
 擅自								擅自
 超越								超越
 经营								经营
@@ -48525,10 +48450,8 @@ TEST WORDS PRECISION:	0.946
 检查								检查
 中								中
 ，								，
-该								该
-门市部							      |	门
-							      >	市
-							      >	部
+该							      |	该门市
+门市部							      |	部
 负责人								负责人
 谢								谢
 金龙								金龙
@@ -48564,10 +48487,8 @@ TEST WORDS PRECISION:	0.946
 身份								身份
 的								的
 青年								青年
-和								和
-门市部							      |	门
-							      >	市
-							      >	部
+和							      |	和门市
+门市部							      |	部
 营业员								营业员
 推								推
 搡								搡
@@ -48671,14 +48592,14 @@ TEST WORDS PRECISION:	0.946
 追捕								追捕
 中								中
 。								。
-INSERTIONS:	16
+INSERTIONS:	8
 DELETIONS:	4
-SUBSTITUTIONS:	15
-NCHANGE:	35
+SUBSTITUTIONS:	18
+NCHANGE:	30
 NTRUTH:	179
-NTEST:	191
-TRUE WORDS RECALL:	0.894
-TEST WORDS PRECISION:	0.838
+NTEST:	183
+TRUE WORDS RECALL:	0.877
+TEST WORDS PRECISION:	0.858
 --pku_test_gold.utf8-------output.txt----865
 去年								去年
 12月								12月
@@ -48774,8 +48695,7 @@ TEST WORDS PRECISION:	0.838
 工商								工商
 所长								所长
 夏								夏
-正春							      |	正
-							      >	春
+正春								正春
 等								等
 人								人
 衣服								衣服
@@ -48807,8 +48727,7 @@ TEST WORDS PRECISION:	0.838
 再次								再次
 对								对
 夏								夏
-正春							      |	正
-							      >	春
+正春								正春
 等								等
 工商								工商
 工作								工作
@@ -48846,38 +48765,34 @@ TEST WORDS PRECISION:	0.838
 立案								立案
 调查								调查
 。								。
-INSERTIONS:	11
+INSERTIONS:	9
 DELETIONS:	3
-SUBSTITUTIONS:	14
-NCHANGE:	28
+SUBSTITUTIONS:	12
+NCHANGE:	24
 NTRUTH:	155
-NTEST:	163
-TRUE WORDS RECALL:	0.890
-TEST WORDS PRECISION:	0.847
+NTEST:	161
+TRUE WORDS RECALL:	0.903
+TEST WORDS PRECISION:	0.870
 --pku_test_gold.utf8-------output.txt----866
-封丘县							      |	封
-							      >	丘
-							      >	县
+封丘县								封丘县
 国税局								国税局
 征管								征管
 考核								考核
 力度								力度
 大								大
-INSERTIONS:	2
+INSERTIONS:	0
 DELETIONS:	0
-SUBSTITUTIONS:	1
-NCHANGE:	3
+SUBSTITUTIONS:	0
+NCHANGE:	0
 NTRUTH:	6
-NTEST:	8
-TRUE WORDS RECALL:	0.833
-TEST WORDS PRECISION:	0.625
+NTEST:	6
+TRUE WORDS RECALL:	1.000
+TEST WORDS PRECISION:	1.000
 --pku_test_gold.utf8-------output.txt----867
 本报								本报
 讯								讯
 河南省								河南省
-封丘县							      |	封
-							      >	丘
-							      >	县
+封丘县								封丘县
 国税局								国税局
 严格								严格
 落实								落实
@@ -48927,31 +48842,29 @@ TEST WORDS PRECISION:	0.625
 余								余
 元								元
 。								。
-INSERTIONS:	2
+INSERTIONS:	0
 DELETIONS:	0
-SUBSTITUTIONS:	1
-NCHANGE:	3
+SUBSTITUTIONS:	0
+NCHANGE:	0
 NTRUTH:	53
-NTEST:	55
-TRUE WORDS RECALL:	0.981
-TEST WORDS PRECISION:	0.945
+NTEST:	53
+TRUE WORDS RECALL:	1.000
+TEST WORDS PRECISION:	1.000
 --pku_test_gold.utf8-------output.txt----868
 （								（
 方								方
-金玲							      |	金
-							      >	玲
+金玲								金玲
 崔								崔
-鸿杰							      |	鸿
-							      >	杰
+鸿杰								鸿杰
 ）								）
-INSERTIONS:	2
+INSERTIONS:	0
 DELETIONS:	0
-SUBSTITUTIONS:	2
-NCHANGE:	4
+SUBSTITUTIONS:	0
+NCHANGE:	0
 NTRUTH:	6
-NTEST:	8
-TRUE WORDS RECALL:	0.667
-TEST WORDS PRECISION:	0.500
+NTEST:	6
+TRUE WORDS RECALL:	1.000
+TEST WORDS PRECISION:	1.000
 --pku_test_gold.utf8-------output.txt----869
 海王								海王
 生物								生物
@@ -49071,8 +48984,8 @@ TEST WORDS PRECISION:	0.500
 省								省
 上								上
 和								和
-各							      |	各地
-地市							      |	市
+各							      |	各地市
+地市							      <
 分头								分头
 招标								招标
 相								相
@@ -49104,17 +49017,16 @@ TEST WORDS PRECISION:	0.500
 。								。
 （								（
 胡								胡
-加祥							      |	加
-							      >	祥
+加祥								加祥
 ）								）
-INSERTIONS:	3
-DELETIONS:	0
-SUBSTITUTIONS:	6
-NCHANGE:	9
+INSERTIONS:	2
+DELETIONS:	1
+SUBSTITUTIONS:	4
+NCHANGE:	7
 NTRUTH:	50
-NTEST:	53
-TRUE WORDS RECALL:	0.880
-TEST WORDS PRECISION:	0.830
+NTEST:	51
+TRUE WORDS RECALL:	0.900
+TEST WORDS PRECISION:	0.882
 --pku_test_gold.utf8-------output.txt----873
 北京								北京
 高校								高校
@@ -49445,8 +49357,7 @@ TEST WORDS PRECISION:	1.000
 （								（
 记者								记者
 陈								陈
-忠华							      |	忠
-							      >	华
+忠华								忠华
 、								、
 张								张
 羽								羽
@@ -49470,9 +49381,8 @@ TEST WORDS PRECISION:	1.000
 在								在
 全省								全省
 11								11
-个								个
-地市							      |	地
-							      >	市
+个							      |	个地市
+地市							      <
 同时								同时
 展开								展开
 ，								，
@@ -49495,14 +49405,14 @@ TEST WORDS PRECISION:	1.000
 强行								强行
 关停								关停
 。								。
-INSERTIONS:	2
-DELETIONS:	2
-SUBSTITUTIONS:	4
-NCHANGE:	8
+INSERTIONS:	0
+DELETIONS:	3
+SUBSTITUTIONS:	3
+NCHANGE:	6
 NTRUTH:	57
-NTEST:	57
+NTEST:	54
 TRUE WORDS RECALL:	0.895
-TEST WORDS PRECISION:	0.895
+TEST WORDS PRECISION:	0.944
 --pku_test_gold.utf8-------output.txt----880
 截至								截至
 目前								目前
@@ -50123,8 +50033,7 @@ TEST WORDS PRECISION:	1.000
 报道								报道
 ：								：
 浙江省								浙江省
-海盐县							      |	海盐
-							      >	县
+海盐县								海盐县
 积极								积极
 引导								引导
 、								、
@@ -50146,14 +50055,14 @@ TEST WORDS PRECISION:	1.000
 喜人								喜人
 局面								局面
 。								。
-INSERTIONS:	2
+INSERTIONS:	1
 DELETIONS:	0
-SUBSTITUTIONS:	2
-NCHANGE:	4
+SUBSTITUTIONS:	1
+NCHANGE:	2
 NTRUTH:	32
-NTEST:	34
-TRUE WORDS RECALL:	0.938
-TEST WORDS PRECISION:	0.882
+NTEST:	33
+TRUE WORDS RECALL:	0.969
+TEST WORDS PRECISION:	0.939
 --pku_test_gold.utf8-------output.txt----890
 海盐县							      |	海盐
 							      >	县
@@ -50456,8 +50365,7 @@ TEST WORDS PRECISION:	0.938
 北大								北大
 学生								学生
 傅								傅
-雪蓓							      |	雪
-							      >	蓓
+雪蓓								雪蓓
 、								、
 谭								谭
 鸣								鸣
@@ -50551,14 +50459,14 @@ TEST WORDS PRECISION:	0.938
 传递								传递
 活动								活动
 。								。
-INSERTIONS:	7
+INSERTIONS:	6
 DELETIONS:	6
-SUBSTITUTIONS:	12
-NCHANGE:	25
+SUBSTITUTIONS:	11
+NCHANGE:	23
 NTRUTH:	129
-NTEST:	130
-TRUE WORDS RECALL:	0.860
-TEST WORDS PRECISION:	0.854
+NTEST:	129
+TRUE WORDS RECALL:	0.868
+TEST WORDS PRECISION:	0.868
 --pku_test_gold.utf8-------output.txt----894
 火炬								火炬
 在								在
@@ -51018,8 +50926,7 @@ TEST WORDS PRECISION:	0.764
 奥委会								奥委会
 执委								执委
 何								何
-振梁							      |	振
-							      >	梁
+振梁								振梁
 ，								，
 以及								以及
 体育界								体育界
@@ -51041,14 +50948,14 @@ TEST WORDS PRECISION:	0.764
 发表								发表
 讲话								讲话
 。								。
-INSERTIONS:	6
+INSERTIONS:	5
 DELETIONS:	1
-SUBSTITUTIONS:	5
-NCHANGE:	12
+SUBSTITUTIONS:	4
+NCHANGE:	10
 NTRUTH:	44
-NTEST:	49
-TRUE WORDS RECALL:	0.864
-TEST WORDS PRECISION:	0.776
+NTEST:	48
+TRUE WORDS RECALL:	0.886
+TEST WORDS PRECISION:	0.812
 --pku_test_gold.utf8-------output.txt----906
 叶								叶
 江川								江川
@@ -51682,8 +51589,7 @@ TEST WORDS PRECISION:	0.903
 副								副
 司长								司长
 刘								刘
-保延							      |	保
-							      >	延
+保延								保延
 认为								认为
 ，								，
 中药								中药
@@ -51769,21 +51675,20 @@ TEST WORDS PRECISION:	0.903
 中药								中药
 现代化								现代化
 。								。
-INSERTIONS:	2
+INSERTIONS:	1
 DELETIONS:	2
-SUBSTITUTIONS:	3
-NCHANGE:	7
+SUBSTITUTIONS:	2
+NCHANGE:	5
 NTRUTH:	94
-NTEST:	94
-TRUE WORDS RECALL:	0.947
-TEST WORDS PRECISION:	0.947
+NTEST:	93
+TRUE WORDS RECALL:	0.957
+TEST WORDS PRECISION:	0.968
 --pku_test_gold.utf8-------output.txt----915
 三九								三九
 集团								集团
 总裁								总裁
 赵								赵
-新先							      |	新
-							      >	先
+新先								新先
 说								说
 ，								，
 世界								世界
@@ -51943,14 +51848,14 @@ TEST WORDS PRECISION:	0.947
 唯一								唯一
 出路								出路
 。								。
-INSERTIONS:	2
+INSERTIONS:	1
 DELETIONS:	4
-SUBSTITUTIONS:	9
-NCHANGE:	15
+SUBSTITUTIONS:	8
+NCHANGE:	13
 NTRUTH:	163
-NTEST:	161
-TRUE WORDS RECALL:	0.920
-TEST WORDS PRECISION:	0.932
+NTEST:	160
+TRUE WORDS RECALL:	0.926
+TEST WORDS PRECISION:	0.944
 --pku_test_gold.utf8-------output.txt----916
 中药								中药
 的								的
@@ -52050,8 +51955,7 @@ TEST WORDS PRECISION:	0.935
 中心								中心
 主任								主任
 陈								陈
-裕容							      |	裕
-							      >	容
+裕容								裕容
 认为								认为
 ，								，
 中医药								中医药
@@ -52138,14 +52042,14 @@ TEST WORDS PRECISION:	0.935
 ”								”
 靠拢								靠拢
 。								。
-INSERTIONS:	6
+INSERTIONS:	5
 DELETIONS:	3
-SUBSTITUTIONS:	11
-NCHANGE:	20
+SUBSTITUTIONS:	10
+NCHANGE:	18
 NTRUTH:	93
-NTEST:	96
-TRUE WORDS RECALL:	0.849
-TEST WORDS PRECISION:	0.823
+NTEST:	95
+TRUE WORDS RECALL:	0.860
+TEST WORDS PRECISION:	0.842
 --pku_test_gold.utf8-------output.txt----919
 前不久								前不久
 ，								，
@@ -52305,8 +52209,7 @@ TEST WORDS PRECISION:	0.906
 公司								公司
 董事长								董事长
 孙								孙
-耀志							      |	耀
-							      >	志
+耀志								耀志
 认为								认为
 ，								，
 中医药								中医药
@@ -52402,14 +52305,14 @@ TEST WORDS PRECISION:	0.906
 该								该
 落后								落后
 。								。
-INSERTIONS:	2
+INSERTIONS:	1
 DELETIONS:	5
-SUBSTITUTIONS:	7
-NCHANGE:	14
+SUBSTITUTIONS:	6
+NCHANGE:	12
 NTRUTH:	102
-NTEST:	99
-TRUE WORDS RECALL:	0.882
-TEST WORDS PRECISION:	0.909
+NTEST:	98
+TRUE WORDS RECALL:	0.892
+TEST WORDS PRECISION:	0.929
 --pku_test_gold.utf8-------output.txt----921
 西药								西药
 是								是
@@ -52979,9 +52882,7 @@ TEST WORDS PRECISION:	0.500
 了								了
 ，								，
 山东省								山东省
-高唐县							      |	高
-							      >	唐
-							      >	县
+高唐县								高唐县
 的								的
 科技								科技
 人员								人员
@@ -53039,9 +52940,7 @@ TEST WORDS PRECISION:	0.500
 网							      <
 ”								”
 ，								，
-高唐县							      |	高
-							      >	唐
-							      >	县
+高唐县								高唐县
 奏响								奏响
 了								了
 科技								科技
@@ -53052,14 +52951,14 @@ TEST WORDS PRECISION:	0.500
 							      >	重唱
 ”								”
 。								。
-INSERTIONS:	6
+INSERTIONS:	2
 DELETIONS:	2
-SUBSTITUTIONS:	8
-NCHANGE:	16
+SUBSTITUTIONS:	6
+NCHANGE:	10
 NTRUTH:	83
-NTEST:	87
-TRUE WORDS RECALL:	0.880
-TEST WORDS PRECISION:	0.839
+NTEST:	83
+TRUE WORDS RECALL:	0.904
+TEST WORDS PRECISION:	0.904
 --pku_test_gold.utf8-------output.txt----931
 在								在
 近								近
@@ -53071,9 +52970,7 @@ TEST WORDS PRECISION:	0.839
 活动								活动
 中								中
 ，								，
-高唐县							      |	高
-							      >	唐
-							      >	县
+高唐县								高唐县
 发现								发现
 ，								，
 举办								举办
@@ -53226,14 +53123,14 @@ TEST WORDS PRECISION:	0.839
 朱								朱
 桂林								桂林
 ）								）
-INSERTIONS:	2
+INSERTIONS:	0
 DELETIONS:	6
-SUBSTITUTIONS:	8
-NCHANGE:	16
+SUBSTITUTIONS:	7
+NCHANGE:	13
 NTRUTH:	163
-NTEST:	159
-TRUE WORDS RECALL:	0.914
-TEST WORDS PRECISION:	0.937
+NTEST:	157
+TRUE WORDS RECALL:	0.920
+TEST WORDS PRECISION:	0.955
 --pku_test_gold.utf8-------output.txt----932
 围绕								围绕
 农民								农民
@@ -53355,17 +53252,14 @@ TEST WORDS PRECISION:	0.917
 ”								”
 ，								，
 山东								山东
-高唐县							      |	高
-							      >	唐
-							      >	县
+高唐县								高唐县
 建设								建设
 农村								农村
 科普							      |	科普网
 网							      <
 ，								，
 浙江								浙江
-海盐县							      |	海盐
-							      >	县
+海盐县								海盐县
 开展								开展
 丰富多采							丰富多采
 的								的
@@ -53424,14 +53318,14 @@ TEST WORDS PRECISION:	0.917
 值得								值得
 借鉴								借鉴
 。								。
-INSERTIONS:	4
+INSERTIONS:	1
 DELETIONS:	1
-SUBSTITUTIONS:	4
-NCHANGE:	9
+SUBSTITUTIONS:	2
+NCHANGE:	4
 NTRUTH:	78
-NTEST:	81
-TRUE WORDS RECALL:	0.936
-TEST WORDS PRECISION:	0.901
+NTEST:	78
+TRUE WORDS RECALL:	0.962
+TEST WORDS PRECISION:	0.962
 --pku_test_gold.utf8-------output.txt----935
 新西兰								新西兰
 曙光								曙光
@@ -53544,8 +53438,7 @@ TEST WORDS PRECISION:	0.847
 内								内
 大运会							      |	大
 会旗							      |	运
-							      >	会会
-							      >	旗
+							      >	会会旗
 迎风								迎风
 飘扬								飘扬
 ，								，
@@ -53566,14 +53459,14 @@ TEST WORDS PRECISION:	0.847
 上								上
 举行								举行
 。								。
-INSERTIONS:	9
+INSERTIONS:	8
 DELETIONS:	1
 SUBSTITUTIONS:	8
-NCHANGE:	18
+NCHANGE:	17
 NTRUTH:	40
-NTEST:	48
+NTEST:	47
 TRUE WORDS RECALL:	0.775
-TEST WORDS PRECISION:	0.646
+TEST WORDS PRECISION:	0.660
 --pku_test_gold.utf8-------output.txt----938
 中国								中国
 教育部								教育部
@@ -53604,9 +53497,7 @@ TEST WORDS PRECISION:	0.646
 北帕莫斯顿市						      |	北
 							      >	帕
 							      >	莫
-							      >	斯
-							      >	顿
-							      >	市
+							      >	斯顿市
 市长								市长
 吉尔·怀特						      |	吉
 							      >	尔
@@ -53619,8 +53510,7 @@ TEST WORDS PRECISION:	0.646
 新西兰								新西兰
 大使								大使
 陈								陈
-文照							      |	文
-							      >	照
+文照								文照
 先后								先后
 致辞								致辞
 。								。
@@ -53628,8 +53518,7 @@ TEST WORDS PRECISION:	0.646
 							      >	大学
 学生								学生
 全								全
-奕颖							      |	奕
-							      >	颖
+奕颖								奕颖
 代表								代表
 中国								中国
 大学生								大学生
@@ -53662,14 +53551,14 @@ TEST WORDS PRECISION:	0.646
 贡献								贡献
 。								。
 ”								”
-INSERTIONS:	21
+INSERTIONS:	17
 DELETIONS:	0
-SUBSTITUTIONS:	11
-NCHANGE:	32
+SUBSTITUTIONS:	9
+NCHANGE:	26
 NTRUTH:	66
-NTEST:	87
-TRUE WORDS RECALL:	0.833
-TEST WORDS PRECISION:	0.632
+NTEST:	83
+TRUE WORDS RECALL:	0.864
+TEST WORDS PRECISION:	0.687
 --pku_test_gold.utf8-------output.txt----939
 5时								5时
 55分								55分
@@ -53733,15 +53622,14 @@ TEST WORDS PRECISION:	0.632
 北大								北大
 的								的
 全								全
-奕颖							      |	奕
-							      >	颖
+奕颖								奕颖
 、								、
 王								王
 征宇								征宇
 、								、
 沈								沈
-鹏								鹏
-和								和
+鹏							      |	鹏和
+和							      <
 中央								中央
 民族								民族
 大学								大学
@@ -53776,14 +53664,14 @@ TEST WORDS PRECISION:	0.632
 分外								分外
 醒目								醒目
 。								。
-INSERTIONS:	6
-DELETIONS:	1
+INSERTIONS:	5
+DELETIONS:	2
 SUBSTITUTIONS:	5
 NCHANGE:	12
 NTRUTH:	99
-NTEST:	104
-TRUE WORDS RECALL:	0.939
-TEST WORDS PRECISION:	0.894
+NTEST:	102
+TRUE WORDS RECALL:	0.929
+TEST WORDS PRECISION:	0.902
 --pku_test_gold.utf8-------output.txt----940
 草地								草地
 畜牧业								畜牧业
@@ -54066,8 +53954,7 @@ TEST WORDS PRECISION:	0.571
 级							      |	上级
 冠军								冠军
 任								任
-彦兵							      |	彦
-							      >	兵
+彦兵								彦兵
 ，								，
 夺得								夺得
 中国								中国
@@ -54080,14 +53967,14 @@ TEST WORDS PRECISION:	0.571
 ”								”
 头衔								头衔
 。								。
-INSERTIONS:	5
+INSERTIONS:	4
 DELETIONS:	1
-SUBSTITUTIONS:	8
-NCHANGE:	14
+SUBSTITUTIONS:	7
+NCHANGE:	12
 NTRUTH:	62
-NTEST:	66
-TRUE WORDS RECALL:	0.855
-TEST WORDS PRECISION:	0.803
+NTEST:	65
+TRUE WORDS RECALL:	0.871
+TEST WORDS PRECISION:	0.831
 --pku_test_gold.utf8-------output.txt----947
 作为								作为
 全国								全国
@@ -54126,8 +54013,7 @@ TEST WORDS PRECISION:	0.803
 劣势								劣势
 的								的
 任								任
-彦兵							      |	彦
-							      >	兵
+彦兵								彦兵
 从								从
 第三								第三
 回合								回合
@@ -54147,8 +54033,7 @@ TEST WORDS PRECISION:	0.803
 ，								，
 使得								使得
 任								任
-彦兵							      |	彦
-							      >	兵
+彦兵								彦兵
 屡屡								屡屡
 无							      |	无功而返
 功							      <
@@ -54179,14 +54064,14 @@ TEST WORDS PRECISION:	0.803
 的								的
 胜利								胜利
 。								。
-INSERTIONS:	3
+INSERTIONS:	1
 DELETIONS:	4
-SUBSTITUTIONS:	5
-NCHANGE:	12
+SUBSTITUTIONS:	3
+NCHANGE:	8
 NTRUTH:	87
-NTEST:	86
-TRUE WORDS RECALL:	0.897
-TEST WORDS PRECISION:	0.907
+NTEST:	84
+TRUE WORDS RECALL:	0.920
+TEST WORDS PRECISION:	0.952
 --pku_test_gold.utf8-------output.txt----948
 庆							      |	庆元旦
 元旦							      <
@@ -54390,8 +54275,7 @@ TEST WORDS PRECISION:	0.833
 行政								行政
 长官								长官
 何								何
-厚铧							      |	厚
-							      >	铧
+厚铧								厚铧
 及								及
 一些								一些
 嘉宾								嘉宾
@@ -54403,14 +54287,14 @@ TEST WORDS PRECISION:	0.833
 云文							      |	云
 							      >	文
 ）								）
-INSERTIONS:	2
+INSERTIONS:	1
 DELETIONS:	0
-SUBSTITUTIONS:	2
-NCHANGE:	4
+SUBSTITUTIONS:	1
+NCHANGE:	2
 NTRUTH:	16
-NTEST:	18
-TRUE WORDS RECALL:	0.875
-TEST WORDS PRECISION:	0.778
+NTEST:	17
+TRUE WORDS RECALL:	0.938
+TEST WORDS PRECISION:	0.882
 --pku_test_gold.utf8-------output.txt----954
 上网								上网
 参观								参观
@@ -56120,16 +56004,13 @@ TEST WORDS PRECISION:	0.924
 网								网
 ，								，
 使								使
-亚历山大						      |	亚
-							      >	历
-							      >	山
+亚历山大						      |	亚历山
 							      >	大
 、								、
 伊斯梅利亚						      |	伊
 							      >	斯
 							      >	梅
-							      >	利
-							      >	亚
+							      >	利亚
 等								等
 城市								城市
 成为								成为
@@ -56139,14 +56020,14 @@ TEST WORDS PRECISION:	0.924
 贸易								贸易
 站点								站点
 。								。
-INSERTIONS:	9
+INSERTIONS:	6
 DELETIONS:	1
 SUBSTITUTIONS:	5
-NCHANGE:	15
+NCHANGE:	12
 NTRUTH:	53
-NTEST:	61
+NTEST:	58
 TRUE WORDS RECALL:	0.887
-TEST WORDS PRECISION:	0.770
+TEST WORDS PRECISION:	0.810
 --pku_test_gold.utf8-------output.txt----978
 针对								针对
 全球								全球
@@ -56375,8 +56256,7 @@ TEST WORDS PRECISION:	0.960
 伊斯梅利亚						      |	伊
 建成							      |	斯
 中东							      |	梅
-							      >	利
-							      >	亚
+							      >	利亚
 							      >	建
 							      >	成中东
 最								最
@@ -56424,8 +56304,7 @@ TEST WORDS PRECISION:	0.960
 伊斯梅利亚						      |	伊
 							      >	斯
 							      >	梅
-							      >	利
-							      >	亚
+							      >	利亚
 科技								科技
 谷								谷
 工程								工程
@@ -56445,14 +56324,14 @@ TEST WORDS PRECISION:	0.960
 脚步							      |	脚步声
 声							      <
 。								。
-INSERTIONS:	11
+INSERTIONS:	9
 DELETIONS:	3
 SUBSTITUTIONS:	8
-NCHANGE:	22
+NCHANGE:	20
 NTRUTH:	81
-NTEST:	89
+NTEST:	87
 TRUE WORDS RECALL:	0.864
-TEST WORDS PRECISION:	0.787
+TEST WORDS PRECISION:	0.805
 --pku_test_gold.utf8-------output.txt----981
 （								（
 本报								本报
@@ -57148,9 +57027,8 @@ TEST WORDS PRECISION:	1.000
 德国								德国
 发展								发展
 援助								援助
-部长								部长
-海德玛丽·维乔雷克—措伊尔				      |	海
-							      >	德
+部长							      |	部长海
+海德玛丽·维乔雷克—措伊尔				      |	德
 							      >	玛
 							      >	丽
 							      >	·
@@ -57199,14 +57077,14 @@ TEST WORDS PRECISION:	1.000
 实现								实现
 的								的
 。								。
-INSERTIONS:	12
+INSERTIONS:	11
 DELETIONS:	2
-SUBSTITUTIONS:	4
+SUBSTITUTIONS:	5
 NCHANGE:	18
 NTRUTH:	72
-NTEST:	82
-TRUE WORDS RECALL:	0.917
-TEST WORDS PRECISION:	0.805
+NTEST:	81
+TRUE WORDS RECALL:	0.903
+TEST WORDS PRECISION:	0.802
 --pku_test_gold.utf8-------output.txt----992
 菲律宾								菲律宾
 发生								发生
@@ -57265,11 +57143,8 @@ TEST WORDS PRECISION:	1.000
 南端								南端
 的								的
 东达沃省						      |	东
-马蒂市							      |	达
-							      >	沃
-							      >	省
-							      >	马蒂
-							      >	市
+							      >	达沃省
+马蒂市								马蒂市
 东南								东南
 约								约
 66								66
@@ -57284,14 +57159,14 @@ TEST WORDS PRECISION:	1.000
 强							      |	强震
 震感							      |	感
 。								。
-INSERTIONS:	4
+INSERTIONS:	1
 DELETIONS:	0
-SUBSTITUTIONS:	4
-NCHANGE:	8
+SUBSTITUTIONS:	3
+NCHANGE:	4
 NTRUTH:	58
-NTEST:	62
-TRUE WORDS RECALL:	0.931
-TEST WORDS PRECISION:	0.871
+NTEST:	59
+TRUE WORDS RECALL:	0.948
+TEST WORDS PRECISION:	0.932
 --pku_test_gold.utf8-------output.txt----994
 （								（
 本栏								本栏
@@ -57446,9 +57321,7 @@ TEST WORDS PRECISION:	0.905
 的								的
 约翰·斯汤海勒						      |	约翰
 							      >	·
-							      >	斯
-							      >	汤
-							      >	海
+							      >	斯汤海
 							      >	勒
 教授								教授
 介绍								介绍
@@ -57467,14 +57340,14 @@ TEST WORDS PRECISION:	0.905
 1100								1100
 人次								人次
 。								。
-INSERTIONS:	7
+INSERTIONS:	5
 DELETIONS:	0
 SUBSTITUTIONS:	2
-NCHANGE:	9
+NCHANGE:	7
 NTRUTH:	66
-NTEST:	73
+NTEST:	71
 TRUE WORDS RECALL:	0.970
-TEST WORDS PRECISION:	0.877
+TEST WORDS PRECISION:	0.901
 --pku_test_gold.utf8-------output.txt----998
 虽然								虽然
 这里								这里
@@ -58333,16 +58206,15 @@ TEST WORDS PRECISION:	0.950
 黑龙江省							黑龙江省
 省长								省长
 宋								宋
-法棠							      |	法
-							      >	棠
-INSERTIONS:	1
+法棠								法棠
+INSERTIONS:	0
 DELETIONS:	0
-SUBSTITUTIONS:	1
-NCHANGE:	2
+SUBSTITUTIONS:	0
+NCHANGE:	0
 NTRUTH:	11
-NTEST:	12
-TRUE WORDS RECALL:	0.909
-TEST WORDS PRECISION:	0.833
+NTEST:	11
+TRUE WORDS RECALL:	1.000
+TEST WORDS PRECISION:	1.000
 --pku_test_gold.utf8-------output.txt----1006
 当								当
 皑皑								皑皑
@@ -58453,17 +58325,16 @@ TEST WORDS PRECISION:	0.833
 黑龙江省							黑龙江省
 省长								省长
 宋								宋
-法棠							      |	法
-							      >	棠
+法棠								法棠
 。								。
-INSERTIONS:	3
+INSERTIONS:	2
 DELETIONS:	1
-SUBSTITUTIONS:	3
-NCHANGE:	7
+SUBSTITUTIONS:	2
+NCHANGE:	5
 NTRUTH:	109
-NTEST:	111
-TRUE WORDS RECALL:	0.963
-TEST WORDS PRECISION:	0.946
+NTEST:	110
+TRUE WORDS RECALL:	0.972
+TEST WORDS PRECISION:	0.964
 --pku_test_gold.utf8-------output.txt----1007
 谈							      |	谈起
 起							      <
@@ -58808,9 +58679,7 @@ TEST WORDS PRECISION:	0.919
 、								、
 龙珠二龙山						      |	龙
 							      >	珠
-							      >	二
-							      >	龙
-							      >	山
+							      >	二龙山
 滑雪								滑雪
 度假区								度假区
 都								都
@@ -58819,14 +58688,14 @@ TEST WORDS PRECISION:	0.919
 一流								一流
 水平								水平
 。								。
-INSERTIONS:	8
+INSERTIONS:	6
 DELETIONS:	3
 SUBSTITUTIONS:	8
-NCHANGE:	19
+NCHANGE:	17
 NTRUTH:	236
-NTEST:	241
+NTEST:	239
 TRUE WORDS RECALL:	0.953
-TEST WORDS PRECISION:	0.934
+TEST WORDS PRECISION:	0.941
 --pku_test_gold.utf8-------output.txt----1009
 为了								为了
 发展								发展
@@ -59178,9 +59047,7 @@ TEST WORDS PRECISION:	0.983
 和								和
 龙珠二龙山						      |	龙
 							      >	珠
-							      >	二
-							      >	龙
-							      >	山
+							      >	二龙山
 滑雪								滑雪
 活动								活动
 为主								为主
@@ -59211,10 +59078,8 @@ TEST WORDS PRECISION:	0.983
 游客								游客
 。								。
 海林							      |	海
-双峰							      |	林
-雪乡							      |	双
-							      >	峰
-							      >	雪
+双峰							      |	林双峰
+雪乡							      |	雪
 							      >	乡
 旅游节								旅游节
 ，								，
@@ -59279,14 +59144,14 @@ TEST WORDS PRECISION:	0.983
 高潮								高潮
 。								。
 ”								”
-INSERTIONS:	19
+INSERTIONS:	15
 DELETIONS:	3
 SUBSTITUTIONS:	22
-NCHANGE:	44
+NCHANGE:	40
 NTRUTH:	303
-NTEST:	319
+NTEST:	315
 TRUE WORDS RECALL:	0.917
-TEST WORDS PRECISION:	0.871
+TEST WORDS PRECISION:	0.883
 --pku_test_gold.utf8-------output.txt----1011
 宋								宋
 省长								省长
@@ -59516,10 +59381,9 @@ TEST WORDS PRECISION:	1.000
 猛增								猛增
 ，								，
 亚布力							      |	亚
-							      >	布
-							      >	力
-风车								风车
-山庄							      |	山
+风车							      |	布
+山庄							      |	力
+							      >	风车山
 							      >	庄
 的								的
 接待								接待
@@ -59566,14 +59430,14 @@ TEST WORDS PRECISION:	1.000
 的								的
 目的地								目的地
 。								。
-INSERTIONS:	4
+INSERTIONS:	3
 DELETIONS:	2
-SUBSTITUTIONS:	4
+SUBSTITUTIONS:	5
 NCHANGE:	10
 NTRUTH:	72
-NTEST:	74
-TRUE WORDS RECALL:	0.917
-TEST WORDS PRECISION:	0.892
+NTEST:	73
+TRUE WORDS RECALL:	0.903
+TEST WORDS PRECISION:	0.890
 --pku_test_gold.utf8-------output.txt----1015
 冰雪								冰雪
 “								“
@@ -59669,9 +59533,7 @@ TEST WORDS PRECISION:	1.000
 哈尔滨								哈尔滨
 近郊								近郊
 的								的
-二龙山							      |	二
-							      >	龙
-							      >	山
+二龙山								二龙山
 滑雪场								滑雪场
 爆满								爆满
 ，								，
@@ -59709,14 +59571,14 @@ TEST WORDS PRECISION:	1.000
 雪具							      |	雪
 							      >	具
 。								。
-INSERTIONS:	6
+INSERTIONS:	4
 DELETIONS:	3
-SUBSTITUTIONS:	12
-NCHANGE:	21
+SUBSTITUTIONS:	11
+NCHANGE:	18
 NTRUTH:	110
-NTEST:	113
-TRUE WORDS RECALL:	0.864
-TEST WORDS PRECISION:	0.841
+NTEST:	111
+TRUE WORDS RECALL:	0.873
+TEST WORDS PRECISION:	0.865
 --pku_test_gold.utf8-------output.txt----1017
 一								一
 位								位
@@ -59839,9 +59701,7 @@ TEST WORDS PRECISION:	0.841
 雪塑							      |	雪
 							      >	塑
 、								、
-二龙山							      |	二
-							      >	龙
-							      >	山
+二龙山								二龙山
 、								、
 亚布力							      |	亚
 							      >	布
@@ -59859,14 +59719,14 @@ TEST WORDS PRECISION:	0.841
 尽								尽
 畅								畅
 。								。
-INSERTIONS:	7
+INSERTIONS:	5
 DELETIONS:	5
-SUBSTITUTIONS:	12
-NCHANGE:	24
+SUBSTITUTIONS:	11
+NCHANGE:	21
 NTRUTH:	134
-NTEST:	136
-TRUE WORDS RECALL:	0.873
-TEST WORDS PRECISION:	0.860
+NTEST:	134
+TRUE WORDS RECALL:	0.881
+TEST WORDS PRECISION:	0.881
 --pku_test_gold.utf8-------output.txt----1018
 冰雪								冰雪
 旅游								旅游
@@ -59887,8 +59747,7 @@ TEST WORDS PRECISION:	0.860
 黑龙江省							黑龙江省
 省长								省长
 宋								宋
-法棠							      |	法
-							      >	棠
+法棠								法棠
 告诉								告诉
 记者								记者
 ：								：
@@ -59948,14 +59807,14 @@ TEST WORDS PRECISION:	0.860
 可观								可观
 了								了
 。								。
-INSERTIONS:	3
+INSERTIONS:	2
 DELETIONS:	0
-SUBSTITUTIONS:	3
-NCHANGE:	6
+SUBSTITUTIONS:	2
+NCHANGE:	4
 NTRUTH:	77
-NTEST:	80
-TRUE WORDS RECALL:	0.961
-TEST WORDS PRECISION:	0.925
+NTEST:	79
+TRUE WORDS RECALL:	0.974
+TEST WORDS PRECISION:	0.949
 --pku_test_gold.utf8-------output.txt----1019
 包袱								包袱
 变								变
@@ -60090,8 +59949,7 @@ TEST WORDS PRECISION:	0.952
 市委								市委
 书记								书记
 任								任
-仲夷							      |	仲
-							      >	夷
+仲夷								仲夷
 在								在
 一								一
 户								户
@@ -60181,14 +60039,14 @@ TEST WORDS PRECISION:	0.952
 是								是
 商机								商机
 。								。
-INSERTIONS:	3
+INSERTIONS:	2
 DELETIONS:	1
-SUBSTITUTIONS:	4
-NCHANGE:	8
+SUBSTITUTIONS:	3
+NCHANGE:	6
 NTRUTH:	109
-NTEST:	111
-TRUE WORDS RECALL:	0.954
-TEST WORDS PRECISION:	0.937
+NTEST:	110
+TRUE WORDS RECALL:	0.963
+TEST WORDS PRECISION:	0.955
 --pku_test_gold.utf8-------output.txt----1022
 现在								现在
 ，								，
@@ -60234,8 +60092,7 @@ TEST WORDS PRECISION:	0.937
 建委								建委
 主任								主任
 高								高
-迎祥							      |	迎
-							      >	祥
+迎祥								迎祥
 向								向
 记者								记者
 算								算
@@ -60328,14 +60185,14 @@ TEST WORDS PRECISION:	0.937
 和								和
 知名度								知名度
 。								。
-INSERTIONS:	5
+INSERTIONS:	4
 DELETIONS:	3
-SUBSTITUTIONS:	10
-NCHANGE:	18
+SUBSTITUTIONS:	9
+NCHANGE:	16
 NTRUTH:	133
-NTEST:	135
-TRUE WORDS RECALL:	0.902
-TEST WORDS PRECISION:	0.889
+NTEST:	134
+TRUE WORDS RECALL:	0.910
+TEST WORDS PRECISION:	0.903
 --pku_test_gold.utf8-------output.txt----1023
 至于								至于
 冰雪								冰雪
@@ -61577,9 +61434,7 @@ TEST WORDS PRECISION:	1.000
 战败								战败
 ，								，
 沙皇								沙皇
-亚历山大						      |	亚
-							      >	历
-							      >	山
+亚历山大						      |	亚历山
 							      >	大
 二								二
 世								世
@@ -61676,14 +61531,14 @@ TEST WORDS PRECISION:	1.000
 的								的
 体系								体系
 。								。
-INSERTIONS:	13
+INSERTIONS:	11
 DELETIONS:	2
 SUBSTITUTIONS:	15
-NCHANGE:	30
+NCHANGE:	28
 NTRUTH:	342
-NTEST:	353
+NTEST:	351
 TRUE WORDS RECALL:	0.950
-TEST WORDS PRECISION:	0.921
+TEST WORDS PRECISION:	0.926
 --pku_test_gold.utf8-------output.txt----1038
 资本主义							资本主义
 政治								政治
@@ -65666,8 +65521,8 @@ TEST WORDS PRECISION:	0.946
 变								变
 政府								政府
 包								包
-建								建
-为								为
+建							      |	建为
+为							      <
 全民								全民
 共建								共建
 ，								，
@@ -65685,13 +65540,13 @@ TEST WORDS PRECISION:	0.946
 建设								建设
 。								。
 INSERTIONS:	0
-DELETIONS:	2
-SUBSTITUTIONS:	2
-NCHANGE:	4
+DELETIONS:	3
+SUBSTITUTIONS:	3
+NCHANGE:	6
 NTRUTH:	195
-NTEST:	193
-TRUE WORDS RECALL:	0.979
-TEST WORDS PRECISION:	0.990
+NTEST:	192
+TRUE WORDS RECALL:	0.969
+TEST WORDS PRECISION:	0.984
 --pku_test_gold.utf8-------output.txt----1065
 经营								经营
 城市								城市
@@ -65733,8 +65588,7 @@ TEST WORDS PRECISION:	0.990
 浅							      <
 。								。
 湖南								湖南
-益阳市							      |	益阳
-							      >	市
+益阳市								益阳市
 1996年								1996年
 将								将
 市内								市内
@@ -65967,9 +65821,9 @@ TEST WORDS PRECISION:	0.990
 自								自
 1995年								1995年
 撤								撤
-地								地
-建								建
-市								市
+地							      |	地建市
+建							      <
+市							      <
 以来								以来
 ，								，
 中心								中心
@@ -66008,14 +65862,14 @@ TEST WORDS PRECISION:	0.990
 而								而
 来								来
 。								。
-INSERTIONS:	8
-DELETIONS:	7
+INSERTIONS:	7
+DELETIONS:	9
 SUBSTITUTIONS:	13
-NCHANGE:	28
+NCHANGE:	29
 NTRUTH:	307
-NTEST:	308
-TRUE WORDS RECALL:	0.935
-TEST WORDS PRECISION:	0.932
+NTEST:	305
+TRUE WORDS RECALL:	0.928
+TEST WORDS PRECISION:	0.934
 --pku_test_gold.utf8-------output.txt----1066
 新								新
 世纪								世纪
@@ -68406,8 +68260,7 @@ TRUE WORDS RECALL:	1.000
 TEST WORDS PRECISION:	1.000
 --pku_test_gold.utf8-------output.txt----1089
 福建								福建
-武平县							      |	武平
-							      >	县
+武平县								武平县
 取缔								取缔
 300								300
 家								家
@@ -68421,14 +68274,14 @@ TEST WORDS PRECISION:	1.000
 3								3
 张								张
 ）								）
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	0
-SUBSTITUTIONS:	1
-NCHANGE:	2
+SUBSTITUTIONS:	0
+NCHANGE:	0
 NTRUTH:	15
-NTEST:	16
-TRUE WORDS RECALL:	0.933
-TEST WORDS PRECISION:	0.875
+NTEST:	15
+TRUE WORDS RECALL:	1.000
+TEST WORDS PRECISION:	1.000
 --pku_test_gold.utf8-------output.txt----1090
 为了								为了
 确保								确保
@@ -68512,9 +68365,8 @@ TEST WORDS PRECISION:	0.965
 爆竹								爆竹
 传统								传统
 的								的
-武平县							      |	武平
-十方							      |	县
-							      >	十
+武平县								武平县
+十方							      |	十
 							      >	方
 等								等
 乡镇								乡镇
@@ -68587,9 +68439,9 @@ TEST WORDS PRECISION:	0.965
 县							      |	县政府
 政府							      <
 成立								成立
-了								了
-由								由
-县								县
+了							      |	了由县
+由							      <
+县							      <
 领导								领导
 同志								同志
 挂帅								挂帅
@@ -68777,25 +68629,23 @@ TEST WORDS PRECISION:	0.965
 。								。
 （								（
 福建								福建
-龙岩市							      |	龙岩
-							      >	市
+龙岩市								龙岩市
 公安局								公安局
 张								张
-春波							      |	春
-							      >	波
+春波								春波
 郑								郑
 湛陈							      |	湛
 							      >	陈
 昆明								昆明
 ）								）
-INSERTIONS:	12
-DELETIONS:	5
-SUBSTITUTIONS:	15
-NCHANGE:	32
+INSERTIONS:	9
+DELETIONS:	7
+SUBSTITUTIONS:	13
+NCHANGE:	29
 NTRUTH:	280
-NTEST:	287
+NTEST:	282
 TRUE WORDS RECALL:	0.929
-TEST WORDS PRECISION:	0.906
+TEST WORDS PRECISION:	0.922
 --pku_test_gold.utf8-------output.txt----1092
 图片								图片
 ：								：
@@ -68888,9 +68738,7 @@ TEST WORDS PRECISION:	0.833
 内蒙古								内蒙古
 锡林郭勒盟							锡林郭勒盟
 太仆寺旗						      |	太
-							      >	仆
-							      >	寺
-							      >	旗
+							      >	仆寺旗
 农民								农民
 、								、
 二十五								二十五
@@ -68985,14 +68833,14 @@ TEST WORDS PRECISION:	0.833
 周							      |	周军
 军							      <
 ）								）
-INSERTIONS:	8
+INSERTIONS:	6
 DELETIONS:	4
 SUBSTITUTIONS:	12
-NCHANGE:	24
+NCHANGE:	22
 NTRUTH:	92
-NTEST:	96
+NTEST:	94
 TRUE WORDS RECALL:	0.826
-TEST WORDS PRECISION:	0.792
+TEST WORDS PRECISION:	0.809
 --pku_test_gold.utf8-------output.txt----1098
 连云港								连云港
 机关								机关
@@ -69026,9 +68874,8 @@ TEST WORDS PRECISION:	1.000
 灌云								灌云
 、								、
 灌南							      |	灌
-							      >	南
-二								二
-县								县
+二							      |	南二县
+县							      <
 遭受								遭受
 严重								严重
 水灾								水灾
@@ -69037,9 +68884,9 @@ TEST WORDS PRECISION:	1.000
 后								后
 ，								，
 这								这
-两								两
-个								个
-县								县
+两							      |	两个县
+个							      <
+县							      <
 五								五
 个								个
 重灾								重灾
@@ -69080,8 +68927,8 @@ TEST WORDS PRECISION:	1.000
 十								十
 天								天
 就								就
-收到								收到
-市								市
+收到							      |	收到市
+市							      <
 机关								机关
 九十三								九十三
 个								个
@@ -69135,39 +68982,37 @@ TEST WORDS PRECISION:	1.000
 江苏								江苏
 连云港市							连云港市
 蔡								蔡
-晓雨							      |	晓
-							      >	雨
+晓雨								晓雨
 ）								）
-INSERTIONS:	5
-DELETIONS:	2
-SUBSTITUTIONS:	6
-NCHANGE:	13
+INSERTIONS:	3
+DELETIONS:	6
+SUBSTITUTIONS:	8
+NCHANGE:	17
 NTRUTH:	117
-NTEST:	120
-TRUE WORDS RECALL:	0.932
-TEST WORDS PRECISION:	0.908
+NTEST:	114
+TRUE WORDS RECALL:	0.880
+TEST WORDS PRECISION:	0.904
 --pku_test_gold.utf8-------output.txt----1100
 迟到								迟到
 的								的
 结果								结果
 ———								———
-临武县							      |	临
-一							      |	武
-起							      |	县
-							      >	一起
+临武县								临武县
+一							      |	一起
+起							      <
 校园								校园
 悲剧								悲剧
 处理								处理
 的								的
 前后								前后
-INSERTIONS:	1
-DELETIONS:	0
-SUBSTITUTIONS:	3
-NCHANGE:	4
+INSERTIONS:	0
+DELETIONS:	1
+SUBSTITUTIONS:	1
+NCHANGE:	2
 NTRUTH:	12
-NTEST:	13
-TRUE WORDS RECALL:	0.750
-TEST WORDS PRECISION:	0.692
+NTEST:	11
+TRUE WORDS RECALL:	0.833
+TEST WORDS PRECISION:	0.909
 --pku_test_gold.utf8-------output.txt----1101
 编者按								编者按
 ：								：
@@ -69328,15 +69173,12 @@ TEST WORDS PRECISION:	0.936
 22日								22日
 ，								，
 湖南省								湖南省
-临武县							      |	临
-							      >	武
-							      >	县
+临武县								临武县
 城关								城关
 完小							      |	完
 学生							      |	小学生
 刘								刘
-任志							      |	任
-							      >	志
+任志								任志
 的								的
 父亲								父亲
 刘								刘
@@ -69375,8 +69217,7 @@ TEST WORDS PRECISION:	0.936
 的								的
 校长								校长
 李								李
-新文							      |	新
-							      >	文
+新文								新文
 的								的
 职务								职务
 ，								，
@@ -69405,14 +69246,14 @@ TEST WORDS PRECISION:	0.936
 了								了
 结果								结果
 。								。
-INSERTIONS:	7
+INSERTIONS:	3
 DELETIONS:	1
-SUBSTITUTIONS:	8
-NCHANGE:	16
+SUBSTITUTIONS:	5
+NCHANGE:	9
 NTRUTH:	75
-NTEST:	81
-TRUE WORDS RECALL:	0.880
-TEST WORDS PRECISION:	0.815
+NTEST:	77
+TRUE WORDS RECALL:	0.920
+TEST WORDS PRECISION:	0.896
 --pku_test_gold.utf8-------output.txt----1103
 1999年								1999年
 11月								11月
@@ -69420,9 +69261,7 @@ TEST WORDS PRECISION:	0.815
 10时								10时
 25分								25分
 ，								，
-临武县							      |	临
-							      >	武
-							      >	县
+临武县								临武县
 城关								城关
 完小							      |	完
 							      >	小
@@ -69486,8 +69325,7 @@ TEST WORDS PRECISION:	0.815
 教导								教导
 主任								主任
 胡								胡
-金苗							      |	金
-							      >	苗
+金苗								金苗
 在								在
 征							      |	征得
 得							      <
@@ -69618,8 +69456,8 @@ TEST WORDS PRECISION:	0.815
 的								的
 学生								学生
 被								被
-送往								送往
-县								县
+送往							      |	送往县
+县							      <
 中医								中医
 医院								医院
 救治								救治
@@ -69632,8 +69470,7 @@ TEST WORDS PRECISION:	0.815
 班								班
 学生								学生
 刘								刘
-任志							      |	任
-							      >	志
+任志								任志
 因								因
 伤势								伤势
 过								过
@@ -69712,14 +69549,14 @@ TEST WORDS PRECISION:	0.815
 处理								处理
 不公								不公
 。								。
-INSERTIONS:	14
-DELETIONS:	6
-SUBSTITUTIONS:	24
-NCHANGE:	44
+INSERTIONS:	10
+DELETIONS:	7
+SUBSTITUTIONS:	22
+NCHANGE:	39
 NTRUTH:	284
-NTEST:	292
-TRUE WORDS RECALL:	0.894
-TEST WORDS PRECISION:	0.870
+NTEST:	287
+TRUE WORDS RECALL:	0.898
+TEST WORDS PRECISION:	0.889
 --pku_test_gold.utf8-------output.txt----1104
 记者								记者
 在								在
@@ -69784,9 +69621,7 @@ TEST WORDS PRECISION:	0.900
 完小							      |	完
 							      >	小
 是								是
-临武县							      |	临
-							      >	武
-							      >	县
+临武县								临武县
 一								一
 所								所
 重点								重点
@@ -69878,14 +69713,14 @@ TEST WORDS PRECISION:	0.900
 了								了
 学生								学生
 。								。
-INSERTIONS:	5
+INSERTIONS:	3
 DELETIONS:	1
-SUBSTITUTIONS:	7
-NCHANGE:	13
+SUBSTITUTIONS:	6
+NCHANGE:	10
 NTRUTH:	93
-NTEST:	97
-TRUE WORDS RECALL:	0.914
-TEST WORDS PRECISION:	0.876
+NTEST:	95
+TRUE WORDS RECALL:	0.925
+TEST WORDS PRECISION:	0.905
 --pku_test_gold.utf8-------output.txt----1106
 城关								城关
 完小							      |	完
@@ -70144,8 +69979,7 @@ TEST WORDS PRECISION:	0.925
 的								的
 校长								校长
 李								李
-新文							      |	新
-							      >	文
+新文								新文
 、								、
 负有								负有
 直接								直接
@@ -70154,8 +69988,7 @@ TEST WORDS PRECISION:	0.925
 教导								教导
 主任								主任
 胡								胡
-金苗							      |	金
-							      >	苗
+金苗								金苗
 分别								分别
 给予								给予
 党内								党内
@@ -70168,8 +70001,7 @@ TEST WORDS PRECISION:	0.925
 撤销								撤销
 了								了
 胡								胡
-金苗							      |	金
-							      >	苗
+金苗								金苗
 的								的
 职务								职务
 。								。
@@ -70177,8 +70009,7 @@ TEST WORDS PRECISION:	0.925
 调查								调查
 期间								期间
 李								李
-新文							      |	新
-							      >	文
+新文								新文
 还								还
 在								在
 主持								主持
@@ -70288,8 +70119,7 @@ TEST WORDS PRECISION:	0.925
 决定								决定
 免去								免去
 李								李
-新文							      |	新
-							      >	文
+新文								新文
 职务								职务
 ，								，
 调离								调离
@@ -70309,14 +70139,14 @@ TEST WORDS PRECISION:	0.925
 公正								公正
 解决								解决
 。								。
-INSERTIONS:	7
+INSERTIONS:	2
 DELETIONS:	3
-SUBSTITUTIONS:	10
-NCHANGE:	20
+SUBSTITUTIONS:	5
+NCHANGE:	10
 NTRUTH:	187
-NTEST:	191
-TRUE WORDS RECALL:	0.930
-TEST WORDS PRECISION:	0.911
+NTEST:	186
+TRUE WORDS RECALL:	0.957
+TEST WORDS PRECISION:	0.962
 --pku_test_gold.utf8-------output.txt----1108
 谨防								谨防
 “								“
@@ -71157,8 +70987,8 @@ TEST WORDS PRECISION:	0.962
 如								如
 我们								我们
 最近								最近
-审计								审计
-市								市
+审计							      |	审计市
+市							      <
 某								某
 局								局
 1999年								1999年
@@ -71213,13 +71043,13 @@ TEST WORDS PRECISION:	0.962
 							      >	42％
 。								。
 INSERTIONS:	10
-DELETIONS:	0
-SUBSTITUTIONS:	5
-NCHANGE:	15
+DELETIONS:	1
+SUBSTITUTIONS:	6
+NCHANGE:	17
 NTRUTH:	114
-NTEST:	124
-TRUE WORDS RECALL:	0.956
-TEST WORDS PRECISION:	0.879
+NTEST:	123
+TRUE WORDS RECALL:	0.939
+TEST WORDS PRECISION:	0.870
 --pku_test_gold.utf8-------output.txt----1119
 形成								形成
 上述								上述
@@ -71348,28 +71178,26 @@ TRUE WORDS RECALL:	0.964
 TEST WORDS PRECISION:	0.931
 --pku_test_gold.utf8-------output.txt----1121
 姚								姚
-铜梅							      |	铜
-							      >	梅
+铜梅								铜梅
 婚事								婚事
 新							      |	新办
 办							      <
 ：								：
 省								省
 下								下
-彩礼钱							      |	彩
-							      >	礼
+彩礼钱							      |	彩礼
 							      >	钱
 办								办
 个								个
 幼儿园								幼儿园
-INSERTIONS:	3
+INSERTIONS:	1
 DELETIONS:	1
-SUBSTITUTIONS:	3
-NCHANGE:	7
+SUBSTITUTIONS:	2
+NCHANGE:	4
 NTRUTH:	12
-NTEST:	14
-TRUE WORDS RECALL:	0.667
-TEST WORDS PRECISION:	0.571
+NTEST:	12
+TRUE WORDS RECALL:	0.750
+TEST WORDS PRECISION:	0.750
 --pku_test_gold.utf8-------output.txt----1122
 江西								江西
 宜丰县								宜丰县
@@ -71380,8 +71208,7 @@ TEST WORDS PRECISION:	0.571
 							      >	下村
 姑娘								姑娘
 姚								姚
-铜梅							      |	铜
-							      >	梅
+铜梅								铜梅
 ，								，
 二○○○年								二○○○年
 下半年								下半年
@@ -71454,20 +71281,19 @@ TEST WORDS PRECISION:	0.571
 群众								群众
 对								对
 姚								姚
-铜梅							      |	铜
-							      >	梅
+铜梅								铜梅
 的								的
 做法								做法
 交口称赞							交口称赞
 。								。
-INSERTIONS:	9
+INSERTIONS:	7
 DELETIONS:	1
-SUBSTITUTIONS:	8
-NCHANGE:	18
+SUBSTITUTIONS:	6
+NCHANGE:	14
 NTRUTH:	80
-NTEST:	88
-TRUE WORDS RECALL:	0.887
-TEST WORDS PRECISION:	0.807
+NTEST:	86
+TRUE WORDS RECALL:	0.912
+TEST WORDS PRECISION:	0.849
 --pku_test_gold.utf8-------output.txt----1123
 （								（
 江西								江西
@@ -71656,9 +71482,9 @@ TEST WORDS PRECISION:	0.614
 							      >	丰
 							      >	村
 利用								利用
-靠近								靠近
-县城							      |	县
-和							      |	城和
+靠近							      |	靠近县
+县城							      |	城和
+和							      <
 206								206
 国道								国道
 穿							      |	穿村
@@ -71808,8 +71634,7 @@ TEST WORDS PRECISION:	0.614
 元								元
 ，								，
 王水圩村						      |	王
-闸口							      |	水
-							      >	圩
+闸口							      |	水圩
 							      >	村
 							      >	闸
 							      >	口
@@ -71834,8 +71659,7 @@ TEST WORDS PRECISION:	0.614
 磨盘								磨盘
 组								组
 屠								屠
-学昌							      |	学
-							      >	昌
+学昌								学昌
 等								等
 3								3
 户								户
@@ -71966,14 +71790,14 @@ TEST WORDS PRECISION:	0.614
 500								500
 元								元
 。								。
-INSERTIONS:	23
-DELETIONS:	8
-SUBSTITUTIONS:	29
-NCHANGE:	60
+INSERTIONS:	21
+DELETIONS:	9
+SUBSTITUTIONS:	28
+NCHANGE:	58
 NTRUTH:	296
-NTEST:	311
+NTEST:	308
 TRUE WORDS RECALL:	0.875
-TEST WORDS PRECISION:	0.833
+TEST WORDS PRECISION:	0.841
 --pku_test_gold.utf8-------output.txt----1128
 税费								税费
 征收								征收
@@ -72858,23 +72682,21 @@ TEST WORDS PRECISION:	0.913
 市委								市委
 办公厅								办公厅
 李								李
-景煜							      |	景
-							      >	煜
+景煜								景煜
 卫								卫
 先庆							      |	先
 							      >	庆
 邵								邵
-必明							      |	必
-							      >	明
+必明								必明
 ）								）
-INSERTIONS:	3
+INSERTIONS:	1
 DELETIONS:	6
-SUBSTITUTIONS:	7
-NCHANGE:	16
+SUBSTITUTIONS:	5
+NCHANGE:	12
 NTRUTH:	59
-NTEST:	56
-TRUE WORDS RECALL:	0.780
-TEST WORDS PRECISION:	0.821
+NTEST:	54
+TRUE WORDS RECALL:	0.814
+TEST WORDS PRECISION:	0.889
 --pku_test_gold.utf8-------output.txt----1135
 探望								探望
 新								新
@@ -77424,10 +77246,8 @@ TEST WORDS PRECISION:	1.000
 他								他
 参加								参加
 过								过
-甲午							      |	甲
-海战							      |	午
-							      >	海
-							      >	战
+甲午							      |	甲午海
+海战							      |	战
 ，								，
 亲历								亲历
 了								了
@@ -77495,14 +77315,14 @@ TEST WORDS PRECISION:	1.000
 外交								外交
 ”								”
 。								。
-INSERTIONS:	12
+INSERTIONS:	10
 DELETIONS:	2
 SUBSTITUTIONS:	12
-NCHANGE:	26
+NCHANGE:	24
 NTRUTH:	157
-NTEST:	167
+NTEST:	165
 TRUE WORDS RECALL:	0.911
-TEST WORDS PRECISION:	0.856
+TEST WORDS PRECISION:	0.867
 --pku_test_gold.utf8-------output.txt----1197
 （								（
 A								A
@@ -78115,8 +77935,7 @@ TEST WORDS PRECISION:	1.000
 外交史								外交史
 的								的
 薛								薛
-谋洪							      |	谋
-							      >	洪
+谋洪								谋洪
 教授								教授
 认为								认为
 ，								，
@@ -78308,14 +78127,14 @@ TEST WORDS PRECISION:	1.000
 与								与
 资金								资金
 。								。
-INSERTIONS:	8
+INSERTIONS:	7
 DELETIONS:	3
-SUBSTITUTIONS:	10
-NCHANGE:	21
+SUBSTITUTIONS:	9
+NCHANGE:	19
 NTRUTH:	278
-NTEST:	283
-TRUE WORDS RECALL:	0.953
-TEST WORDS PRECISION:	0.936
+NTEST:	282
+TRUE WORDS RECALL:	0.957
+TEST WORDS PRECISION:	0.943
 --pku_test_gold.utf8-------output.txt----1205
 1979年								1979年
 1月								1月
@@ -79248,18 +79067,17 @@ TEST WORDS PRECISION:	1.000
 新华社								新华社
 记者								记者
 刘								刘
-广铭							      |	广
-							      >	铭
+广铭								广铭
 摄								摄
 ）								）
-INSERTIONS:	2
+INSERTIONS:	1
 DELETIONS:	1
-SUBSTITUTIONS:	3
-NCHANGE:	6
+SUBSTITUTIONS:	2
+NCHANGE:	4
 NTRUTH:	44
-NTEST:	45
-TRUE WORDS RECALL:	0.909
-TEST WORDS PRECISION:	0.889
+NTEST:	44
+TRUE WORDS RECALL:	0.932
+TEST WORDS PRECISION:	0.932
 --pku_test_gold.utf8-------output.txt----1218
 云南								云南
 西								西
@@ -79324,8 +79142,7 @@ TEST WORDS PRECISION:	1.000
 云南							      |	云南省
 省政府							      |	政府
 在								在
-开远市							      |	开远
-							      >	市
+开远市								开远市
 召开								召开
 “								“
 西								西
@@ -79353,14 +79170,14 @@ TEST WORDS PRECISION:	1.000
 顺利								顺利
 实施								实施
 。								。
-INSERTIONS:	2
+INSERTIONS:	1
 DELETIONS:	0
-SUBSTITUTIONS:	4
-NCHANGE:	6
+SUBSTITUTIONS:	3
+NCHANGE:	4
 NTRUTH:	68
-NTEST:	70
-TRUE WORDS RECALL:	0.941
-TEST WORDS PRECISION:	0.914
+NTEST:	69
+TRUE WORDS RECALL:	0.956
+TEST WORDS PRECISION:	0.942
 --pku_test_gold.utf8-------output.txt----1220
 根据								根据
 国家								国家
@@ -80751,10 +80568,8 @@ TEST WORDS PRECISION:	1.000
 通车								通车
 ；								；
 甘孜州							      |	甘
-							      >	孜
-							      >	州
-八								八
-县								县
+八							      |	孜
+县							      |	州八县
 光缆								光缆
 传输								传输
 线路								线路
@@ -80797,14 +80612,14 @@ TEST WORDS PRECISION:	1.000
 投入								投入
 使用								使用
 。								。
-INSERTIONS:	6
+INSERTIONS:	4
 DELETIONS:	0
-SUBSTITUTIONS:	4
+SUBSTITUTIONS:	6
 NCHANGE:	10
 NTRUTH:	116
-NTEST:	122
-TRUE WORDS RECALL:	0.966
-TEST WORDS PRECISION:	0.918
+NTEST:	120
+TRUE WORDS RECALL:	0.948
+TEST WORDS PRECISION:	0.917
 --pku_test_gold.utf8-------output.txt----1231
 我								我
 的								的
@@ -81989,8 +81804,7 @@ TEST WORDS PRECISION:	1.000
 讯								讯
 记者								记者
 许								许
-正中							      |	正
-							      >	中
+正中								正中
 报道								报道
 ：								：
 我国								我国
@@ -82034,14 +81848,14 @@ TEST WORDS PRECISION:	1.000
 获悉								获悉
 的								的
 。								。
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	1
-SUBSTITUTIONS:	4
-NCHANGE:	6
+SUBSTITUTIONS:	3
+NCHANGE:	4
 NTRUTH:	51
-NTEST:	51
-TRUE WORDS RECALL:	0.902
-TEST WORDS PRECISION:	0.902
+NTEST:	50
+TRUE WORDS RECALL:	0.922
+TEST WORDS PRECISION:	0.940
 --pku_test_gold.utf8-------output.txt----1249
 据								据
 江苏								江苏
@@ -82263,8 +82077,7 @@ TEST WORDS PRECISION:	1.000
 讯								讯
 记者								记者
 李								李
-丽辉							      |	丽
-							      >	辉
+丽辉								丽辉
 从								从
 国家								国家
 工商								工商
@@ -82366,14 +82179,14 @@ TEST WORDS PRECISION:	1.000
 万								万
 元								元
 。								。
-INSERTIONS:	9
+INSERTIONS:	8
 DELETIONS:	1
-SUBSTITUTIONS:	4
-NCHANGE:	14
+SUBSTITUTIONS:	3
+NCHANGE:	12
 NTRUTH:	101
-NTEST:	109
-TRUE WORDS RECALL:	0.950
-TEST WORDS PRECISION:	0.881
+NTEST:	108
+TRUE WORDS RECALL:	0.960
+TEST WORDS PRECISION:	0.898
 --pku_test_gold.utf8-------output.txt----1254
 山东省								山东省
 工商部门						      |	工商
@@ -83318,8 +83131,7 @@ TEST WORDS PRECISION:	0.950
 三								三
 医院								医院
 徐								徐
-家棚							      |	家
-							      >	棚
+家棚								家棚
 分院								分院
 。								。
 由于								由于
@@ -83410,14 +83222,14 @@ TEST WORDS PRECISION:	0.950
 适当								适当
 变动								变动
 。								。
-INSERTIONS:	4
+INSERTIONS:	3
 DELETIONS:	2
-SUBSTITUTIONS:	8
-NCHANGE:	14
+SUBSTITUTIONS:	7
+NCHANGE:	12
 NTRUTH:	111
-NTEST:	113
-TRUE WORDS RECALL:	0.910
-TEST WORDS PRECISION:	0.894
+NTEST:	112
+TRUE WORDS RECALL:	0.919
+TEST WORDS PRECISION:	0.911
 --pku_test_gold.utf8-------output.txt----1270
 经济								经济
 增长								增长
@@ -85136,8 +84948,7 @@ TEST WORDS PRECISION:	0.700
 电								电
 记者								记者
 顾								顾
-兆农							      |	兆
-							      >	农
+兆农								兆农
 报道								报道
 ：								：
 日前								日前
@@ -85172,14 +84983,14 @@ TEST WORDS PRECISION:	0.700
 》								》
 ）								）
 。								。
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	1
-SUBSTITUTIONS:	2
-NCHANGE:	4
+SUBSTITUTIONS:	1
+NCHANGE:	2
 NTRUTH:	42
-NTEST:	42
-TRUE WORDS RECALL:	0.929
-TEST WORDS PRECISION:	0.929
+NTEST:	41
+TRUE WORDS RECALL:	0.952
+TEST WORDS PRECISION:	0.976
 --pku_test_gold.utf8-------output.txt----1300
 《								《
 条例								条例
@@ -85379,9 +85190,9 @@ TEST WORDS PRECISION:	1.000
 四川								四川
 、								、
 甘肃								甘肃
-三								三
-个								个
-省								省
+三							      |	三个省
+个							      <
+省							      <
 开展								开展
 全国								全国
 第三								第三
@@ -85416,13 +85227,13 @@ TEST WORDS PRECISION:	1.000
 只								只
 。								。
 INSERTIONS:	0
-DELETIONS:	0
-SUBSTITUTIONS:	0
-NCHANGE:	0
+DELETIONS:	2
+SUBSTITUTIONS:	1
+NCHANGE:	3
 NTRUTH:	49
-NTEST:	49
-TRUE WORDS RECALL:	1.000
-TEST WORDS PRECISION:	1.000
+NTEST:	47
+TRUE WORDS RECALL:	0.939
+TEST WORDS PRECISION:	0.979
 --pku_test_gold.utf8-------output.txt----1303
 图片								图片
 ：								：
@@ -85467,8 +85278,7 @@ TEST WORDS PRECISION:	1.000
 。								。
 （								（
 阎								阎
-文青							      |	文
-							      >	青
+文青								文青
 摄								摄
 于								于
 陕西								陕西
@@ -85476,14 +85286,14 @@ TEST WORDS PRECISION:	1.000
 自然							      |	坪
 保护区							      |	自然保护区
 ）								）
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	0
-SUBSTITUTIONS:	4
-NCHANGE:	5
+SUBSTITUTIONS:	3
+NCHANGE:	3
 NTRUTH:	23
-NTEST:	24
-TRUE WORDS RECALL:	0.826
-TEST WORDS PRECISION:	0.792
+NTEST:	23
+TRUE WORDS RECALL:	0.870
+TEST WORDS PRECISION:	0.870
 --pku_test_gold.utf8-------output.txt----1306
 3								3
 、								、
@@ -86448,8 +86258,8 @@ TEST WORDS PRECISION:	0.918
 前								前
 一								一
 周								周
-在								在
-美								美
+在							      |	在美
+美							      <
 恢复								恢复
 谈判								谈判
 之际								之际
@@ -86526,13 +86336,13 @@ TEST WORDS PRECISION:	0.918
 问题								问题
 。								。
 INSERTIONS:	3
-DELETIONS:	1
-SUBSTITUTIONS:	3
-NCHANGE:	7
+DELETIONS:	2
+SUBSTITUTIONS:	4
+NCHANGE:	9
 NTRUTH:	81
-NTEST:	83
-TRUE WORDS RECALL:	0.951
-TEST WORDS PRECISION:	0.928
+NTEST:	82
+TRUE WORDS RECALL:	0.926
+TEST WORDS PRECISION:	0.915
 --pku_test_gold.utf8-------output.txt----1325
 据								据
 此间								此间
@@ -86671,8 +86481,7 @@ TEST WORDS PRECISION:	0.932
 （								（
 记者								记者
 马								马
-晓霖							      |	晓
-							      >	霖
+晓霖								晓霖
 ）								）
 以色列								以色列
 民航								民航
@@ -86703,14 +86512,14 @@ TEST WORDS PRECISION:	0.932
 进行								进行
 惩罚								惩罚
 。								。
-INSERTIONS:	3
+INSERTIONS:	2
 DELETIONS:	0
-SUBSTITUTIONS:	3
-NCHANGE:	6
+SUBSTITUTIONS:	2
+NCHANGE:	4
 NTRUTH:	38
-NTEST:	41
-TRUE WORDS RECALL:	0.921
-TEST WORDS PRECISION:	0.854
+NTEST:	40
+TRUE WORDS RECALL:	0.947
+TEST WORDS PRECISION:	0.900
 --pku_test_gold.utf8-------output.txt----1327
 加沙								加沙
 机场								机场
@@ -87282,8 +87091,7 @@ TEST WORDS PRECISION:	0.884
 的								的
 老人								老人
 金								金
-永善							      |	永
-							      >	善
+永善								永善
 对								对
 记者								记者
 说								说
@@ -87301,14 +87109,14 @@ TEST WORDS PRECISION:	0.884
 上							      |	上好
 好日子							      |	日子
 。								。
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	0
-SUBSTITUTIONS:	5
-NCHANGE:	6
+SUBSTITUTIONS:	4
+NCHANGE:	4
 NTRUTH:	64
-NTEST:	65
-TRUE WORDS RECALL:	0.922
-TEST WORDS PRECISION:	0.908
+NTEST:	64
+TRUE WORDS RECALL:	0.938
+TEST WORDS PRECISION:	0.938
 --pku_test_gold.utf8-------output.txt----1338
 （								（
 本报								本报
@@ -88828,8 +88636,7 @@ TEST WORDS PRECISION:	0.920
 艺术团								艺术团
 演员								演员
 王								王
-小鸽							      |	小
-							      >	鸽
+小鸽								小鸽
 演唱								演唱
 了								了
 《								《
@@ -88851,14 +88658,14 @@ TEST WORDS PRECISION:	0.920
 推向								推向
 高潮								高潮
 。								。
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	2
-SUBSTITUTIONS:	3
-NCHANGE:	6
+SUBSTITUTIONS:	2
+NCHANGE:	4
 NTRUTH:	73
-NTEST:	72
-TRUE WORDS RECALL:	0.932
-TEST WORDS PRECISION:	0.944
+NTEST:	71
+TRUE WORDS RECALL:	0.945
+TEST WORDS PRECISION:	0.972
 --pku_test_gold.utf8-------output.txt----1362
 中国								中国
 驻								驻
@@ -88961,8 +88768,7 @@ TEST WORDS PRECISION:	0.961
 总商会								总商会
 主席								主席
 郑								郑
-明如							      |	明
-							      >	如
+明如								明如
 先生								先生
 感慨								感慨
 地								地
@@ -89003,14 +88809,14 @@ TEST WORDS PRECISION:	0.961
 大								大
 成就								成就
 。								。
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	1
-SUBSTITUTIONS:	2
-NCHANGE:	4
+SUBSTITUTIONS:	1
+NCHANGE:	2
 NTRUTH:	80
-NTEST:	80
-TRUE WORDS RECALL:	0.963
-TEST WORDS PRECISION:	0.963
+NTEST:	79
+TRUE WORDS RECALL:	0.975
+TEST WORDS PRECISION:	0.987
 --pku_test_gold.utf8-------output.txt----1364
 泰国								泰国
 商会								商会
@@ -89022,8 +88828,7 @@ TEST WORDS PRECISION:	0.963
 会馆								会馆
 主席								主席
 胡								胡
-玉鳞							      |	玉
-							      >	鳞
+玉鳞								玉鳞
 先生								先生
 表示								表示
 ，								，
@@ -89050,8 +88855,7 @@ TEST WORDS PRECISION:	0.963
 商会								商会
 会长								会长
 李								李
-桂雄							      |	桂
-							      >	雄
+桂雄								桂雄
 先生								先生
 代表								代表
 泰国								泰国
@@ -89072,14 +88876,14 @@ TEST WORDS PRECISION:	0.963
 更加								更加
 强盛								强盛
 。								。
-INSERTIONS:	3
+INSERTIONS:	1
 DELETIONS:	4
-SUBSTITUTIONS:	7
-NCHANGE:	14
+SUBSTITUTIONS:	5
+NCHANGE:	10
 NTRUTH:	57
-NTEST:	56
-TRUE WORDS RECALL:	0.807
-TEST WORDS PRECISION:	0.821
+NTEST:	54
+TRUE WORDS RECALL:	0.842
+TEST WORDS PRECISION:	0.889
 --pku_test_gold.utf8-------output.txt----1365
 秘鲁								秘鲁
 首都								首都
@@ -89130,8 +88934,7 @@ TEST WORDS PRECISION:	0.964
 总局								总局
 主席								主席
 萧								萧
-孝权							      |	孝
-							      >	权
+孝权								孝权
 先生								先生
 说								说
 ，								，
@@ -89167,14 +88970,14 @@ TEST WORDS PRECISION:	0.964
 生活								生活
 幸福								幸福
 。								。
-INSERTIONS:	2
+INSERTIONS:	1
 DELETIONS:	0
-SUBSTITUTIONS:	2
-NCHANGE:	4
+SUBSTITUTIONS:	1
+NCHANGE:	2
 NTRUTH:	46
-NTEST:	48
-TRUE WORDS RECALL:	0.957
-TEST WORDS PRECISION:	0.917
+NTEST:	47
+TRUE WORDS RECALL:	0.978
+TEST WORDS PRECISION:	0.957
 --pku_test_gold.utf8-------output.txt----1367
 古巴								古巴
 最								最
@@ -89267,8 +89070,7 @@ TEST WORDS PRECISION:	0.947
 会馆								会馆
 主席								主席
 张								张
-伟廉							      |	伟
-							      >	廉
+伟廉								伟廉
 1日								1日
 表示								表示
 ，								，
@@ -89324,14 +89126,14 @@ TEST WORDS PRECISION:	0.947
 							      >	一
 大业								大业
 。								。
-INSERTIONS:	2
+INSERTIONS:	1
 DELETIONS:	1
-SUBSTITUTIONS:	5
-NCHANGE:	8
+SUBSTITUTIONS:	4
+NCHANGE:	6
 NTRUTH:	62
-NTEST:	63
-TRUE WORDS RECALL:	0.903
-TEST WORDS PRECISION:	0.889
+NTEST:	62
+TRUE WORDS RECALL:	0.919
+TEST WORDS PRECISION:	0.919
 --pku_test_gold.utf8-------output.txt----1369
 几								几
 家								家
@@ -89516,9 +89318,7 @@ TEST WORDS PRECISION:	0.832
 公路								公路
 内								内
 的								的
-台伯河							      |	台
-							      >	伯
-							      >	河
+台伯河								台伯河
 上								上
 ，								，
 有								有
@@ -89530,10 +89330,9 @@ TEST WORDS PRECISION:	0.832
 桥								桥
 ，								，
 平日								平日
-台伯							      |	台
-河水							      |	伯
-流量							      |	河
-							      >	水流量
+台伯							      |	台伯河
+河水							      |	水流量
+流量							      <
 小								小
 ，								，
 河滩								河滩
@@ -89579,14 +89378,14 @@ TEST WORDS PRECISION:	0.832
 家								家
 ”								”
 。								。
-INSERTIONS:	4
-DELETIONS:	0
-SUBSTITUTIONS:	5
-NCHANGE:	9
+INSERTIONS:	1
+DELETIONS:	1
+SUBSTITUTIONS:	3
+NCHANGE:	5
 NTRUTH:	91
-NTEST:	95
-TRUE WORDS RECALL:	0.945
-TEST WORDS PRECISION:	0.905
+NTEST:	91
+TRUE WORDS RECALL:	0.956
+TEST WORDS PRECISION:	0.956
 --pku_test_gold.utf8-------output.txt----1373
 罗马								罗马
 的								的
@@ -89907,9 +89706,7 @@ TEST WORDS PRECISION:	1.000
 南部								南部
 安塔利亚省						      |	安
 							      >	塔
-							      >	利
-							      >	亚
-							      >	省
+							      >	利亚省
 附近								附近
 的								的
 地中海								地中海
@@ -89954,14 +89751,14 @@ TEST WORDS PRECISION:	1.000
 加拉尼							      |	加
 							      >	拉尼
 。								。
-INSERTIONS:	5
+INSERTIONS:	3
 DELETIONS:	2
 SUBSTITUTIONS:	4
-NCHANGE:	11
+NCHANGE:	9
 NTRUTH:	57
-NTEST:	60
+NTEST:	58
 TRUE WORDS RECALL:	0.895
-TEST WORDS PRECISION:	0.850
+TEST WORDS PRECISION:	0.879
 --pku_test_gold.utf8-------output.txt----1380
 （								（
 新华社								新华社
@@ -90076,8 +89873,7 @@ TEST WORDS PRECISION:	0.918
 							      >	克
 和								和
 贾里德·米拉克						      |	贾
-							      >	里
-							      >	德
+							      >	里德
 							      >	·
 							      >	米
 							      >	拉
@@ -90131,14 +89927,14 @@ TEST WORDS PRECISION:	0.918
 克隆								克隆
 计划								计划
 。								。
-INSERTIONS:	12
+INSERTIONS:	11
 DELETIONS:	1
 SUBSTITUTIONS:	4
-NCHANGE:	17
+NCHANGE:	16
 NTRUTH:	60
-NTEST:	71
+NTEST:	70
 TRUE WORDS RECALL:	0.917
-TEST WORDS PRECISION:	0.775
+TEST WORDS PRECISION:	0.786
 --pku_test_gold.utf8-------output.txt----1384
 米拉克							      |	米
 							      >	拉
@@ -91343,10 +91139,9 @@ TEST WORDS PRECISION:	1.000
 --pku_test_gold.utf8-------output.txt----1403
 在								在
 喀什							      |	喀什地区
-地区							      |	疏
-疏附县							      |	附
-阿吉乡							      |	县
-							      >	阿
+地区							      <
+疏附县								疏附县
+阿吉乡							      |	阿
 							      >	吉
 							      >	乡
 ，								，
@@ -91359,14 +91154,14 @@ TEST WORDS PRECISION:	1.000
 的								的
 故事								故事
 。								。
-INSERTIONS:	3
-DELETIONS:	1
-SUBSTITUTIONS:	5
-NCHANGE:	9
+INSERTIONS:	2
+DELETIONS:	2
+SUBSTITUTIONS:	3
+NCHANGE:	7
 NTRUTH:	15
-NTEST:	17
-TRUE WORDS RECALL:	0.600
-TEST WORDS PRECISION:	0.529
+NTEST:	15
+TRUE WORDS RECALL:	0.667
+TEST WORDS PRECISION:	0.667
 --pku_test_gold.utf8-------output.txt----1404
 那								那
 是								是
@@ -91514,8 +91309,7 @@ TEST WORDS PRECISION:	0.800
 --pku_test_gold.utf8-------output.txt----1406
 “								“
 柯克亚							      |	柯
-							      >	克
-							      >	亚
+							      >	克亚
 绿化								绿化
 工程								工程
 ”								”
@@ -91581,14 +91375,14 @@ TEST WORDS PRECISION:	0.800
 汗马功劳						      |	马
 							      >	功劳
 。								。
-INSERTIONS:	7
+INSERTIONS:	6
 DELETIONS:	2
 SUBSTITUTIONS:	9
-NCHANGE:	18
+NCHANGE:	17
 NTRUTH:	62
-NTEST:	67
+NTEST:	66
 TRUE WORDS RECALL:	0.823
-TEST WORDS PRECISION:	0.761
+TEST WORDS PRECISION:	0.773
 --pku_test_gold.utf8-------output.txt----1407
 自古								自古
 靠								靠
@@ -91964,9 +91758,9 @@ TEST WORDS PRECISION:	0.938
 10								10
 位								位
 的								的
-省							      |	省区
+省							      |	省区市
 区							      <
-市								市
+市							      <
 中								中
 一半								一半
 是								是
@@ -92212,12 +92006,12 @@ TEST WORDS PRECISION:	0.938
 位								位
 。								。
 INSERTIONS:	0
-DELETIONS:	6
+DELETIONS:	7
 SUBSTITUTIONS:	11
-NCHANGE:	17
+NCHANGE:	18
 NTRUTH:	306
-NTEST:	300
-TRUE WORDS RECALL:	0.944
+NTEST:	299
+TRUE WORDS RECALL:	0.941
 TEST WORDS PRECISION:	0.963
 --pku_test_gold.utf8-------output.txt----1414
 划拨								划拨
@@ -92247,8 +92041,7 @@ TEST WORDS PRECISION:	0.900
 电								电
 记者								记者
 马								马
-应珊							      |	应
-							      >	珊
+应珊								应珊
 报道								报道
 ：								：
 去年								去年
@@ -92313,14 +92106,14 @@ TEST WORDS PRECISION:	0.900
 好								好
 年								年
 。								。
-INSERTIONS:	2
+INSERTIONS:	1
 DELETIONS:	0
-SUBSTITUTIONS:	4
-NCHANGE:	6
+SUBSTITUTIONS:	3
+NCHANGE:	4
 NTRUTH:	71
-NTEST:	73
-TRUE WORDS RECALL:	0.944
-TEST WORDS PRECISION:	0.918
+NTEST:	72
+TRUE WORDS RECALL:	0.958
+TEST WORDS PRECISION:	0.944
 --pku_test_gold.utf8-------output.txt----1416
 灾害								灾害
 发生								发生
@@ -92383,8 +92176,7 @@ TEST WORDS PRECISION:	0.918
 副								副
 书记								书记
 姚								姚
-湘成							      |	湘
-							      >	成
+湘成								湘成
 ，								，
 副								副
 省长								省长
@@ -92416,14 +92208,14 @@ TEST WORDS PRECISION:	0.918
 救济								救济
 工作								工作
 。								。
-INSERTIONS:	2
+INSERTIONS:	1
 DELETIONS:	0
-SUBSTITUTIONS:	2
-NCHANGE:	4
+SUBSTITUTIONS:	1
+NCHANGE:	2
 NTRUTH:	92
-NTEST:	94
-TRUE WORDS RECALL:	0.978
-TEST WORDS PRECISION:	0.957
+NTEST:	93
+TRUE WORDS RECALL:	0.989
+TEST WORDS PRECISION:	0.978
 --pku_test_gold.utf8-------output.txt----1417
 最近								最近
 ，								，
@@ -92643,8 +92435,7 @@ TEST WORDS PRECISION:	1.000
 明燕							      |	燕
 、								、
 杨								杨
-传平							      |	传
-							      >	平
+传平								传平
 两								两
 户								户
 三峡								三峡
@@ -92658,8 +92449,7 @@ TEST WORDS PRECISION:	1.000
 情况								情况
 。								。
 杨								杨
-传平							      |	传
-							      >	平
+传平								传平
 75								75
 岁								岁
 的								的
@@ -92751,14 +92541,14 @@ TEST WORDS PRECISION:	1.000
 得								得
 愉快								愉快
 。								。
-INSERTIONS:	9
+INSERTIONS:	7
 DELETIONS:	3
-SUBSTITUTIONS:	14
-NCHANGE:	26
+SUBSTITUTIONS:	12
+NCHANGE:	22
 NTRUTH:	129
-NTEST:	135
-TRUE WORDS RECALL:	0.868
-TEST WORDS PRECISION:	0.830
+NTEST:	133
+TRUE WORDS RECALL:	0.884
+TEST WORDS PRECISION:	0.857
 --pku_test_gold.utf8-------output.txt----1421
 国务院								国务院
 确定								确定
@@ -92785,9 +92575,7 @@ TEST WORDS PRECISION:	0.830
 接收								接收
 安置								安置
 重庆市								重庆市
-云阳县							      |	云
-							      >	阳
-							      >	县
+云阳县								云阳县
 183								183
 户								户
 810								810
@@ -92850,24 +92638,21 @@ TEST WORDS PRECISION:	0.830
 之								之
 路								路
 。								。
-INSERTIONS:	2
+INSERTIONS:	0
 DELETIONS:	1
-SUBSTITUTIONS:	4
-NCHANGE:	7
+SUBSTITUTIONS:	3
+NCHANGE:	4
 NTRUTH:	88
-NTEST:	89
-TRUE WORDS RECALL:	0.943
-TEST WORDS PRECISION:	0.933
+NTEST:	87
+TRUE WORDS RECALL:	0.955
+TEST WORDS PRECISION:	0.966
 --pku_test_gold.utf8-------output.txt----1422
 五百								五百
 马祖							      |	马
-香客							      |	祖
-							      >	香
+香客							      |	祖香
 							      >	客
 赴								赴
-湄洲岛							      |	湄
-							      >	洲
-							      >	岛
+湄洲岛								湄洲岛
 进								进
 香								香
 金门								金门
@@ -92875,14 +92660,14 @@ TEST WORDS PRECISION:	0.933
 乘船								乘船
 直航								直航
 厦门								厦门
-INSERTIONS:	4
+INSERTIONS:	1
 DELETIONS:	0
-SUBSTITUTIONS:	3
-NCHANGE:	7
+SUBSTITUTIONS:	2
+NCHANGE:	3
 NTRUTH:	12
-NTEST:	16
-TRUE WORDS RECALL:	0.750
-TEST WORDS PRECISION:	0.562
+NTEST:	13
+TRUE WORDS RECALL:	0.833
+TEST WORDS PRECISION:	0.769
 --pku_test_gold.utf8-------output.txt----1423
 本报								本报
 福州								福州
@@ -92899,8 +92684,7 @@ TEST WORDS PRECISION:	0.562
 500								500
 名								名
 马祖							      |	马
-香客							      |	祖
-							      >	香
+香客							      |	祖香
 							      >	客
 乘船								乘船
 抵达								抵达
@@ -92915,9 +92699,7 @@ TEST WORDS PRECISION:	0.562
 转							      |	转赴
 赴							      <
 莆田市								莆田市
-湄洲岛							      |	湄
-							      >	洲
-							      >	岛
+湄洲岛								湄洲岛
 ，								，
 参加								参加
 妈祖							      |	妈
@@ -92945,14 +92727,14 @@ TEST WORDS PRECISION:	0.562
 热情								热情
 欢迎								欢迎
 。								。
-INSERTIONS:	10
+INSERTIONS:	7
 DELETIONS:	1
-SUBSTITUTIONS:	10
-NCHANGE:	21
+SUBSTITUTIONS:	9
+NCHANGE:	17
 NTRUTH:	51
-NTEST:	60
-TRUE WORDS RECALL:	0.784
-TEST WORDS PRECISION:	0.667
+NTEST:	57
+TRUE WORDS RECALL:	0.804
+TEST WORDS PRECISION:	0.719
 --pku_test_gold.utf8-------output.txt----1424
 进香团							      |	进
 							      >	香
@@ -93071,18 +92853,16 @@ TEST WORDS PRECISION:	0.667
 香客							      |	香
 							      >	客
 直航								直航
-湄洲岛							      |	湄
-							      >	洲
-							      >	岛
+湄洲岛								湄洲岛
 。								。
-INSERTIONS:	14
+INSERTIONS:	12
 DELETIONS:	0
-SUBSTITUTIONS:	13
-NCHANGE:	27
+SUBSTITUTIONS:	12
+NCHANGE:	24
 NTRUTH:	107
-NTEST:	121
-TRUE WORDS RECALL:	0.879
-TEST WORDS PRECISION:	0.777
+NTEST:	119
+TRUE WORDS RECALL:	0.888
+TEST WORDS PRECISION:	0.798
 --pku_test_gold.utf8-------output.txt----1425
 对								对
 祖国								祖国
@@ -93170,18 +92950,16 @@ TEST WORDS PRECISION:	0.777
 开							      <
 福州								福州
 前往								前往
-湄洲岛							      |	湄
-							      >	洲
-							      >	岛
+湄洲岛								湄洲岛
 。								。
-INSERTIONS:	8
+INSERTIONS:	6
 DELETIONS:	4
-SUBSTITUTIONS:	14
-NCHANGE:	26
+SUBSTITUTIONS:	13
+NCHANGE:	23
 NTRUTH:	82
-NTEST:	86
-TRUE WORDS RECALL:	0.780
-TEST WORDS PRECISION:	0.744
+NTEST:	84
+TRUE WORDS RECALL:	0.793
+TEST WORDS PRECISION:	0.774
 --pku_test_gold.utf8-------output.txt----1426
 本报								本报
 厦门								厦门
@@ -93397,9 +93175,7 @@ TEST WORDS PRECISION:	0.981
 昭典								昭典
 是								是
 湖北								湖北
-黄安县							      |	黄
-							      >	安
-							      >	县
+黄安县								黄安县
 （								（
 今								今
 红安							      |	红
@@ -93508,14 +93284,14 @@ TEST WORDS PRECISION:	0.981
 等								等
 职								职
 。								。
-INSERTIONS:	15
+INSERTIONS:	13
 DELETIONS:	1
-SUBSTITUTIONS:	18
-NCHANGE:	34
+SUBSTITUTIONS:	17
+NCHANGE:	31
 NTRUTH:	100
-NTEST:	114
-TRUE WORDS RECALL:	0.810
-TEST WORDS PRECISION:	0.711
+NTEST:	112
+TRUE WORDS RECALL:	0.820
+TEST WORDS PRECISION:	0.732
 --pku_test_gold.utf8-------output.txt----1432
 新								新
 中国								中国
@@ -94340,8 +94116,7 @@ TRUE WORDS RECALL:	0.854
 TEST WORDS PRECISION:	0.872
 --pku_test_gold.utf8-------output.txt----1442
 张								张
-福森							      |	福
-							      >	森
+福森								福森
 在								在
 张家港								张家港
 与								与
@@ -94351,14 +94126,14 @@ TEST WORDS PRECISION:	0.872
 座谈								座谈
 时								时
 指出								指出
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	0
-SUBSTITUTIONS:	1
-NCHANGE:	2
+SUBSTITUTIONS:	0
+NCHANGE:	0
 NTRUTH:	11
-NTEST:	12
-TRUE WORDS RECALL:	0.909
-TEST WORDS PRECISION:	0.833
+NTEST:	11
+TRUE WORDS RECALL:	1.000
+TEST WORDS PRECISION:	1.000
 --pku_test_gold.utf8-------output.txt----1443
 县区								县区
 司法局								司法局
@@ -94395,8 +94170,7 @@ TEST WORDS PRECISION:	1.000
 党组								党组
 书记								书记
 张								张
-福森							      |	福
-							      >	森
+福森								福森
 今天								今天
 在								在
 张家港市							张家港市
@@ -94450,18 +94224,17 @@ TEST WORDS PRECISION:	1.000
 根本								根本
 任务								任务
 。								。
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	0
-SUBSTITUTIONS:	1
-NCHANGE:	2
+SUBSTITUTIONS:	0
+NCHANGE:	0
 NTRUTH:	71
-NTEST:	72
-TRUE WORDS RECALL:	0.986
-TEST WORDS PRECISION:	0.972
+NTEST:	71
+TRUE WORDS RECALL:	1.000
+TEST WORDS PRECISION:	1.000
 --pku_test_gold.utf8-------output.txt----1445
 张								张
-福森							      |	福
-							      >	森
+福森								福森
 说								说
 ，								，
 随着								随着
@@ -94544,14 +94317,14 @@ TEST WORDS PRECISION:	0.972
 法律								法律
 保障								保障
 。								。
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	2
-SUBSTITUTIONS:	3
-NCHANGE:	6
+SUBSTITUTIONS:	2
+NCHANGE:	4
 NTRUTH:	84
-NTEST:	83
-TRUE WORDS RECALL:	0.940
-TEST WORDS PRECISION:	0.952
+NTEST:	82
+TRUE WORDS RECALL:	0.952
+TEST WORDS PRECISION:	0.976
 --pku_test_gold.utf8-------output.txt----1446
 他								他
 要求								要求
@@ -94727,8 +94500,7 @@ TEST WORDS PRECISION:	1.000
 党组								党组
 书记								书记
 张								张
-福森							      |	福
-							      >	森
+福森								福森
 和								和
 江苏								江苏
 省委								省委
@@ -94753,14 +94525,14 @@ TEST WORDS PRECISION:	1.000
 和								和
 证书								证书
 。								。
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	0
-SUBSTITUTIONS:	1
-NCHANGE:	2
+SUBSTITUTIONS:	0
+NCHANGE:	0
 NTRUTH:	31
-NTEST:	32
-TRUE WORDS RECALL:	0.968
-TEST WORDS PRECISION:	0.938
+NTEST:	31
+TRUE WORDS RECALL:	1.000
+TEST WORDS PRECISION:	1.000
 --pku_test_gold.utf8-------output.txt----1449
 张家港市							张家港市
 司法局								司法局
@@ -94902,18 +94674,17 @@ TEST WORDS PRECISION:	1.000
 。								。
 （								（
 曹								曹
-礼达							      |	礼
-							      >	达
+礼达								礼达
 摄								摄
 ）								）
-INSERTIONS:	3
+INSERTIONS:	2
 DELETIONS:	2
-SUBSTITUTIONS:	4
-NCHANGE:	9
+SUBSTITUTIONS:	3
+NCHANGE:	7
 NTRUTH:	49
-NTEST:	50
-TRUE WORDS RECALL:	0.878
-TEST WORDS PRECISION:	0.860
+NTEST:	49
+TRUE WORDS RECALL:	0.898
+TEST WORDS PRECISION:	0.898
 --pku_test_gold.utf8-------output.txt----1452
 新							      |	新世纪
 世纪							      <
@@ -95228,8 +94999,7 @@ TEST WORDS PRECISION:	0.759
 》								》
 和								和
 刘								刘
-健安							      |	健
-							      >	安
+健安								健安
 、								、
 粟								粟
 道常							      |	道
@@ -95263,8 +95033,7 @@ TEST WORDS PRECISION:	0.759
 二等奖								二等奖
 ，								，
 吴								吴
-朝仁							      |	朝
-							      >	仁
+朝仁								朝仁
 拍摄								拍摄
 的								的
 《								《
@@ -95320,14 +95089,14 @@ TEST WORDS PRECISION:	0.759
 王								王
 忠家								忠家
 ）								）
-INSERTIONS:	8
+INSERTIONS:	6
 DELETIONS:	0
-SUBSTITUTIONS:	6
-NCHANGE:	14
+SUBSTITUTIONS:	4
+NCHANGE:	10
 NTRUTH:	96
-NTEST:	104
-TRUE WORDS RECALL:	0.938
-TEST WORDS PRECISION:	0.865
+NTEST:	102
+TRUE WORDS RECALL:	0.958
+TEST WORDS PRECISION:	0.902
 --pku_test_gold.utf8-------output.txt----1459
 明天								明天
 气象								气象
@@ -96295,8 +96064,7 @@ TRUE WORDS RECALL:	1.000
 TEST WORDS PRECISION:	1.000
 --pku_test_gold.utf8-------output.txt----1511
 福建								福建
-武夷山							      |	武夷
-							      >	山
+武夷山								武夷山
 多								多
 云								云
 4								4
@@ -96304,22 +96072,20 @@ TEST WORDS PRECISION:	1.000
 ／								／
 13								13
 ℃								℃
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	0
-SUBSTITUTIONS:	1
-NCHANGE:	2
+SUBSTITUTIONS:	0
+NCHANGE:	0
 NTRUTH:	9
-NTEST:	10
-TRUE WORDS RECALL:	0.889
-TEST WORDS PRECISION:	0.800
+NTEST:	9
+TRUE WORDS RECALL:	1.000
+TEST WORDS PRECISION:	1.000
 --pku_test_gold.utf8-------output.txt----1512
 桂林								桂林
 资江							      |	资
 							      >	江
 漂流								漂流
-五排河							      |	五
-							      >	排
-							      >	河
+五排河								五排河
 探险								探险
 小雨								小雨
 4								4
@@ -96327,20 +96093,18 @@ TEST WORDS PRECISION:	0.800
 ／								／
 14								14
 ℃								℃
-INSERTIONS:	3
+INSERTIONS:	1
 DELETIONS:	0
-SUBSTITUTIONS:	2
-NCHANGE:	5
+SUBSTITUTIONS:	1
+NCHANGE:	2
 NTRUTH:	11
-NTEST:	14
-TRUE WORDS RECALL:	0.818
-TEST WORDS PRECISION:	0.643
+NTEST:	12
+TRUE WORDS RECALL:	0.909
+TEST WORDS PRECISION:	0.833
 --pku_test_gold.utf8-------output.txt----1513
 湖南								湖南
 南岳							      |	南
-衡山							      |	岳
-							      >	衡
-							      >	山
+衡山							      |	岳衡山
 阴								阴
 转								转
 小雨								小雨
@@ -96349,33 +96113,31 @@ TEST WORDS PRECISION:	0.643
 ／								／
 7								7
 ℃								℃
-INSERTIONS:	2
+INSERTIONS:	0
 DELETIONS:	0
 SUBSTITUTIONS:	2
-NCHANGE:	4
+NCHANGE:	2
 NTRUTH:	11
-NTEST:	13
+NTEST:	11
 TRUE WORDS RECALL:	0.818
-TEST WORDS PRECISION:	0.692
+TEST WORDS PRECISION:	0.818
 --pku_test_gold.utf8-------output.txt----1514
 贵州								贵州
-红枫湖							      |	红
-							      >	枫
-							      >	湖
+红枫湖								红枫湖
 小雨								小雨
 3								3
 ℃								℃
 ／								／
 9								9
 ℃								℃
-INSERTIONS:	2
+INSERTIONS:	0
 DELETIONS:	0
-SUBSTITUTIONS:	1
-NCHANGE:	3
+SUBSTITUTIONS:	0
+NCHANGE:	0
 NTRUTH:	8
-NTEST:	10
-TRUE WORDS RECALL:	0.875
-TEST WORDS PRECISION:	0.700
+NTEST:	8
+TRUE WORDS RECALL:	1.000
+TEST WORDS PRECISION:	1.000
 --pku_test_gold.utf8-------output.txt----1515
 湖南								湖南
 张家界								张家界
@@ -96513,8 +96275,7 @@ TEST WORDS PRECISION:	0.667
 统计局								统计局
 局长								局长
 朱								朱
-之鑫							      |	之
-							      >	鑫
+之鑫								之鑫
 宣布								宣布
 ，								，
 今年								今年
@@ -96548,14 +96309,14 @@ TEST WORDS PRECISION:	0.667
 1万亿								1万亿
 美元								美元
 。								。
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	2
-SUBSTITUTIONS:	3
-NCHANGE:	6
+SUBSTITUTIONS:	2
+NCHANGE:	4
 NTRUTH:	56
-NTEST:	55
-TRUE WORDS RECALL:	0.911
-TEST WORDS PRECISION:	0.927
+NTEST:	54
+TRUE WORDS RECALL:	0.929
+TEST WORDS PRECISION:	0.963
 --pku_test_gold.utf8-------output.txt----1522
 1万亿								1万亿
 美元								美元
@@ -98532,9 +98293,9 @@ TEST WORDS PRECISION:	0.964
 全国								全国
 有								有
 20								20
-多								多
-个								个
-省								省
+多							      |	多个省
+个							      <
+省							      <
 、								、
 区								区
 、								、
@@ -98554,13 +98315,13 @@ TEST WORDS PRECISION:	0.964
 部门								部门
 。								。
 INSERTIONS:	0
-DELETIONS:	1
-SUBSTITUTIONS:	1
-NCHANGE:	2
+DELETIONS:	3
+SUBSTITUTIONS:	2
+NCHANGE:	5
 NTRUTH:	87
-NTEST:	86
-TRUE WORDS RECALL:	0.977
-TEST WORDS PRECISION:	0.988
+NTEST:	84
+TRUE WORDS RECALL:	0.943
+TEST WORDS PRECISION:	0.976
 --pku_test_gold.utf8-------output.txt----1542
 三								三
 、								、
@@ -99332,8 +99093,7 @@ TEST WORDS PRECISION:	0.942
 石								石
 大路								大路
 吴								吴
-广余							      |	广
-							      >	余
+广余								广余
 仓库								仓库
 、								、
 东莞								东莞
@@ -99347,38 +99107,30 @@ TEST WORDS PRECISION:	0.942
 料								料
 店								店
 、								、
-四会市							      |	四
-大沙							      |	会
-财记							      |	市
-							      >	大
-							      >	沙
+四会市								四会市
+大沙							      |	大
+财记							      |	沙
 							      >	财
 							      >	记
 饲料								饲料
 店								店
 、								、
-四会市							      |	四
-大沙							      |	会
-							      >	市
-							      >	大
+四会市								四会市
+大沙							      |	大
 							      >	沙
 丰盛								丰盛
 饲料								饲料
 店								店
 、								、
-四会市							      |	四
-大沙							      |	会
-简氏							      |	市
-							      >	大
-							      >	沙
+四会市								四会市
+大沙							      |	大
+简氏							      |	沙
 							      >	简
 							      >	氏
 饲料								饲料
 店								店
 、								、
-四会市							      |	四
-							      >	会
-							      >	市
+四会市								四会市
 向阳								向阳
 饲料								饲料
 购销部							      |	购销
@@ -99396,8 +99148,7 @@ TEST WORDS PRECISION:	0.942
 							      >	坭
 工业区								工业区
 郑								郑
-巧花							      |	巧
-							      >	花
+巧花								巧花
 仓库								仓库
 。								。
 共								共
@@ -99414,14 +99165,14 @@ TEST WORDS PRECISION:	0.942
 多								多
 公斤								公斤
 。								。
-INSERTIONS:	28
+INSERTIONS:	18
 DELETIONS:	0
-SUBSTITUTIONS:	21
-NCHANGE:	49
+SUBSTITUTIONS:	15
+NCHANGE:	33
 NTRUTH:	119
-NTEST:	147
-TRUE WORDS RECALL:	0.824
-TEST WORDS PRECISION:	0.667
+NTEST:	137
+TRUE WORDS RECALL:	0.874
+TEST WORDS PRECISION:	0.759
 --pku_test_gold.utf8-------output.txt----1552
 浙江省								浙江省
 查处								查处
@@ -99644,10 +99395,8 @@ TEST WORDS PRECISION:	0.800
 小嶝							      |	小
 							      >	嶝
 、								、
-角屿							      |	角
-岛上							      |	屿
-							      >	岛
-							      >	上
+角屿							      |	角屿岛
+岛上							      |	上
 的								的
 解放军								解放军
 官兵								官兵
@@ -99667,24 +99416,22 @@ TEST WORDS PRECISION:	0.800
 的								的
 来临								来临
 。								。
-INSERTIONS:	4
+INSERTIONS:	2
 DELETIONS:	3
 SUBSTITUTIONS:	7
-NCHANGE:	14
+NCHANGE:	12
 NTRUTH:	60
-NTEST:	61
+NTEST:	59
 TRUE WORDS RECALL:	0.833
-TEST WORDS PRECISION:	0.820
+TEST WORDS PRECISION:	0.847
 --pku_test_gold.utf8-------output.txt----1557
 离								离
-金门岛							      |	金门
-最							      |	岛
-近							      |	最近
+金门岛								金门岛
+最							      |	最近
+近							      <
 的								的
 是								是
-角屿岛							      |	角
-							      >	屿
-							      >	岛
+角屿岛								角屿岛
 。								。
 站								站
 在								在
@@ -99814,9 +99561,9 @@ TEST WORDS PRECISION:	0.820
 在								在
 这								这
 建								建
-个								个
-望								望
-海								海
+个							      |	个望海
+望							      <
+海							      <
 楼								楼
 ，								，
 看								看
@@ -99828,14 +99575,14 @@ TEST WORDS PRECISION:	0.820
 							      >	歌
 对唱								对唱
 。								。
-INSERTIONS:	10
-DELETIONS:	3
-SUBSTITUTIONS:	19
-NCHANGE:	32
+INSERTIONS:	8
+DELETIONS:	6
+SUBSTITUTIONS:	17
+NCHANGE:	31
 NTRUTH:	142
-NTEST:	149
-TRUE WORDS RECALL:	0.845
-TEST WORDS PRECISION:	0.805
+NTEST:	144
+TRUE WORDS RECALL:	0.838
+TEST WORDS PRECISION:	0.826
 --pku_test_gold.utf8-------output.txt----1558
 夜幕								夜幕
 渐渐								渐渐
@@ -99902,10 +99649,8 @@ TEST WORDS PRECISION:	0.805
 吧								吧
 。								。
 在								在
-大嶝							      |	大
-岛上							      |	嶝
-							      >	岛
-							      >	上
+大嶝							      |	大嶝岛
+岛上							      |	上
 的								的
 “								“
 望								望
@@ -99993,9 +99738,9 @@ TEST WORDS PRECISION:	0.805
 退潮								退潮
 时								时
 ，								，
-从								从
-三								三
-岛								岛
+从							      |	从三岛
+三							      <
+岛							      <
 挽								挽
 起								起
 裤脚							      |	裤
@@ -100033,14 +99778,14 @@ TEST WORDS PRECISION:	0.805
 同								同
 愿								愿
 。								。
-INSERTIONS:	9
-DELETIONS:	2
-SUBSTITUTIONS:	11
-NCHANGE:	22
+INSERTIONS:	7
+DELETIONS:	4
+SUBSTITUTIONS:	12
+NCHANGE:	23
 NTRUTH:	187
-NTEST:	194
-TRUE WORDS RECALL:	0.930
-TEST WORDS PRECISION:	0.897
+NTEST:	190
+TRUE WORDS RECALL:	0.914
+TEST WORDS PRECISION:	0.900
 --pku_test_gold.utf8-------output.txt----1559
 “								“
 史缘							      |	史
@@ -101242,8 +100987,7 @@ TEST WORDS PRECISION:	0.969
 纪委								纪委
 书记								书记
 王								王
-会全							      |	会
-							      >	全
+会全								会全
 借用								借用
 唐太宗								唐太宗
 教育								教育
@@ -101287,14 +101031,14 @@ TEST WORDS PRECISION:	0.969
 实在								实在
 可惜								可惜
 。								。
-INSERTIONS:	3
+INSERTIONS:	2
 DELETIONS:	5
-SUBSTITUTIONS:	7
-NCHANGE:	15
+SUBSTITUTIONS:	6
+NCHANGE:	13
 NTRUTH:	145
-NTEST:	143
-TRUE WORDS RECALL:	0.917
-TEST WORDS PRECISION:	0.930
+NTEST:	142
+TRUE WORDS RECALL:	0.924
+TEST WORDS PRECISION:	0.944
 --pku_test_gold.utf8-------output.txt----1573
 目前								目前
 ，								，
@@ -101454,18 +101198,17 @@ TEST WORDS PRECISION:	0.875
 。								。
 （								（
 陆								陆
-安权							      |	安
-							      >	权
+安权								安权
 摄								摄
 ）								）
-INSERTIONS:	2
+INSERTIONS:	1
 DELETIONS:	2
-SUBSTITUTIONS:	4
-NCHANGE:	8
+SUBSTITUTIONS:	3
+NCHANGE:	6
 NTRUTH:	43
-NTEST:	43
-TRUE WORDS RECALL:	0.860
-TEST WORDS PRECISION:	0.860
+NTEST:	42
+TRUE WORDS RECALL:	0.884
+TEST WORDS PRECISION:	0.905
 --pku_test_gold.utf8-------output.txt----1576
 首								首
 届								届
@@ -101626,8 +101369,7 @@ TEST WORDS PRECISION:	1.000
 （								（
 记者								记者
 张								张
-选杰							      |	选
-							      >	杰
+选杰								选杰
 ）								）
 经过								经过
 多							      |	多年
@@ -101666,14 +101408,14 @@ TEST WORDS PRECISION:	1.000
 新								新
 阶段								阶段
 。								。
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	1
-SUBSTITUTIONS:	4
-NCHANGE:	6
+SUBSTITUTIONS:	3
+NCHANGE:	4
 NTRUTH:	46
-NTEST:	46
-TRUE WORDS RECALL:	0.891
-TEST WORDS PRECISION:	0.891
+NTEST:	45
+TRUE WORDS RECALL:	0.913
+TEST WORDS PRECISION:	0.933
 --pku_test_gold.utf8-------output.txt----1581
 三河								三河
 对								对
@@ -101770,17 +101512,16 @@ TEST WORDS PRECISION:	1.000
 津强							      |	津
 							      >	强
 陈								陈
-克军							      |	克
-							      >	军
+克军								克军
 ）								）
-INSERTIONS:	2
+INSERTIONS:	1
 DELETIONS:	1
-SUBSTITUTIONS:	5
-NCHANGE:	8
+SUBSTITUTIONS:	4
+NCHANGE:	6
 NTRUTH:	79
-NTEST:	80
-TRUE WORDS RECALL:	0.924
-TEST WORDS PRECISION:	0.912
+NTEST:	79
+TRUE WORDS RECALL:	0.937
+TEST WORDS PRECISION:	0.937
 --pku_test_gold.utf8-------output.txt----1583
 武警								武警
 交通								交通
@@ -101873,17 +101614,16 @@ TEST WORDS PRECISION:	1.000
 。								。
 （								（
 徐								徐
-秀放							      |	秀
-							      >	放
+秀放								秀放
 ）								）
-INSERTIONS:	2
+INSERTIONS:	1
 DELETIONS:	2
-SUBSTITUTIONS:	5
-NCHANGE:	9
+SUBSTITUTIONS:	4
+NCHANGE:	7
 NTRUTH:	76
-NTEST:	76
-TRUE WORDS RECALL:	0.908
-TEST WORDS PRECISION:	0.908
+NTEST:	75
+TRUE WORDS RECALL:	0.921
+TEST WORDS PRECISION:	0.933
 --pku_test_gold.utf8-------output.txt----1585
 从								从
 “								“
@@ -102329,9 +102069,9 @@ TEST WORDS PRECISION:	0.905
 选拔								选拔
 结果								结果
 。								。
-并								并
-在								在
-省								省
+并							      |	并在省
+在							      <
+省							      <
 监察厅								监察厅
 设立								设立
 了								了
@@ -102360,13 +102100,13 @@ TEST WORDS PRECISION:	0.905
 。								。
 ”								”
 INSERTIONS:	0
-DELETIONS:	1
-SUBSTITUTIONS:	1
-NCHANGE:	2
+DELETIONS:	3
+SUBSTITUTIONS:	2
+NCHANGE:	5
 NTRUTH:	63
-NTEST:	62
-TRUE WORDS RECALL:	0.968
-TEST WORDS PRECISION:	0.984
+NTEST:	60
+TRUE WORDS RECALL:	0.921
+TEST WORDS PRECISION:	0.967
 --pku_test_gold.utf8-------output.txt----1593
 对于								对于
 进入								进入
@@ -103652,17 +103392,16 @@ TEST WORDS PRECISION:	1.000
 冯								冯
 建波								建波
 王								王
-世心							      |	世
-							      >	心
+世心								世心
 ）								）
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	0
-SUBSTITUTIONS:	1
-NCHANGE:	2
+SUBSTITUTIONS:	0
+NCHANGE:	0
 NTRUTH:	6
-NTEST:	7
-TRUE WORDS RECALL:	0.833
-TEST WORDS PRECISION:	0.714
+NTEST:	6
+TRUE WORDS RECALL:	1.000
+TEST WORDS PRECISION:	1.000
 --pku_test_gold.utf8-------output.txt----1610
 缜密								缜密
 侦查								侦查
@@ -103739,15 +103478,13 @@ TEST WORDS PRECISION:	0.886
 分别								分别
 以								以
 陈								陈
-国祈							      |	国
-							      >	祈
+国祈								国祈
 、								、
 王								王
 磊								磊
 、								、
 包								包
-阿玲							      |	阿
-							      >	玲
+阿玲								阿玲
 为首								为首
 的								的
 这个								这个
@@ -103839,14 +103576,14 @@ TEST WORDS PRECISION:	0.886
 抓捕								抓捕
 归案								归案
 。								。
-INSERTIONS:	4
+INSERTIONS:	2
 DELETIONS:	0
-SUBSTITUTIONS:	4
-NCHANGE:	8
+SUBSTITUTIONS:	2
+NCHANGE:	4
 NTRUTH:	103
-NTEST:	107
-TRUE WORDS RECALL:	0.961
-TEST WORDS PRECISION:	0.925
+NTEST:	105
+TRUE WORDS RECALL:	0.981
+TEST WORDS PRECISION:	0.962
 --pku_test_gold.utf8-------output.txt----1613
 香港								香港
 现有								现有
@@ -104733,8 +104470,7 @@ TEST WORDS PRECISION:	0.833
 钻井								钻井
 工程师								工程师
 秦								秦
-文贵							      |	文
-							      >	贵
+文贵								文贵
 》								》
 获								获
 一等奖								一等奖
@@ -104743,14 +104479,14 @@ TEST WORDS PRECISION:	0.833
 唐								唐
 健								健
 ）								）
-INSERTIONS:	4
+INSERTIONS:	3
 DELETIONS:	1
-SUBSTITUTIONS:	4
-NCHANGE:	9
+SUBSTITUTIONS:	3
+NCHANGE:	7
 NTRUTH:	69
-NTEST:	72
-TRUE WORDS RECALL:	0.928
-TEST WORDS PRECISION:	0.889
+NTEST:	71
+TRUE WORDS RECALL:	0.942
+TEST WORDS PRECISION:	0.915
 --pku_test_gold.utf8-------output.txt----1626
 上海								上海
 民营								民营
@@ -104795,8 +104531,7 @@ TEST WORDS PRECISION:	1.000
 八百								八百
 套								套
 俞兆林牌						      |	俞
-							      >	兆
-							      >	林
+							      >	兆林
 							      >	牌
 绿色								绿色
 环保								环保
@@ -104823,14 +104558,14 @@ TEST WORDS PRECISION:	1.000
 和								和
 支持								支持
 。								。
-INSERTIONS:	6
+INSERTIONS:	5
 DELETIONS:	1
 SUBSTITUTIONS:	5
-NCHANGE:	12
+NCHANGE:	11
 NTRUTH:	50
-NTEST:	55
+NTEST:	54
 TRUE WORDS RECALL:	0.880
-TEST WORDS PRECISION:	0.800
+TEST WORDS PRECISION:	0.815
 --pku_test_gold.utf8-------output.txt----1628
 聊城							      |	聊
 							      >	城
@@ -105749,8 +105484,7 @@ TEST WORDS PRECISION:	0.987
 效应								效应
 ，								，
 使								使
-欧元区							      |	欧元
-							      >	区
+欧元区								欧元区
 国家								国家
 免受							      |	免
 							      >	受
@@ -105834,14 +105568,14 @@ TEST WORDS PRECISION:	0.987
 币								币
 形象								形象
 。								。
-INSERTIONS:	5
+INSERTIONS:	4
 DELETIONS:	0
-SUBSTITUTIONS:	5
-NCHANGE:	10
+SUBSTITUTIONS:	4
+NCHANGE:	8
 NTRUTH:	167
-NTEST:	172
-TRUE WORDS RECALL:	0.970
-TEST WORDS PRECISION:	0.942
+NTEST:	171
+TRUE WORDS RECALL:	0.976
+TEST WORDS PRECISION:	0.953
 --pku_test_gold.utf8-------output.txt----1642
 机器人								机器人
 迎								迎
@@ -106699,8 +106433,8 @@ TEST WORDS PRECISION:	1.000
 ，								，
 其中								其中
 爱德华								爱德华
-王子								王子
-岛								岛
+王子							      |	王子岛
+岛							      <
 、								、
 纽芬兰							      |	纽
 							      >	芬兰
@@ -106762,13 +106496,13 @@ TEST WORDS PRECISION:	1.000
 小时								小时
 。								。
 INSERTIONS:	2
-DELETIONS:	5
-SUBSTITUTIONS:	9
-NCHANGE:	16
+DELETIONS:	6
+SUBSTITUTIONS:	10
+NCHANGE:	18
 NTRUTH:	96
-NTEST:	93
-TRUE WORDS RECALL:	0.854
-TEST WORDS PRECISION:	0.882
+NTEST:	92
+TRUE WORDS RECALL:	0.833
+TEST WORDS PRECISION:	0.870
 --pku_test_gold.utf8-------output.txt----1652
 加拿大								加拿大
 网络								网络
@@ -108518,8 +108252,7 @@ TEST WORDS PRECISION:	0.950
 格雷罗州							格雷罗州
 伊斯塔帕市						      |	伊
 							      >	斯
-							      >	塔帕
-							      >	市
+							      >	塔帕市
 举行								举行
 的								的
 “								“
@@ -108576,14 +108309,14 @@ TEST WORDS PRECISION:	0.950
 出来								出来
 的								的
 。								。
-INSERTIONS:	6
+INSERTIONS:	5
 DELETIONS:	1
 SUBSTITUTIONS:	4
-NCHANGE:	11
+NCHANGE:	10
 NTRUTH:	64
-NTEST:	69
+NTEST:	68
 TRUE WORDS RECALL:	0.922
-TEST WORDS PRECISION:	0.855
+TEST WORDS PRECISION:	0.868
 --pku_test_gold.utf8-------output.txt----1673
 海龟								海龟
 是								是
@@ -108783,8 +108516,7 @@ TEST WORDS PRECISION:	0.913
 一								一
 处								处
 叫								叫
-美丽滩							      |	美丽
-							      >	滩
+美丽滩								美丽滩
 的								的
 海滨								海滨
 ，								，
@@ -108859,19 +108591,18 @@ TEST WORDS PRECISION:	0.913
 见								见
 图								图
 张								张
-金江							      |	金
-							      >	江
+金江								金江
 摄								摄
 ）								）
 。								。
-INSERTIONS:	3
+INSERTIONS:	1
 DELETIONS:	2
-SUBSTITUTIONS:	5
-NCHANGE:	10
+SUBSTITUTIONS:	3
+NCHANGE:	6
 NTRUTH:	82
-NTEST:	83
-TRUE WORDS RECALL:	0.915
-TEST WORDS PRECISION:	0.904
+NTEST:	81
+TRUE WORDS RECALL:	0.939
+TEST WORDS PRECISION:	0.951
 --pku_test_gold.utf8-------output.txt----1676
 小								小
 海龟								海龟
@@ -109449,8 +109180,7 @@ TEST WORDS PRECISION:	0.975
 学校								学校
 校长								校长
 杜								杜
-兆才							      |	兆
-							      >	才
+兆才								兆才
 等								等
 领导								领导
 及								及
@@ -109462,14 +109192,14 @@ TEST WORDS PRECISION:	0.975
 本次								本次
 大会								大会
 。								。
-INSERTIONS:	2
+INSERTIONS:	1
 DELETIONS:	0
-SUBSTITUTIONS:	4
-NCHANGE:	6
+SUBSTITUTIONS:	3
+NCHANGE:	4
 NTRUTH:	53
-NTEST:	55
-TRUE WORDS RECALL:	0.925
-TEST WORDS PRECISION:	0.891
+NTEST:	54
+TRUE WORDS RECALL:	0.943
+TEST WORDS PRECISION:	0.926
 --pku_test_gold.utf8-------output.txt----1683
 蔡							      |	蔡家
 家东							      |	东
@@ -109786,9 +109516,8 @@ TEST WORDS PRECISION:	0.917
 顶峰								顶峰
 的								的
 “								“
-处女							      |	处
-							      >	女
-峰								峰
+处女							      |	处女峰
+峰							      <
 ”								”
 。								。
 1991年								1991年
@@ -109863,8 +109592,7 @@ TEST WORDS PRECISION:	0.917
 志义								志义
 、								、
 孙								孙
-维琦							      |	维
-							      >	琦
+维琦								维琦
 和								和
 11								11
 名								名
@@ -109899,14 +109627,14 @@ TEST WORDS PRECISION:	0.917
 纪念碑								纪念碑
 ”								”
 。								。
-INSERTIONS:	8
-DELETIONS:	2
-SUBSTITUTIONS:	10
-NCHANGE:	20
+INSERTIONS:	6
+DELETIONS:	3
+SUBSTITUTIONS:	9
+NCHANGE:	18
 NTRUTH:	128
-NTEST:	134
+NTEST:	131
 TRUE WORDS RECALL:	0.906
-TEST WORDS PRECISION:	0.866
+TEST WORDS PRECISION:	0.885
 --pku_test_gold.utf8-------output.txt----1689
 登山								登山
 是								是
@@ -110169,9 +109897,7 @@ TEST WORDS PRECISION:	0.600
 							      >	顶
 							      >	堤
 广场								广场
-处津河							      |	处
-							      >	津
-							      >	河
+处津河								处津河
 共同								共同
 举办								举办
 新							      |	新世纪
@@ -110180,14 +109906,14 @@ TEST WORDS PRECISION:	0.600
 大							      |	大行动
 行动							      <
 。								。
-INSERTIONS:	5
+INSERTIONS:	3
 DELETIONS:	6
-SUBSTITUTIONS:	9
-NCHANGE:	20
+SUBSTITUTIONS:	8
+NCHANGE:	17
 NTRUTH:	53
-NTEST:	52
-TRUE WORDS RECALL:	0.717
-TEST WORDS PRECISION:	0.731
+NTEST:	50
+TRUE WORDS RECALL:	0.736
+TEST WORDS PRECISION:	0.780
 --pku_test_gold.utf8-------output.txt----1694
 来自								来自
 天津								天津
@@ -110217,9 +109943,8 @@ TEST WORDS PRECISION:	0.731
 300								300
 多								多
 人								人
-在								在
-津河							      |	津
-							      >	河
+在							      |	在津河
+津河							      <
 破								破
 冰								冰
 游泳								游泳
@@ -110284,14 +110009,14 @@ TEST WORDS PRECISION:	0.731
 签名								签名
 活动								活动
 。								。
-INSERTIONS:	3
-DELETIONS:	3
+INSERTIONS:	2
+DELETIONS:	4
 SUBSTITUTIONS:	5
 NCHANGE:	11
 NTRUTH:	92
-NTEST:	92
-TRUE WORDS RECALL:	0.913
-TEST WORDS PRECISION:	0.913
+NTEST:	90
+TRUE WORDS RECALL:	0.902
+TEST WORDS PRECISION:	0.922
 --pku_test_gold.utf8-------output.txt----1695
 二○○○年								二○○○年
 中国								中国
@@ -110680,9 +110405,8 @@ TEST WORDS PRECISION:	0.875
 副								副
 主席								主席
 张								张
-吉龙							      |	吉
-先后							      |	龙
-							      >	先
+吉龙								吉龙
+先后							      |	先
 							      >	后
 来到								来到
 人民网							      |	人民
@@ -110703,14 +110427,14 @@ www.people.com.cn／sports				      |	www.people.com.cn
 了								了
 交流								交流
 。								。
-INSERTIONS:	5
+INSERTIONS:	4
 DELETIONS:	1
-SUBSTITUTIONS:	5
-NCHANGE:	11
+SUBSTITUTIONS:	4
+NCHANGE:	9
 NTRUTH:	37
-NTEST:	41
-TRUE WORDS RECALL:	0.838
-TEST WORDS PRECISION:	0.756
+NTEST:	40
+TRUE WORDS RECALL:	0.865
+TEST WORDS PRECISION:	0.800
 --pku_test_gold.utf8-------output.txt----1702
 网友								网友
 ：								：
@@ -111192,8 +110916,7 @@ TRUE WORDS RECALL:	0.800
 TEST WORDS PRECISION:	0.889
 --pku_test_gold.utf8-------output.txt----1715
 张								张
-吉龙							      |	吉
-							      >	龙
+吉龙								吉龙
 ：								：
 中国								中国
 足协								足协
@@ -111235,14 +110958,14 @@ TEST WORDS PRECISION:	0.889
 等								等
 城市								城市
 。								。
-INSERTIONS:	2
+INSERTIONS:	1
 DELETIONS:	1
-SUBSTITUTIONS:	3
-NCHANGE:	6
+SUBSTITUTIONS:	2
+NCHANGE:	4
 NTRUTH:	42
-NTEST:	43
-TRUE WORDS RECALL:	0.905
-TEST WORDS PRECISION:	0.884
+NTEST:	42
+TRUE WORDS RECALL:	0.929
+TEST WORDS PRECISION:	0.929
 --pku_test_gold.utf8-------output.txt----1716
 网友								网友
 ：								：
@@ -111269,8 +110992,7 @@ TRUE WORDS RECALL:	1.000
 TEST WORDS PRECISION:	1.000
 --pku_test_gold.utf8-------output.txt----1717
 张								张
-吉龙							      |	吉
-							      >	龙
+吉龙								吉龙
 ：								：
 中国								中国
 足球								足球
@@ -111295,14 +111017,14 @@ TEST WORDS PRECISION:	1.000
 足球								足球
 爱好者								爱好者
 。								。
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	0
-SUBSTITUTIONS:	1
-NCHANGE:	2
+SUBSTITUTIONS:	0
+NCHANGE:	0
 NTRUTH:	26
-NTEST:	27
-TRUE WORDS RECALL:	0.962
-TEST WORDS PRECISION:	0.926
+NTEST:	26
+TRUE WORDS RECALL:	1.000
+TEST WORDS PRECISION:	1.000
 --pku_test_gold.utf8-------output.txt----1718
 网友								网友
 ：								：
@@ -111324,8 +111046,7 @@ TRUE WORDS RECALL:	1.000
 TEST WORDS PRECISION:	1.000
 --pku_test_gold.utf8-------output.txt----1719
 张								张
-吉龙							      |	吉
-							      >	龙
+吉龙								吉龙
 ：								：
 国务院								国务院
 目前								目前
@@ -111388,14 +111109,14 @@ TEST WORDS PRECISION:	1.000
 的								的
 支持								支持
 。								。
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	0
-SUBSTITUTIONS:	1
-NCHANGE:	2
+SUBSTITUTIONS:	0
+NCHANGE:	0
 NTRUTH:	64
-NTEST:	65
-TRUE WORDS RECALL:	0.984
-TEST WORDS PRECISION:	0.969
+NTEST:	64
+TRUE WORDS RECALL:	1.000
+TEST WORDS PRECISION:	1.000
 --pku_test_gold.utf8-------output.txt----1720
 网友								网友
 ：								：
@@ -111427,8 +111148,7 @@ TRUE WORDS RECALL:	1.000
 TEST WORDS PRECISION:	1.000
 --pku_test_gold.utf8-------output.txt----1721
 张								张
-吉龙							      |	吉
-							      >	龙
+吉龙								吉龙
 ：								：
 日本								日本
 足球								足球
@@ -111546,14 +111266,14 @@ TEST WORDS PRECISION:	1.000
 的								的
 不足								不足
 。								。
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	4
-SUBSTITUTIONS:	5
-NCHANGE:	10
+SUBSTITUTIONS:	4
+NCHANGE:	8
 NTRUTH:	119
-NTEST:	116
-TRUE WORDS RECALL:	0.924
-TEST WORDS PRECISION:	0.948
+NTEST:	115
+TRUE WORDS RECALL:	0.933
+TEST WORDS PRECISION:	0.965
 --pku_test_gold.utf8-------output.txt----1722
 网友								网友
 ：								：
@@ -111574,8 +111294,7 @@ TRUE WORDS RECALL:	1.000
 TEST WORDS PRECISION:	1.000
 --pku_test_gold.utf8-------output.txt----1723
 张								张
-吉龙							      |	吉
-							      >	龙
+吉龙								吉龙
 ：								：
 我								我
 个人								个人
@@ -111624,14 +111343,14 @@ TEST WORDS PRECISION:	1.000
 过							      |	过热
 热							      <
 。								。
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	3
-SUBSTITUTIONS:	3
-NCHANGE:	7
+SUBSTITUTIONS:	2
+NCHANGE:	5
 NTRUTH:	50
-NTEST:	48
-TRUE WORDS RECALL:	0.880
-TEST WORDS PRECISION:	0.917
+NTEST:	47
+TRUE WORDS RECALL:	0.900
+TEST WORDS PRECISION:	0.957
 --pku_test_gold.utf8-------output.txt----1724
 女子								女子
 围棋								围棋
@@ -111732,21 +111451,20 @@ TEST WORDS PRECISION:	0.875
 使								使
 小将								小将
 黄								黄
-佳								佳
-初段							      |	初
-							      >	段
+佳							      |	佳初
+初段							      |	段
 推								推
 枰								枰
 认输								认输
 。								。
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	0
-SUBSTITUTIONS:	3
+SUBSTITUTIONS:	4
 NCHANGE:	4
 NTRUTH:	38
-NTEST:	39
-TRUE WORDS RECALL:	0.921
-TEST WORDS PRECISION:	0.897
+NTEST:	38
+TRUE WORDS RECALL:	0.895
+TEST WORDS PRECISION:	0.895
 --pku_test_gold.utf8-------output.txt----1727
 今天								今天
 的								的
@@ -111760,8 +111478,8 @@ TEST WORDS PRECISION:	0.897
 段								段
 迎战								迎战
 徐								徐
-莹								莹
-三								三
+莹							      |	莹三
+三							      <
 段								段
 。								。
 一个								一个
@@ -111794,8 +111512,8 @@ TEST WORDS PRECISION:	0.897
 有							      |	有的
 的							      <
 徐								徐
-莹								莹
-三								三
+莹							      |	莹三
+三							      <
 段								段
 开局								开局
 不							      |	不错
@@ -111842,13 +111560,13 @@ TEST WORDS PRECISION:	0.897
 璇								璇
 。								。
 INSERTIONS:	0
-DELETIONS:	4
-SUBSTITUTIONS:	4
-NCHANGE:	8
+DELETIONS:	6
+SUBSTITUTIONS:	6
+NCHANGE:	12
 NTRUTH:	93
-NTEST:	89
-TRUE WORDS RECALL:	0.914
-TEST WORDS PRECISION:	0.955
+NTEST:	87
+TRUE WORDS RECALL:	0.871
+TEST WORDS PRECISION:	0.931
 --pku_test_gold.utf8-------output.txt----1728
 另外								另外
 一								一
@@ -111858,8 +111576,8 @@ TEST WORDS PRECISION:	0.955
 湖北								湖北
 选手								选手
 叶								叶
-桂								桂
-五								五
+桂							      |	桂五
+五							      <
 段								段
 战胜								战胜
 了								了
@@ -111879,13 +111597,13 @@ TEST WORDS PRECISION:	0.955
 强							      <
 。								。
 INSERTIONS:	0
-DELETIONS:	2
-SUBSTITUTIONS:	2
-NCHANGE:	4
+DELETIONS:	3
+SUBSTITUTIONS:	3
+NCHANGE:	6
 NTRUTH:	28
-NTEST:	26
-TRUE WORDS RECALL:	0.857
-TEST WORDS PRECISION:	0.923
+NTEST:	25
+TRUE WORDS RECALL:	0.786
+TEST WORDS PRECISION:	0.880
 --pku_test_gold.utf8-------output.txt----1729
 明天								明天
 ，								，
@@ -111935,16 +111653,15 @@ TEST WORDS PRECISION:	1.000
 永生								永生
 淘汰								淘汰
 于								于
-幼华							      |	幼
-							      >	华
-INSERTIONS:	1
+幼华								幼华
+INSERTIONS:	0
 DELETIONS:	1
-SUBSTITUTIONS:	2
-NCHANGE:	4
+SUBSTITUTIONS:	1
+NCHANGE:	2
 NTRUTH:	9
-NTEST:	9
-TRUE WORDS RECALL:	0.667
-TEST WORDS PRECISION:	0.667
+NTEST:	8
+TRUE WORDS RECALL:	0.778
+TEST WORDS PRECISION:	0.875
 --pku_test_gold.utf8-------output.txt----1731
 本报								本报
 讯								讯
@@ -111990,8 +111707,7 @@ TEST WORDS PRECISION:	0.667
 特级								特级
 大师								大师
 于								于
-幼华							      |	幼
-							      >	华
+幼华								幼华
 ，								，
 跻身								跻身
 八								八
@@ -112018,14 +111734,14 @@ TEST WORDS PRECISION:	0.667
 陶								陶
 汉明								汉明
 。								。
-INSERTIONS:	3
+INSERTIONS:	2
 DELETIONS:	5
-SUBSTITUTIONS:	7
-NCHANGE:	15
+SUBSTITUTIONS:	6
+NCHANGE:	13
 NTRUTH:	69
-NTEST:	67
-TRUE WORDS RECALL:	0.826
-TEST WORDS PRECISION:	0.851
+NTEST:	66
+TRUE WORDS RECALL:	0.841
+TEST WORDS PRECISION:	0.879
 --pku_test_gold.utf8-------output.txt----1732
 体操								体操
 明星								明星
@@ -112255,8 +111971,8 @@ TEST WORDS PRECISION:	0.886
 ，								，
 在								在
 原								原
-贺								贺
-龙								龙
+贺							      |	贺龙
+龙							      <
 体育场								体育场
 的								的
 基础								基础
@@ -112294,19 +112010,18 @@ TEST WORDS PRECISION:	0.886
 。								。
 （								（
 刘								刘
-绪甲							      |	绪
-							      >	甲
+绪甲								绪甲
 邹								邹
 蓬								蓬
 ）								）
-INSERTIONS:	4
-DELETIONS:	1
+INSERTIONS:	3
+DELETIONS:	2
 SUBSTITUTIONS:	7
 NCHANGE:	12
 NTRUTH:	57
-NTEST:	60
-TRUE WORDS RECALL:	0.860
-TEST WORDS PRECISION:	0.817
+NTEST:	58
+TRUE WORDS RECALL:	0.842
+TEST WORDS PRECISION:	0.828
 --pku_test_gold.utf8-------output.txt----1738
 童心								童心
 同心								同心
@@ -113560,11 +113275,10 @@ TEST WORDS PRECISION:	0.894
 							      >	权
 ，								，
 而								而
-按照								按照
-省								省
-选举							      |	选
-办法							      |	举办
-							      >	法
+按照							      |	按照省
+省							      |	选
+选举							      |	举办
+办法							      |	法
 ，								，
 罢免								罢免
 村委会								村委会
@@ -113610,14 +113324,14 @@ TEST WORDS PRECISION:	0.894
 一方								一方
 不利								不利
 。								。
-INSERTIONS:	3
+INSERTIONS:	2
 DELETIONS:	2
-SUBSTITUTIONS:	6
-NCHANGE:	11
+SUBSTITUTIONS:	8
+NCHANGE:	12
 NTRUTH:	121
-NTEST:	122
-TRUE WORDS RECALL:	0.934
-TEST WORDS PRECISION:	0.926
+NTEST:	121
+TRUE WORDS RECALL:	0.917
+TEST WORDS PRECISION:	0.917
 --pku_test_gold.utf8-------output.txt----1762
 据								据
 民政部门							民政部门
@@ -113837,8 +113551,8 @@ TEST WORDS PRECISION:	0.926
 少							      <
 在								在
 温州								温州
-其他								其他
-区								区
+其他							      |	其他区
+区							      <
 读书								读书
 的								的
 学生								学生
@@ -113885,13 +113599,13 @@ TEST WORDS PRECISION:	0.926
 天								天
 。								。
 INSERTIONS:	2
-DELETIONS:	3
-SUBSTITUTIONS:	5
-NCHANGE:	10
+DELETIONS:	4
+SUBSTITUTIONS:	6
+NCHANGE:	12
 NTRUTH:	83
-NTEST:	82
-TRUE WORDS RECALL:	0.904
-TEST WORDS PRECISION:	0.915
+NTEST:	81
+TRUE WORDS RECALL:	0.880
+TEST WORDS PRECISION:	0.901
 --pku_test_gold.utf8-------output.txt----1765
 乡							      |	乡政府
 政府							      <
@@ -115164,8 +114878,7 @@ TEST WORDS PRECISION:	1.000
 近年来								近年来
 ，								，
 河北省								河北省
-容城县							      |	容城
-							      >	县
+容城县								容城县
 公安局								公安局
 党委								党委
 一班人								一班人
@@ -115253,14 +114966,14 @@ TEST WORDS PRECISION:	1.000
 两								两
 次								次
 。								。
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	1
-SUBSTITUTIONS:	2
-NCHANGE:	4
+SUBSTITUTIONS:	1
+NCHANGE:	2
 NTRUTH:	91
-NTEST:	91
-TRUE WORDS RECALL:	0.967
-TEST WORDS PRECISION:	0.967
+NTEST:	90
+TRUE WORDS RECALL:	0.978
+TEST WORDS PRECISION:	0.989
 --pku_test_gold.utf8-------output.txt----1784
 图片								图片
 ：								：
@@ -115320,8 +115033,7 @@ TEST WORDS PRECISION:	1.000
 、								、
 局长								局长
 许								许
-汝钧							      |	汝
-							      >	钧
+汝钧								汝钧
 同								同
 局								局
 党委								党委
@@ -115333,14 +115045,14 @@ TEST WORDS PRECISION:	1.000
 质量							      |	质量关
 关							      <
 。								。
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	2
-SUBSTITUTIONS:	3
-NCHANGE:	6
+SUBSTITUTIONS:	2
+NCHANGE:	4
 NTRUTH:	16
-NTEST:	15
-TRUE WORDS RECALL:	0.688
-TEST WORDS PRECISION:	0.733
+NTEST:	14
+TRUE WORDS RECALL:	0.750
+TEST WORDS PRECISION:	0.857
 --pku_test_gold.utf8-------output.txt----1788
 （								（
 贾								贾
@@ -116932,16 +116644,15 @@ TEST WORDS PRECISION:	0.750
 副								副
 主任								主任
 袁								袁
-曙宏							      |	曙
-							      >	宏
-INSERTIONS:	1
+曙宏								曙宏
+INSERTIONS:	0
 DELETIONS:	1
-SUBSTITUTIONS:	4
-NCHANGE:	6
+SUBSTITUTIONS:	3
+NCHANGE:	4
 NTRUTH:	15
-NTEST:	15
-TRUE WORDS RECALL:	0.667
-TEST WORDS PRECISION:	0.667
+NTEST:	14
+TRUE WORDS RECALL:	0.733
+TEST WORDS PRECISION:	0.786
 --pku_test_gold.utf8-------output.txt----1817
 记者								记者
 ：								：
@@ -116978,8 +116689,7 @@ TRUE WORDS RECALL:	1.000
 TEST WORDS PRECISION:	1.000
 --pku_test_gold.utf8-------output.txt----1818
 袁								袁
-曙宏							      |	曙
-							      >	宏
+曙宏								曙宏
 ：								：
 这个								这个
 案子								案子
@@ -117004,14 +116714,14 @@ TEST WORDS PRECISION:	1.000
 的								的
 结局								结局
 。								。
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	1
-SUBSTITUTIONS:	2
-NCHANGE:	4
+SUBSTITUTIONS:	1
+NCHANGE:	2
 NTRUTH:	26
-NTEST:	26
-TRUE WORDS RECALL:	0.885
-TEST WORDS PRECISION:	0.885
+NTEST:	25
+TRUE WORDS RECALL:	0.923
+TEST WORDS PRECISION:	0.960
 --pku_test_gold.utf8-------output.txt----1819
 案子								案子
 的								的
@@ -117035,8 +116745,7 @@ TEST WORDS PRECISION:	0.885
 。								。
 最后								最后
 夏								夏
-世清							      |	世
-							      >	清
+世清								世清
 认识								认识
 到								到
 自己								自己
@@ -117073,14 +116782,14 @@ TEST WORDS PRECISION:	0.885
 依法							      |	依法行
 行政							      |	政
 。								。
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	3
-SUBSTITUTIONS:	6
-NCHANGE:	10
+SUBSTITUTIONS:	5
+NCHANGE:	8
 NTRUTH:	59
-NTEST:	57
-TRUE WORDS RECALL:	0.847
-TEST WORDS PRECISION:	0.877
+NTEST:	56
+TRUE WORDS RECALL:	0.864
+TEST WORDS PRECISION:	0.911
 --pku_test_gold.utf8-------output.txt----1820
 因此								因此
 可以								可以
@@ -117168,8 +116877,7 @@ TRUE WORDS RECALL:	0.818
 TEST WORDS PRECISION:	0.900
 --pku_test_gold.utf8-------output.txt----1822
 袁								袁
-曙宏							      |	曙
-							      >	宏
+曙宏								曙宏
 ：								：
 恰恰相反							恰恰相反
 ，								，
@@ -117190,14 +116898,14 @@ TEST WORDS PRECISION:	0.900
 的								的
 威信								威信
 。								。
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	2
-SUBSTITUTIONS:	3
-NCHANGE:	6
+SUBSTITUTIONS:	2
+NCHANGE:	4
 NTRUTH:	22
-NTEST:	21
-TRUE WORDS RECALL:	0.773
-TEST WORDS PRECISION:	0.810
+NTEST:	20
+TRUE WORDS RECALL:	0.818
+TEST WORDS PRECISION:	0.900
 --pku_test_gold.utf8-------output.txt----1823
 我国								我国
 现阶段								现阶段
@@ -117426,8 +117134,7 @@ TEST WORDS PRECISION:	0.864
 							      >	村
 与								与
 夏								夏
-世清							      |	世
-							      >	清
+世清								世清
 的								的
 树木								树木
 权属								权属
@@ -117464,14 +117171,14 @@ TEST WORDS PRECISION:	0.864
 民事								民事
 纠纷								纠纷
 。								。
-INSERTIONS:	5
+INSERTIONS:	4
 DELETIONS:	2
-SUBSTITUTIONS:	7
-NCHANGE:	14
+SUBSTITUTIONS:	6
+NCHANGE:	12
 NTRUTH:	47
-NTEST:	50
-TRUE WORDS RECALL:	0.809
-TEST WORDS PRECISION:	0.760
+NTEST:	49
+TRUE WORDS RECALL:	0.830
+TEST WORDS PRECISION:	0.796
 --pku_test_gold.utf8-------output.txt----1827
 再								再
 之后								之后
@@ -117483,9 +117190,9 @@ TEST WORDS PRECISION:	0.760
 提起								提起
 行政								行政
 复议								复议
-和								和
-向								向
-县								县
+和							      |	和向县
+向							      <
+县							      <
 法院								法院
 提起								提起
 行政诉讼							行政诉讼
@@ -117532,13 +117239,13 @@ TEST WORDS PRECISION:	0.760
 纠纷								纠纷
 。								。
 INSERTIONS:	2
-DELETIONS:	3
-SUBSTITUTIONS:	5
-NCHANGE:	10
+DELETIONS:	5
+SUBSTITUTIONS:	6
+NCHANGE:	13
 NTRUTH:	56
-NTEST:	55
-TRUE WORDS RECALL:	0.857
-TEST WORDS PRECISION:	0.873
+NTEST:	53
+TRUE WORDS RECALL:	0.804
+TEST WORDS PRECISION:	0.849
 --pku_test_gold.utf8-------output.txt----1828
 在								在
 这								这
@@ -117630,8 +117337,7 @@ TRUE WORDS RECALL:	0.696
 TEST WORDS PRECISION:	0.762
 --pku_test_gold.utf8-------output.txt----1830
 袁								袁
-曙宏							      |	曙
-							      >	宏
+曙宏								曙宏
 ：								：
 首先								首先
 应当								应当
@@ -117716,14 +117422,14 @@ TEST WORDS PRECISION:	0.762
 基本								基本
 前提								前提
 。								。
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	2
-SUBSTITUTIONS:	6
-NCHANGE:	9
+SUBSTITUTIONS:	5
+NCHANGE:	7
 NTRUTH:	86
-NTEST:	85
-TRUE WORDS RECALL:	0.907
-TEST WORDS PRECISION:	0.918
+NTEST:	84
+TRUE WORDS RECALL:	0.919
+TEST WORDS PRECISION:	0.940
 --pku_test_gold.utf8-------output.txt----1831
 现在								现在
 ，								，
@@ -118021,8 +117727,7 @@ TEST WORDS PRECISION:	0.852
 因								因
 农民								农民
 夏								夏
-世清							      |	世
-							      >	清
+世清								世清
 违约								违约
 不								不
 缴								缴
@@ -118060,8 +117765,7 @@ TEST WORDS PRECISION:	0.852
 政府							      |	镇政府
 与								与
 夏								夏
-世清							      |	世
-							      >	清
+世清								世清
 却								却
 通过								通过
 这个								这个
@@ -118077,14 +117781,14 @@ TEST WORDS PRECISION:	0.852
 更加								更加
 融洽								融洽
 。								。
-INSERTIONS:	3
+INSERTIONS:	1
 DELETIONS:	1
-SUBSTITUTIONS:	8
-NCHANGE:	12
+SUBSTITUTIONS:	6
+NCHANGE:	8
 NTRUTH:	68
-NTEST:	70
-TRUE WORDS RECALL:	0.868
-TEST WORDS PRECISION:	0.843
+NTEST:	68
+TRUE WORDS RECALL:	0.897
+TEST WORDS PRECISION:	0.897
 --pku_test_gold.utf8-------output.txt----1835
 不							      |	不是
 是							      <
@@ -118105,8 +117809,7 @@ TEST WORDS PRECISION:	0.667
 --pku_test_gold.utf8-------output.txt----1836
 农民								农民
 夏								夏
-世清							      |	世
-							      >	清
+世清								世清
 老汉								老汉
 ，								，
 在								在
@@ -118164,14 +117867,14 @@ TEST WORDS PRECISION:	0.667
 依靠								依靠
 法律								法律
 。								。
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	4
-SUBSTITUTIONS:	5
-NCHANGE:	10
+SUBSTITUTIONS:	4
+NCHANGE:	8
 NTRUTH:	60
-NTEST:	57
-TRUE WORDS RECALL:	0.850
-TEST WORDS PRECISION:	0.895
+NTEST:	56
+TRUE WORDS RECALL:	0.867
+TEST WORDS PRECISION:	0.929
 --pku_test_gold.utf8-------output.txt----1837
 夏								夏
 老汉								老汉
@@ -118490,8 +118193,7 @@ TEST WORDS PRECISION:	1.000
 原								原
 镇长								镇长
 董								董
-烈宏							      |	烈
-							      >	宏
+烈宏								烈宏
 下乡								下乡
 检查								检查
 秋收								秋收
@@ -118508,20 +118210,19 @@ TEST WORDS PRECISION:	1.000
 组								组
 村民								村民
 夏								夏
-世清							      |	世
-							      >	清
+世清								世清
 老汉								老汉
 的								的
 房前								房前
 。								。
-INSERTIONS:	4
+INSERTIONS:	2
 DELETIONS:	0
-SUBSTITUTIONS:	6
-NCHANGE:	10
+SUBSTITUTIONS:	4
+NCHANGE:	6
 NTRUTH:	33
-NTEST:	37
-TRUE WORDS RECALL:	0.818
-TEST WORDS PRECISION:	0.730
+NTEST:	35
+TRUE WORDS RECALL:	0.879
+TEST WORDS PRECISION:	0.829
 --pku_test_gold.utf8-------output.txt----1844
 正								正
 忙								忙
@@ -118707,8 +118408,7 @@ TEST WORDS PRECISION:	1.000
 三阳镇							      |	三阳
 							      >	镇
 地处								地处
-大洪山							      |	大洪
-							      >	山
+大洪山								大洪山
 南麓								南麓
 ，								，
 境内								境内
@@ -118721,8 +118421,7 @@ TEST WORDS PRECISION:	1.000
 银杏树								银杏树
 。								。
 夏								夏
-世清							      |	世
-							      >	清
+世清								世清
 老汉								老汉
 的								的
 房前								房前
@@ -118764,8 +118463,7 @@ TEST WORDS PRECISION:	1.000
 元								元
 。								。
 夏								夏
-世清							      |	世
-							      >	清
+世清								世清
 在								在
 这里								这里
 住								住
@@ -118788,14 +118486,14 @@ TEST WORDS PRECISION:	1.000
 不少								不少
 心血								心血
 。								。
-INSERTIONS:	4
+INSERTIONS:	1
 DELETIONS:	2
-SUBSTITUTIONS:	6
-NCHANGE:	12
+SUBSTITUTIONS:	3
+NCHANGE:	6
 NTRUTH:	80
-NTEST:	82
-TRUE WORDS RECALL:	0.900
-TEST WORDS PRECISION:	0.878
+NTEST:	79
+TRUE WORDS RECALL:	0.938
+TEST WORDS PRECISION:	0.949
 --pku_test_gold.utf8-------output.txt----1850
 1996年								1996年
 ，								，
@@ -118822,8 +118520,7 @@ TEST WORDS PRECISION:	0.878
 承包								承包
 。								。
 夏								夏
-世清							      |	世
-							      >	清
+世清								世清
 以								以
 每年								每年
 缴纳								缴纳
@@ -118849,14 +118546,14 @@ TEST WORDS PRECISION:	0.878
 承包								承包
 合同								合同
 。								。
-INSERTIONS:	3
+INSERTIONS:	2
 DELETIONS:	1
-SUBSTITUTIONS:	3
-NCHANGE:	7
+SUBSTITUTIONS:	2
+NCHANGE:	5
 NTRUTH:	49
-NTEST:	51
-TRUE WORDS RECALL:	0.918
-TEST WORDS PRECISION:	0.882
+NTEST:	50
+TRUE WORDS RECALL:	0.939
+TEST WORDS PRECISION:	0.920
 --pku_test_gold.utf8-------output.txt----1851
 夏								夏
 老汉								老汉
@@ -119013,10 +118710,9 @@ TEST WORDS PRECISION:	1.000
 ，								，
 要求								要求
 夏								夏
-世清							      |	世
-交							      <
-清								清
-							      >	交清
+世清								世清
+交							      |	交清
+清							      <
 承包款								承包款
 和								和
 合同								合同
@@ -119035,14 +118731,14 @@ TEST WORDS PRECISION:	1.000
 了								了
 此案								此案
 。								。
-INSERTIONS:	5
+INSERTIONS:	4
 DELETIONS:	1
 SUBSTITUTIONS:	4
-NCHANGE:	10
+NCHANGE:	9
 NTRUTH:	48
-NTEST:	52
+NTEST:	51
 TRUE WORDS RECALL:	0.896
-TEST WORDS PRECISION:	0.827
+TEST WORDS PRECISION:	0.843
 --pku_test_gold.utf8-------output.txt----1854
 在								在
 审理								审理
@@ -119050,9 +118746,9 @@ TEST WORDS PRECISION:	0.827
 中								中
 ，								，
 夏								夏
-世清							      |	世
-以							      |	清
-此							      |	以此
+世清								世清
+以							      |	以此
+此							      <
 树								树
 长期								长期
 由								由
@@ -119148,13 +118844,13 @@ TEST WORDS PRECISION:	0.827
 审理								审理
 。								。
 INSERTIONS:	1
-DELETIONS:	2
-SUBSTITUTIONS:	6
-NCHANGE:	9
+DELETIONS:	3
+SUBSTITUTIONS:	4
+NCHANGE:	8
 NTRUTH:	102
-NTEST:	101
-TRUE WORDS RECALL:	0.922
-TEST WORDS PRECISION:	0.931
+NTEST:	100
+TRUE WORDS RECALL:	0.931
+TEST WORDS PRECISION:	0.950
 --pku_test_gold.utf8-------output.txt----1855
 二								二
 当								当
@@ -119257,8 +118953,7 @@ TEST WORDS PRECISION:	0.784
 并								并
 要求								要求
 夏								夏
-世清							      |	世
-							      >	清
+世清								世清
 承担								承担
 单方								单方
 违约								违约
@@ -119266,14 +118961,14 @@ TEST WORDS PRECISION:	0.784
 法律								法律
 责任								责任
 。								。
-INSERTIONS:	4
+INSERTIONS:	3
 DELETIONS:	0
-SUBSTITUTIONS:	3
-NCHANGE:	7
+SUBSTITUTIONS:	2
+NCHANGE:	5
 NTRUTH:	39
-NTEST:	43
-TRUE WORDS RECALL:	0.923
-TEST WORDS PRECISION:	0.837
+NTEST:	42
+TRUE WORDS RECALL:	0.949
+TEST WORDS PRECISION:	0.881
 --pku_test_gold.utf8-------output.txt----1858
 这								这
 棵								棵
@@ -119298,9 +118993,9 @@ TEST WORDS PRECISION:	0.837
 呢								呢
 ？								？
 夏								夏
-世清							      |	世
-不							      |	清
-能							      |	不能
+世清								世清
+不							      |	不能
+能							      <
 接受								接受
 这个								这个
 处理								处理
@@ -119338,19 +119033,18 @@ TEST WORDS PRECISION:	0.837
 归属								归属
 。								。
 INSERTIONS:	2
-DELETIONS:	2
-SUBSTITUTIONS:	9
-NCHANGE:	13
+DELETIONS:	3
+SUBSTITUTIONS:	7
+NCHANGE:	12
 NTRUTH:	60
-NTEST:	60
-TRUE WORDS RECALL:	0.817
-TEST WORDS PRECISION:	0.817
+NTEST:	59
+TRUE WORDS RECALL:	0.833
+TEST WORDS PRECISION:	0.847
 --pku_test_gold.utf8-------output.txt----1859
 同时								同时
 ，								，
 夏								夏
-世清							      |	世
-							      >	清
+世清								世清
 还								还
 向								向
 京山县								京山县
@@ -119367,8 +119061,7 @@ TEST WORDS PRECISION:	0.817
 镇长								镇长
 的								的
 董								董
-烈宏							      |	烈
-							      >	宏
+烈宏								烈宏
 推								推
 上								上
 被告席								被告席
@@ -119393,14 +119086,14 @@ TEST WORDS PRECISION:	0.817
 自己								自己
 所有								所有
 。								。
-INSERTIONS:	2
+INSERTIONS:	0
 DELETIONS:	2
-SUBSTITUTIONS:	4
-NCHANGE:	8
+SUBSTITUTIONS:	2
+NCHANGE:	4
 NTRUTH:	45
-NTEST:	45
-TRUE WORDS RECALL:	0.867
-TEST WORDS PRECISION:	0.867
+NTEST:	43
+TRUE WORDS RECALL:	0.911
+TEST WORDS PRECISION:	0.953
 --pku_test_gold.utf8-------output.txt----1860
 县								县
 法院								法院
@@ -119433,8 +119126,7 @@ TEST WORDS PRECISION:	0.867
 行政诉讼							行政诉讼
 。								。
 夏								夏
-世清							      |	世
-							      >	清
+世清								世清
 明白								明白
 这个								这个
 道理								道理
@@ -119454,14 +119146,14 @@ TEST WORDS PRECISION:	0.867
 了								了
 准许								准许
 。								。
-INSERTIONS:	2
+INSERTIONS:	1
 DELETIONS:	1
-SUBSTITUTIONS:	3
-NCHANGE:	6
+SUBSTITUTIONS:	2
+NCHANGE:	4
 NTRUTH:	50
-NTEST:	51
-TRUE WORDS RECALL:	0.920
-TEST WORDS PRECISION:	0.902
+NTEST:	50
+TRUE WORDS RECALL:	0.940
+TEST WORDS PRECISION:	0.940
 --pku_test_gold.utf8-------output.txt----1861
 1999年								1999年
 11月								11月
@@ -119532,8 +119224,7 @@ TEST WORDS PRECISION:	0.700
 后								后
 ，								，
 夏								夏
-世清							      |	世
-							      >	清
+世清								世清
 失望								失望
 又								又
 气愤								气愤
@@ -119582,14 +119273,14 @@ TEST WORDS PRECISION:	0.700
 了								了
 法庭								法庭
 。								。
-INSERTIONS:	5
+INSERTIONS:	4
 DELETIONS:	1
-SUBSTITUTIONS:	4
-NCHANGE:	10
+SUBSTITUTIONS:	3
+NCHANGE:	8
 NTRUTH:	56
-NTEST:	60
-TRUE WORDS RECALL:	0.911
-TEST WORDS PRECISION:	0.850
+NTEST:	59
+TRUE WORDS RECALL:	0.929
+TEST WORDS PRECISION:	0.881
 --pku_test_gold.utf8-------output.txt----1864
 在								在
 各方								各方
@@ -119616,8 +119307,7 @@ TEST WORDS PRECISION:	0.850
 单位								单位
 对								对
 夏								夏
-世清							      |	世
-							      >	清
+世清								世清
 的								的
 宅基地							      |	宅
 							      >	基地
@@ -119649,14 +119339,14 @@ TEST WORDS PRECISION:	0.850
 范围								范围
 内								内
 。								。
-INSERTIONS:	4
+INSERTIONS:	3
 DELETIONS:	0
-SUBSTITUTIONS:	4
-NCHANGE:	8
+SUBSTITUTIONS:	3
+NCHANGE:	6
 NTRUTH:	54
-NTEST:	58
-TRUE WORDS RECALL:	0.926
-TEST WORDS PRECISION:	0.862
+NTEST:	57
+TRUE WORDS RECALL:	0.944
+TEST WORDS PRECISION:	0.895
 --pku_test_gold.utf8-------output.txt----1865
 当								当
 县								县
@@ -119673,8 +119363,7 @@ TEST WORDS PRECISION:	0.862
 时								时
 ，								，
 夏								夏
-世清							      |	世
-							      >	清
+世清								世清
 又								又
 提供								提供
 了								了
@@ -119715,8 +119404,7 @@ TEST WORDS PRECISION:	0.862
 村							      <
 会计								会计
 张								张
-明凤							      |	明
-							      >	凤
+明凤								明凤
 出具								出具
 的								的
 书面								书面
@@ -119764,8 +119452,7 @@ TEST WORDS PRECISION:	0.862
 事实上								事实上
 ，								，
 夏								夏
-世清							      |	世
-							      >	清
+世清								世清
 并								并
 没有								没有
 购得								购得
@@ -119774,14 +119461,14 @@ TEST WORDS PRECISION:	0.862
 的								的
 所有权								所有权
 。								。
-INSERTIONS:	9
+INSERTIONS:	6
 DELETIONS:	1
-SUBSTITUTIONS:	8
-NCHANGE:	18
+SUBSTITUTIONS:	5
+NCHANGE:	12
 NTRUTH:	107
-NTEST:	115
-TRUE WORDS RECALL:	0.916
-TEST WORDS PRECISION:	0.852
+NTEST:	112
+TRUE WORDS RECALL:	0.944
+TEST WORDS PRECISION:	0.902
 --pku_test_gold.utf8-------output.txt----1866
 县								县
 法院								法院
@@ -119790,9 +119477,9 @@ TEST WORDS PRECISION:	0.852
 认为								认为
 ，								，
 夏								夏
-世清							      |	世
-只							      |	清
-有							      |	只有
+世清								世清
+只							      |	只有
+有							      <
 承包								承包
 经营权								经营权
 ，								，
@@ -119801,13 +119488,13 @@ TEST WORDS PRECISION:	0.852
 							      >	权
 。								。
 INSERTIONS:	1
-DELETIONS:	0
-SUBSTITUTIONS:	4
-NCHANGE:	5
+DELETIONS:	1
+SUBSTITUTIONS:	2
+NCHANGE:	4
 NTRUTH:	16
-NTEST:	17
-TRUE WORDS RECALL:	0.750
-TEST WORDS PRECISION:	0.706
+NTEST:	16
+TRUE WORDS RECALL:	0.812
+TEST WORDS PRECISION:	0.812
 --pku_test_gold.utf8-------output.txt----1867
 法院								法院
 终审								终审
@@ -119824,9 +119511,9 @@ NTEST:	6
 TRUE WORDS RECALL:	1.000
 TEST WORDS PRECISION:	1.000
 --pku_test_gold.utf8-------output.txt----1868
-就								就
-在								在
-县								县
+就							      |	就在县
+在							      <
+县							      <
 法院								法院
 即将								即将
 作出								作出
@@ -119834,8 +119521,7 @@ TEST WORDS PRECISION:	1.000
 之前								之前
 ，								，
 夏								夏
-世清							      |	世
-							      >	清
+世清								世清
 再次								再次
 主动								主动
 申请								申请
@@ -119906,14 +119592,14 @@ TEST WORDS PRECISION:	1.000
 适度								适度
 的								的
 。								。
-INSERTIONS:	1
-DELETIONS:	0
+INSERTIONS:	0
+DELETIONS:	2
 SUBSTITUTIONS:	5
-NCHANGE:	6
+NCHANGE:	7
 NTRUTH:	81
-NTEST:	82
-TRUE WORDS RECALL:	0.938
-TEST WORDS PRECISION:	0.927
+NTEST:	79
+TRUE WORDS RECALL:	0.914
+TEST WORDS PRECISION:	0.937
 --pku_test_gold.utf8-------output.txt----1869
 2000年								2000年
 1月								1月
@@ -119931,8 +119617,7 @@ TEST WORDS PRECISION:	0.927
 准许								准许
 原告								原告
 夏								夏
-世清							      |	世
-							      >	清
+世清								世清
 撤回								撤回
 起诉								起诉
 ，								，
@@ -119972,14 +119657,14 @@ TEST WORDS PRECISION:	0.927
 了								了
 句号								句号
 。								。
-INSERTIONS:	3
+INSERTIONS:	2
 DELETIONS:	1
-SUBSTITUTIONS:	3
-NCHANGE:	7
+SUBSTITUTIONS:	2
+NCHANGE:	5
 NTRUTH:	54
-NTEST:	56
-TRUE WORDS RECALL:	0.926
-TEST WORDS PRECISION:	0.893
+NTEST:	55
+TRUE WORDS RECALL:	0.944
+TEST WORDS PRECISION:	0.927
 --pku_test_gold.utf8-------output.txt----1870
 令								令
 人								人
@@ -119992,8 +119677,7 @@ TEST WORDS PRECISION:	0.893
 官司								官司
 的								的
 夏								夏
-世清							      |	世
-							      >	清
+世清								世清
 却								却
 不								不
 输								输
@@ -120026,14 +119710,14 @@ TEST WORDS PRECISION:	0.893
 承包								承包
 经营权								经营权
 。								。
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	1
-SUBSTITUTIONS:	2
-NCHANGE:	4
+SUBSTITUTIONS:	1
+NCHANGE:	2
 NTRUTH:	44
-NTEST:	44
-TRUE WORDS RECALL:	0.932
-TEST WORDS PRECISION:	0.932
+NTEST:	43
+TRUE WORDS RECALL:	0.955
+TEST WORDS PRECISION:	0.977
 --pku_test_gold.utf8-------output.txt----1871
 谈							      |	谈起
 起							      <
@@ -120047,9 +119731,9 @@ TEST WORDS PRECISION:	0.932
 党委							      |	党委书记
 书记							      <
 董								董
-烈宏							      |	烈
-深							      |	宏
-有							      |	深有感触
+烈宏								烈宏
+深							      |	深有感触
+有							      <
 感触							      <
 ：								：
 “								“
@@ -120122,13 +119806,13 @@ TEST WORDS PRECISION:	0.932
 。								。
 ”								”
 INSERTIONS:	0
-DELETIONS:	4
-SUBSTITUTIONS:	10
-NCHANGE:	14
+DELETIONS:	5
+SUBSTITUTIONS:	8
+NCHANGE:	13
 NTRUTH:	86
-NTEST:	82
-TRUE WORDS RECALL:	0.837
-TEST WORDS PRECISION:	0.878
+NTEST:	81
+TRUE WORDS RECALL:	0.849
+TEST WORDS PRECISION:	0.901
 --pku_test_gold.utf8-------output.txt----1872
 如此								如此
 “								“
@@ -120163,9 +119847,7 @@ TRUE WORDS RECALL:	1.000
 TEST WORDS PRECISION:	1.000
 --pku_test_gold.utf8-------output.txt----1874
 山东省								山东省
-昌邑市							      |	昌
-							      >	邑
-							      >	市
+昌邑市								昌邑市
 人民								人民
 检察院								检察院
 自觉								自觉
@@ -120222,14 +119904,14 @@ TEST WORDS PRECISION:	1.000
 和								和
 建议								建议
 。								。
-INSERTIONS:	3
+INSERTIONS:	1
 DELETIONS:	0
-SUBSTITUTIONS:	2
-NCHANGE:	5
+SUBSTITUTIONS:	1
+NCHANGE:	2
 NTRUTH:	57
-NTEST:	60
-TRUE WORDS RECALL:	0.965
-TEST WORDS PRECISION:	0.917
+NTEST:	58
+TRUE WORDS RECALL:	0.982
+TEST WORDS PRECISION:	0.966
 --pku_test_gold.utf8-------output.txt----1875
 （								（
 卢							      |	卢金
@@ -120984,8 +120666,7 @@ TEST WORDS PRECISION:	1.000
 的								的
 受害人								受害人
 吴								吴
-新贵							      |	新
-							      >	贵
+新贵								新贵
 进行								进行
 了								了
 赔偿								赔偿
@@ -121013,8 +120694,7 @@ TEST WORDS PRECISION:	1.000
 送给								送给
 受害人								受害人
 吴								吴
-新贵							      |	新
-							      >	贵
+新贵								新贵
 ，								，
 他								他
 满意								满意
@@ -121022,29 +120702,28 @@ TEST WORDS PRECISION:	1.000
 笑								笑
 了								了
 。								。
-INSERTIONS:	3
+INSERTIONS:	1
 DELETIONS:	2
-SUBSTITUTIONS:	6
-NCHANGE:	11
+SUBSTITUTIONS:	4
+NCHANGE:	7
 NTRUTH:	61
-NTEST:	62
-TRUE WORDS RECALL:	0.869
-TEST WORDS PRECISION:	0.855
+NTEST:	60
+TRUE WORDS RECALL:	0.902
+TEST WORDS PRECISION:	0.917
 --pku_test_gold.utf8-------output.txt----1885
 （								（
 陈								陈
-柏松							      |	柏
-							      >	松
+柏松								柏松
 摄								摄
 ）								）
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	0
-SUBSTITUTIONS:	1
-NCHANGE:	2
+SUBSTITUTIONS:	0
+NCHANGE:	0
 NTRUTH:	5
-NTEST:	6
-TRUE WORDS RECALL:	0.800
-TEST WORDS PRECISION:	0.667
+NTEST:	5
+TRUE WORDS RECALL:	1.000
+TEST WORDS PRECISION:	1.000
 --pku_test_gold.utf8-------output.txt----1886
 公正								公正
 为							      |	为民
@@ -121351,8 +121030,7 @@ TEST WORDS PRECISION:	0.880
 副								副
 局长								局长
 孙								孙
-富运							      |	富
-							      >	运
+富运								富运
 经过								经过
 大量								大量
 细致								细致
@@ -121392,14 +121070,14 @@ TEST WORDS PRECISION:	0.880
 一个								一个
 清白								清白
 。								。
-INSERTIONS:	4
+INSERTIONS:	3
 DELETIONS:	0
-SUBSTITUTIONS:	4
-NCHANGE:	8
+SUBSTITUTIONS:	3
+NCHANGE:	6
 NTRUTH:	64
-NTEST:	68
-TRUE WORDS RECALL:	0.938
-TEST WORDS PRECISION:	0.882
+NTEST:	67
+TRUE WORDS RECALL:	0.953
+TEST WORDS PRECISION:	0.910
 --pku_test_gold.utf8-------output.txt----1890
 敢于								敢于
 碰							      |	碰硬
@@ -121453,8 +121131,7 @@ TEST WORDS PRECISION:	0.692
 局长								局长
 、								、
 人行								人行
-铜陵市							      |	铜陵
-							      >	市
+铜陵市								铜陵市
 和								和
 黄山							      |	黄山市
 市中心							      |	中心
@@ -121464,8 +121141,7 @@ TEST WORDS PRECISION:	0.692
 行长								行长
 、								、
 农行								农行
-淮北市							      |	淮北
-							      >	市
+淮北市								淮北市
 分行								分行
 原							      |	原行
 行长							      |	长
@@ -121499,14 +121175,14 @@ TEST WORDS PRECISION:	0.692
 好								好
 ”								”
 。								。
-INSERTIONS:	5
+INSERTIONS:	3
 DELETIONS:	2
-SUBSTITUTIONS:	10
-NCHANGE:	17
+SUBSTITUTIONS:	8
+NCHANGE:	13
 NTRUTH:	71
-NTEST:	74
-TRUE WORDS RECALL:	0.831
-TEST WORDS PRECISION:	0.797
+NTEST:	72
+TRUE WORDS RECALL:	0.859
+TEST WORDS PRECISION:	0.847
 --pku_test_gold.utf8-------output.txt----1892
 一								一
 项								项
@@ -121559,10 +121235,10 @@ TEST WORDS PRECISION:	1.000
 注意								注意
 。								。
 陶								陶
-士祥							      |	士
-在							      |	祥
-任							      |	在任
-县								县
+士祥								士祥
+在							      |	在任县
+任							      <
+县							      <
 政法委								政法委
 副								副
 书记								书记
@@ -121570,8 +121246,8 @@ TEST WORDS PRECISION:	1.000
 ，								，
 曾								曾
 多年								多年
-担任								担任
-县								县
+担任							      |	担任县
+县							      <
 工商局								工商局
 局长								局长
 职务								职务
@@ -121602,13 +121278,13 @@ TEST WORDS PRECISION:	1.000
 谈何容易							谈何容易
 。								。
 INSERTIONS:	1
-DELETIONS:	0
-SUBSTITUTIONS:	8
-NCHANGE:	9
+DELETIONS:	3
+SUBSTITUTIONS:	7
+NCHANGE:	11
 NTRUTH:	75
-NTEST:	76
-TRUE WORDS RECALL:	0.893
-TEST WORDS PRECISION:	0.882
+NTEST:	73
+TRUE WORDS RECALL:	0.867
+TEST WORDS PRECISION:	0.890
 --pku_test_gold.utf8-------output.txt----1894
 为了								为了
 对								对
@@ -121674,9 +121350,9 @@ TEST WORDS PRECISION:	0.882
 顺藤摸瓜							顺藤摸瓜
 ，								，
 挖								挖
-出								出
-了								了
-县								县
+出							      |	出了县
+了							      <
+县							      <
 工商局								工商局
 财务								财务
 股长								股长
@@ -121691,13 +121367,13 @@ TEST WORDS PRECISION:	0.882
 ”								”
 。								。
 INSERTIONS:	2
-DELETIONS:	0
-SUBSTITUTIONS:	2
-NCHANGE:	4
+DELETIONS:	2
+SUBSTITUTIONS:	3
+NCHANGE:	7
 NTRUTH:	78
-NTEST:	80
-TRUE WORDS RECALL:	0.974
-TEST WORDS PRECISION:	0.950
+NTEST:	78
+TRUE WORDS RECALL:	0.936
+TEST WORDS PRECISION:	0.936
 --pku_test_gold.utf8-------output.txt----1895
 基层								基层
 检察								检察
@@ -121874,8 +121550,7 @@ TEST WORDS PRECISION:	1.000
 ，								，
 马鞍山								马鞍山
 和								和
-明光市							      |	明光
-							      >	市
+明光市								明光市
 检察院								检察院
 还								还
 率先								率先
@@ -121904,14 +121579,14 @@ TEST WORDS PRECISION:	1.000
 接受								接受
 举报								举报
 。								。
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	0
-SUBSTITUTIONS:	1
-NCHANGE:	2
+SUBSTITUTIONS:	0
+NCHANGE:	0
 NTRUTH:	39
-NTEST:	40
-TRUE WORDS RECALL:	0.974
-TEST WORDS PRECISION:	0.950
+NTEST:	39
+TRUE WORDS RECALL:	1.000
+TEST WORDS PRECISION:	1.000
 --pku_test_gold.utf8-------output.txt----1898
 此举								此举
 一								一
@@ -122067,9 +121742,7 @@ TEST WORDS PRECISION:	0.931
 马鞍山市						      |	马鞍山
 金家庄区						      |	市
 							      >	金
-							      >	家
-							      >	庄
-							      >	区
+							      >	家庄区
 检察院								检察院
 就							      |	就是
 是							      <
@@ -122081,14 +121754,14 @@ TEST WORDS PRECISION:	0.931
 钢城								钢城
 的								的
 。								。
-INSERTIONS:	4
+INSERTIONS:	2
 DELETIONS:	2
 SUBSTITUTIONS:	4
-NCHANGE:	10
+NCHANGE:	8
 NTRUTH:	13
-NTEST:	15
+NTEST:	13
 TRUE WORDS RECALL:	0.538
-TEST WORDS PRECISION:	0.467
+TEST WORDS PRECISION:	0.538
 --pku_test_gold.utf8-------output.txt----1902
 马钢							      |	马
 							      >	钢
@@ -122137,8 +121810,7 @@ TEST WORDS PRECISION:	0.467
 以								以
 检察长								检察长
 童								童
-海保							      |	海
-							      >	保
+海保								海保
 为首								为首
 的								的
 新								新
@@ -122153,14 +121825,14 @@ TEST WORDS PRECISION:	0.467
 这块								这块
 硬骨头								硬骨头
 。								。
-INSERTIONS:	4
+INSERTIONS:	3
 DELETIONS:	1
-SUBSTITUTIONS:	5
-NCHANGE:	10
+SUBSTITUTIONS:	4
+NCHANGE:	8
 NTRUTH:	59
-NTEST:	62
-TRUE WORDS RECALL:	0.898
-TEST WORDS PRECISION:	0.855
+NTEST:	61
+TRUE WORDS RECALL:	0.915
+TEST WORDS PRECISION:	0.885
 --pku_test_gold.utf8-------output.txt----1903
 此案								此案
 涉及								涉及
@@ -122211,9 +121883,9 @@ TEST WORDS PRECISION:	0.855
 。								。
 检察长								检察长
 童								童
-海保							      |	海
-知							      |	保
-难							      |	知难而上
+海保								海保
+知							      |	知难而上
+难							      <
 而							      <
 上							      <
 ，								，
@@ -122234,13 +121906,13 @@ TEST WORDS PRECISION:	0.855
 此案								此案
 。								。
 INSERTIONS:	2
-DELETIONS:	2
-SUBSTITUTIONS:	7
-NCHANGE:	11
+DELETIONS:	3
+SUBSTITUTIONS:	5
+NCHANGE:	10
 NTRUTH:	69
-NTEST:	69
-TRUE WORDS RECALL:	0.870
-TEST WORDS PRECISION:	0.870
+NTEST:	68
+TRUE WORDS RECALL:	0.884
+TEST WORDS PRECISION:	0.897
 --pku_test_gold.utf8-------output.txt----1904
 有								有
 了								了
@@ -122462,8 +122134,8 @@ TEST WORDS PRECISION:	0.976
 这								这
 份								份
 建议								建议
-引起								引起
-市								市
+引起							      |	引起市
+市							      <
 有关								有关
 部门								部门
 高度								高度
@@ -122492,13 +122164,13 @@ TEST WORDS PRECISION:	0.976
 实行								实行
 。								。
 INSERTIONS:	3
-DELETIONS:	0
-SUBSTITUTIONS:	4
-NCHANGE:	7
+DELETIONS:	1
+SUBSTITUTIONS:	5
+NCHANGE:	9
 NTRUTH:	61
-NTEST:	64
-TRUE WORDS RECALL:	0.934
-TEST WORDS PRECISION:	0.891
+NTEST:	63
+TRUE WORDS RECALL:	0.902
+TEST WORDS PRECISION:	0.873
 --pku_test_gold.utf8-------output.txt----1908
 针对								针对
 建筑								建筑
@@ -122875,8 +122547,7 @@ TEST WORDS PRECISION:	0.902
 							      >	科
 科长								科长
 邓								邓
-龙辉							      |	龙
-							      >	辉
+龙辉								龙辉
 仅								仅
 一个								一个
 月								月
@@ -122913,14 +122584,12 @@ TEST WORDS PRECISION:	0.902
 兼								兼
 总经理								总经理
 谢								谢
-成润							      |	成
-							      >	润
+成润								成润
 、								、
 副								副
 总经理								总经理
 周								周
-继荣							      |	继
-							      >	荣
+继荣								继荣
 以								以
 下属								下属
 分公司								分公司
@@ -122957,14 +122626,14 @@ TEST WORDS PRECISION:	0.902
 截留								截留
 货款								货款
 。								。
-INSERTIONS:	9
+INSERTIONS:	6
 DELETIONS:	2
-SUBSTITUTIONS:	10
-NCHANGE:	21
+SUBSTITUTIONS:	7
+NCHANGE:	15
 NTRUTH:	123
-NTEST:	130
-TRUE WORDS RECALL:	0.902
-TEST WORDS PRECISION:	0.854
+NTEST:	127
+TRUE WORDS RECALL:	0.927
+TEST WORDS PRECISION:	0.898
 --pku_test_gold.utf8-------output.txt----1914
 赃款								赃款
 多								多
@@ -123500,8 +123169,7 @@ TEST WORDS PRECISION:	1.000
 人民								人民
 检察院								检察院
 鲍								鲍
-绍坤							      |	绍
-							      >	坤
+绍坤								绍坤
 检察长								检察长
 这样								这样
 对								对
@@ -123535,14 +123203,14 @@ TEST WORDS PRECISION:	1.000
 任务								任务
 。								。
 ”								”
-INSERTIONS:	1
+INSERTIONS:	0
 DELETIONS:	0
-SUBSTITUTIONS:	1
-NCHANGE:	2
+SUBSTITUTIONS:	0
+NCHANGE:	0
 NTRUTH:	65
-NTEST:	66
-TRUE WORDS RECALL:	0.985
-TEST WORDS PRECISION:	0.970
+NTEST:	65
+TRUE WORDS RECALL:	1.000
+TEST WORDS PRECISION:	1.000
 --pku_test_gold.utf8-------output.txt----1924
 解决								解决
 对								对
@@ -124305,8 +123973,7 @@ TEST WORDS PRECISION:	0.975
 该院								该院
 检察长								检察长
 林								林
-玉城							      |	玉
-							      >	城
+玉城								玉城
 的								的
 论文								论文
 《								《
@@ -124345,14 +124012,14 @@ TEST WORDS PRECISION:	0.975
 的								的
 专家								专家
 。								。
-INSERTIONS:	2
+INSERTIONS:	1
 DELETIONS:	2
-SUBSTITUTIONS:	6
-NCHANGE:	10
+SUBSTITUTIONS:	5
+NCHANGE:	8
 NTRUTH:	136
-NTEST:	136
-TRUE WORDS RECALL:	0.941
-TEST WORDS PRECISION:	0.941
+NTEST:	135
+TRUE WORDS RECALL:	0.949
+TEST WORDS PRECISION:	0.956
 --pku_test_gold.utf8-------output.txt----1934
 以								以
 制度								制度
@@ -124370,9 +124037,7 @@ TEST WORDS PRECISION:	1.000
 记者								记者
 在								在
 福州市								福州市
-马尾区							      |	马
-							      >	尾
-							      >	区
+马尾区								马尾区
 检察院								检察院
 采访								采访
 ，								，
@@ -124474,14 +124139,14 @@ TEST WORDS PRECISION:	1.000
 干扰								干扰
 因素								因素
 。								。
-INSERTIONS:	2
+INSERTIONS:	0
 DELETIONS:	4
-SUBSTITUTIONS:	4
-NCHANGE:	10
+SUBSTITUTIONS:	3
+NCHANGE:	7
 NTRUTH:	105
-NTEST:	103
-TRUE WORDS RECALL:	0.924
-TEST WORDS PRECISION:	0.942
+NTEST:	101
+TRUE WORDS RECALL:	0.933
+TEST WORDS PRECISION:	0.970
 --pku_test_gold.utf8-------output.txt----1936
 以								以
 健全								健全
@@ -125006,9 +124671,7 @@ TEST WORDS PRECISION:	0.947
 稳								稳
 。								。
 安顺市								安顺市
-西秀区							      |	西
-							      >	秀
-							      >	区
+西秀区								西秀区
 检察院								检察院
 去年								去年
 以来								以来
@@ -125091,14 +124754,14 @@ TEST WORDS PRECISION:	0.947
 了								了
 案件								案件
 。								。
-INSERTIONS:	3
+INSERTIONS:	1
 DELETIONS:	2
-SUBSTITUTIONS:	4
-NCHANGE:	9
+SUBSTITUTIONS:	3
+NCHANGE:	6
 NTRUTH:	123
-NTEST:	124
-TRUE WORDS RECALL:	0.951
-TEST WORDS PRECISION:	0.944
+NTEST:	122
+TRUE WORDS RECALL:	0.959
+TEST WORDS PRECISION:	0.967
 --pku_test_gold.utf8-------output.txt----1943
 天津市								天津市
 首								首
@@ -125156,16 +124819,16 @@ NTEST:	27
 TRUE WORDS RECALL:	1.000
 TEST WORDS PRECISION:	1.000
 === SUMMARY:
-=== TOTAL INSERTIONS:	3289
-=== TOTAL DELETIONS:	2188
-=== TOTAL SUBSTITUTIONS:	5500
-=== TOTAL NCHANGE:	10977
+=== TOTAL INSERTIONS:	2952
+=== TOTAL DELETIONS:	2269
+=== TOTAL SUBSTITUTIONS:	5307
+=== TOTAL NCHANGE:	10528
 === TOTAL TRUE WORD COUNT:	104372
-=== TOTAL TEST WORD COUNT:	105473
-=== TOTAL TRUE WORDS RECALL:	0.926
-=== TOTAL TEST WORDS PRECISION:	0.917
-=== F MEASURE:	0.921
+=== TOTAL TEST WORD COUNT:	105055
+=== TOTAL TRUE WORDS RECALL:	0.927
+=== TOTAL TEST WORDS PRECISION:	0.921
+=== F MEASURE:	0.924
 === OOV Rate:	0.058
-=== OOV Recall Rate:	0.576
-=== IV Recall Rate:	0.948
-###	output.txt	3289	2188	5500	10977	104372	105473	0.926	0.917	0.921	0.058	0.576	0.948
+=== OOV Recall Rate:	0.613
+=== IV Recall Rate:	0.947
+###	output.txt	2952	2269	5307	10528	104372	105055	0.927	0.921	0.924	0.058	0.613	0.947

@@ -23,9 +23,9 @@ from model.hmm import HMM
 from utils.dataset import read_dataset
 
 DATA_DIR = os.getcwd()+'/../data/'
-TRAIN_FILE = DATA_DIR + 'train/train.txt'
 TEST_FILE1 = 'test.txt'
 TEST_FILE2 = Config.PKU_TEST
+TEST_FILE3 = Config.MSR_TEST
 OUT_PUT = os.getcwd() + '/../score/output.txt'
 
 
@@ -164,10 +164,10 @@ if __name__ == '__main__':
         if res:
             ttmpp = res.strip().split(' ')
             res1 = Numner.NumNer(ttmpp)
-            # res2 = Pner.Place_Ner(res1)
-            # namelist = decode(cname, res2)
-            # res3 = Name_Replace(namelist, res2)
-            ans = ' '.join(res1)
+            res2 = Pner.Place_Ner(res1)
+            namelist = decode(cname, res2)
+            res3 = Name_Replace(namelist, res2)
+            ans = ' '.join(res3)
             ans += '\n'
             f.write(ans.encode('utf-8'))
     print 'mission complete'
