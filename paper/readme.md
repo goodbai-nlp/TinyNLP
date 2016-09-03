@@ -49,8 +49,8 @@ hmm+字典分词是jieba分词系统的核心模块，这里就不再介绍hmm�
 
 鉴于n-最短路径分词只做了基础部分，缺少后续处理，还不能评测其精确率和召回率，这里只对后三个分词系统性能进行评估，评估采用的测试集为pku和msr的测试集。
 实验机型：
-Intel core-I5
-GHZ
+Intel core-I3
+2.4 GHZ
 ####分词准确度：
 |   准确度分析      |hmm+字典 |  TnT  |  crf  |
 |-------- |--------|-------|-------|
@@ -112,3 +112,8 @@ crf是目前公认比较强的分词模型，它的精确率和召回率都是�
 【总】crf模型的实验结果是最好的，公认的比较好的模型，但也存在问题，需要生产中按需解决。
 
 上述三种模型在实际的项目中均有使用，简单的模型通过分层和叠加同样可以达到复杂模型的效果，根据实际的需求去选择合适的模型才是合理的做法。
+##参考文献
+[1] TnT -- A Statistical Part-of-Speech Tagger -- Thorsten Brants（A00-1031）
+[2] A Character-Based Joint Model for Chinese Word Segmentation --Wang (C10-1132)
+[3] Which is More Suitable for Chinese Word Segmentation,the Generative Model or the Discriminative One? --wang(Y09-2047)
+[4] 基于N-最短路径方法的中文词语粗分模型--张华平
