@@ -33,7 +33,7 @@ def crf_segmenter(input_file, output_file, tagger):
 
 if __name__ == '__main__':
     if len(sys.argv) != 4:
-        print "pls use: python crf_segmenter.py model input output"
+        print "pls use: python crf_seg.py model input output"
         sys.exit()
     crf_model = sys.argv[1]
     input_file = sys.argv[2]

@@ -205,6 +205,7 @@ testing_dataset = [['dog', 'chase', 'mouse'],
 
 for testing_data in testing_dataset:
     tags = viterbi(testing_data, hmm)
+    print (' '.join(testing_data))
     print (tags)
 
 print("====================Test case3========================")
@@ -228,8 +229,9 @@ print("accuracy=%f" % (float(n_corr)/ n_total))
 print(time.strftime('%Y-%m-%d %H:%M:%S'))
 # print("DONE!!")
 print("====================Test case4========================")
-
+print (' '.join(['HMM', 'is', 'a', 'widely', 'used', 'model', '.']))
 print (viterbi(['HMM', 'is', 'a', 'widely', 'used', 'model', '.'], hmm))
+print (' '.join(['I', 'like', 'cat', ',', 'but', 'I', 'hate', 'eating', 'fish', '.']))
 print (viterbi(['I', 'like', 'cat', ',', 'but', 'I', 'hate', 'eating', 'fish', '.'], hmm))
 
 print("====================Test case5========================")

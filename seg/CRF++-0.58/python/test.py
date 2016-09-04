@@ -38,12 +38,9 @@ try:
     ysize = tagger.ysize()
     for i in range(0, ysize-1):
         print "tag " , i , " " , tagger.yname(i)
-
     # parse and change internal stated as 'parsed'
     tagger.parse()
-
     print "conditional prob=" , tagger.prob(), " log(Z)=" , tagger.Z()
-
     size = tagger.size()
     xsize = tagger.xsize()
     for i in range(0, (size - 1)):

@@ -5,7 +5,10 @@ from __future__ import unicode_literals
 import codecs
 import sys
 import time
-sys.path.append("..")
+import os
+
+sys.path.append(os.getcwd()+'/../../../')
+sys.path.append(os.getcwd()+"/../")
 from model.NumNer import NumRec
 from model.CBGM import CBGM
 from model.PlaceNer import PlaceRec

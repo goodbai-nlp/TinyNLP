@@ -14,13 +14,14 @@ import sys
 import os
 import re
 import math
-sys.path.append('..')
-from config.config import Config
+sys.path.append(os.getcwd()+"/../../../")
+sys.path.append(os.getcwd()+"/../")
 from model.NameNer import decode,CNNAME
 from model.NumNer import NumRec
 from model.PlaceNer import PlaceRec
 from model.hmm import HMM
 from utils.dataset import read_dataset
+from config.config import Config
 
 DATA_DIR = os.getcwd()+'/../data/'
 TEST_FILE1 = 'test.txt'
