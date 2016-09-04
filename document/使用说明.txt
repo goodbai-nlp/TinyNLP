@@ -1,0 +1,57 @@
+==========================SFnlp使用说明======================
+项目整体结构：
+config: 项目配置文件
+data: 训练语料库
+document：说明和总结文档
+ner：人名和地名识别，已集成到分词中，没有单独测试文件
+paper：相关论文
+seg:分词器目录，共四个分词器
+tagger：词性标注器，单独测试，英文版本，还未集成
+
+具体使用说明：
+
+分词器：
+
+N-最短路径分词器：
+测试效果： seg/NShortPathseg目录下，输入文件是test.txt
+执行 python nShortPath.py
+
+Hmm+字典分词器：
+测试效果： seg/Hmmseg/test目录下，输入文件是test.txt
+执行 python test.py 查看分词结果
+
+测试语料： seg/Hmmseg/test目录下，输入文件是pku_test.utf8
+执行 python seg.py 完成分词,输出文件在 seg/Hmmseg/score/output.txt中
+评价分词结果： 切换到score目录下，执行指令
+perl score pku_training_words.utf8 pku_test_gold.utf8 output.txt >score.txt
+查看score.txt可以看到分词的结果
+
+TnT分词器：
+测试效果： seg/CBGseg/test目录下，输入文件是test.txt
+执行 python test.py 查看分词结果
+
+测试语料： seg/CBGseg/test目录下，输入文件是msr_test.utf8
+执行 python seg.py 完成分词,输出文件在 seg/CBGseg/score/output.txt中
+评价分词结果： 切换到score目录下，执行指令
+perl score msr_training_words.utf8 msr_test_gold.utf8 output.txt >score.txt
+查看score.txt可以看到分词的结果
+
+crf分词器：
+测试效果： seg/CRF++-0.58/seg目录下，输入文件test.txt
+执行 python crf_seg.py crf_model test.txt output.txt ,打开output.txt查看分词结果
+
+测试语料： seg/CRF++-0.58/seg目录下，输入文件msr_test.utf8
+执行 python crf_seg.py crf_model msr_test.utf8 output.txt
+
+hmm标注器： tagger/HmmTagger目录下
+执行 python Hmm_Postagger.py 查看运行结果
+
+感知器标注器： tagger/Perceptron目录下
+执行 python PerceptronClassifier.py 查看运行结果
+
+报告与总结：
+由于markdown文件在不同编辑器中显示效果会有不同，我放到了我的github上
+三种分词器性能对比：
+https://github.com/muyeby/SFnlp/tree/master/paper
+中文人名识别：
+https://github.com/muyeby/SFnlp/tree/master/ner/model

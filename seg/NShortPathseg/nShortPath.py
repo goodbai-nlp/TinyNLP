@@ -65,10 +65,7 @@ class NShotPath(object):
 
 if __name__ == '__main__':
     # sentence = u'他说的确实在理'
-    test_sentence = [
-        "张三买了一张三角桌子",
-        "共同创造美好的新世纪——二○○一年新年贺词"
-    ]
+    test_sentence = open("test.txt",'rb')
     segment = NShotPath()
     for sentence in test_sentence:
         if sys.version < '3.0':
@@ -77,7 +74,7 @@ if __name__ == '__main__':
                     sentence = sentence.decode('utf-8')
                 except:
                     sentence = sentence.decode('gbk', 'ignore')
-        path = segment.seg(sentence, 3)
+        path = segment.seg(sentence.strip(), 3)
         for p in path :
             p = sorted(p)
             set = ''
